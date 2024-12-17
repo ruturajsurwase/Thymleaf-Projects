@@ -1,0 +1,23 @@
+package com.weekend.entity;
+
+
+@Entity
+public class AccommodationCamp {
+
+	
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String imageUrl;
+    private String location;
+    private String duration;
+    private String originalPrice;
+    private String discountedPrice;
+    private String discount;
+
+    // Getters and Setters
+    // toString method
+}

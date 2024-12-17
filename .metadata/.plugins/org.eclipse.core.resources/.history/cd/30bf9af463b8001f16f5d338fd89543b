@@ -1,0 +1,9 @@
+package com.weekend.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.weekend.entity.Trek;
+
+public interface TrekRepository extends JpaRepository<Trek, Long>{
+
+}

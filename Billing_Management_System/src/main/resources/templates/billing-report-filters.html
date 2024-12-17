@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Billing Report Filters</title>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+
+
+<style>
+/* General Styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f9;
+	color: #333;
+}
+
+h1 {
+	text-align: center;
+	color: #4a90e2;
+	margin-top: 20px;
+}
+
+/* Topbar */
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #aad6ec;
+	color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+/* Sidebar */
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	background-color: #343a40;
+	color: white;
+	padding-top: 20px;
+	width: 220px;
+}
+
+.sidebar a {
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 5px 0;
+}
+
+.sidebar a:hover {
+	background-color: #81b1ce;
+}
+
+/* Content */
+.content {
+	margin-left: 240px; /* Adjusted for sidebar width */
+	margin-top: 80px; /* Adjusted for topbar height */
+	padding: 20px;
+}
+
+/* Filter Form Container */
+.filter-form {
+	max-width: 500px;
+	margin: 50px auto;
+	padding: 20px;
+	background: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+/* Filter Form Fields */
+.filter-form div {
+	margin-bottom: 15px;
+}
+
+.filter-form label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #555;
+}
+
+.filter-form input[type="text"], .filter-form input[type="date"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.3s;
+}
+
+.filter-form input[type="text"]:focus, .filter-form input[type="date"]:focus
+	{
+	border-color: #4a90e2;
+	outline: none;
+}
+
+/* Filter Form Submit Button */
+.filter-form button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #4a90e2;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.filter-form button:hover {
+	background-color: #357ab8;
+}
+
+/* Logout Button Container */
+.logout-btn {
+	position: absolute;
+    bottom: 74px;
+    width: 90%;
+    left: 10px;
+}
+
+.logout-btn button {
+	background-color: #dc3545;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	transition: background-color 0.3s, transform 0.2s;
+	cursor: pointer;
+}
+
+.logout-btn button:hover {
+	background-color: #b52c3a;
+	transform: scale(1.05);
+}
+
+.logout-btn button:focus {
+	outline: none;
+	box-shadow: 0 0 5px rgba(255, 0, 0, 0.6);
+}
+</style>
+</head>
+<body>
+	<!-- Topbar -->
+	<div class="topbar">
+		<div class="logo">
+			<h5>Billing Management System</h5>
+		</div>
+		<div class="user-info">
+			<span>Welcome, Admin</span>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+			<a href="/" class="btn btn-primary btn-block mb-3">Admin Panel</a> 
+			<a href="/products/addproduct" class="btn btn-primary btn-block mb-3">Add Product</a> 
+			<a href="/products/list" class="btn btn-primary btn-block mb-3">Product List</a> 
+			<a href="/new" class="btn btn-primary btn-block mb-3">Create Invoice</a>
+			<a href="/invoices" class="btn btn-primary btn-block mb-3">All Invoices</a> 
+			<a href="/products/stock" class="btn btn-primary btn-block mb-3">Stock Management</a> 
+			<a href="/billing-report-filters" class="btn btn-primary btn-block mb-3">Billing Report</a>
+			<a href="/client-report-filters" class="btn btn-primary btn-block mb-3">Client Report</a>
+			
+		<!-- Logout Button -->
+		<form th:action="@{/logout}" method="post" class="logout-btn">
+			<button type="submit">Logout</button>
+		</form>
+	</div>
+
+	<!-- Main Content -->
+	<div class="content">
+		<h1>Billing Report</h1>
+		<form th:action="@{/billing-report}" method="get" class="filter-form">
+			<!-- Date Range -->
+			<div>
+				<label for="startDate">Start Date:</label> <input type="date"
+					id="startDate" name="startDate">
+			</div>
+			<div>
+				<label for="endDate">End Date:</label> <input type="date"
+					id="endDate" name="endDate">
+			</div>
+
+			<!-- Client Name -->
+			<!-- <div>
+				<label for="clientName">Client Name:</label> <input type="text"
+					id="clientName" name="clientName" placeholder="Enter client name">
+			</div>
+				 -->
+				 
+			<!-- Submit Button -->
+			<div>
+				<button type="submit">Generate Report</button>
+			</div>
+			
+		</form>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

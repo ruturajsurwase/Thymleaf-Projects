@@ -1,0 +1,7 @@
+package com.weekend.controller;
+
+public class AccommodationCampController {
+
+	
+	private  AccommodationCampService accommodationService;
+}

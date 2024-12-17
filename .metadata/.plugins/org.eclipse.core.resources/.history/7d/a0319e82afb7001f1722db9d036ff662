@@ -1,0 +1,22 @@
+package com.weekend.controller;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class CampingActivity {
+
+	
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
+
+	    private String name;
+	    private String imageUrl;
+	    private String earlyBirdOffer;
+	    private String newYearSpecial;
+	    private BigDecimal originalPrice;
+	    private BigDecimal offerPrice;
+	    private BigDecimal lockPrice;
+	    private String checkInTime;
+	    private String checkOutTime;
+}

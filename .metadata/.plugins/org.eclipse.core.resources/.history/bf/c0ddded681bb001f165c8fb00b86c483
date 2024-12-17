@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Article</title>
+</head>
+<body>
+    <h1>Create Article</h1>
+    <form th:action="@{/articles}" th:object="${article}" method="post" enctype="multipart/form-data">
+        <label>Title:</label>
+        <input type="text" th:field="*{title}" required><br>
+        
+        <label>Description:</label>
+        <textarea th:field="*{description}" rows="5" required></textarea><br>
+        
+        <label>Image:</label>
+        <input type="file" name="image" required><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

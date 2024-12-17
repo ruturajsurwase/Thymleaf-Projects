@@ -1,0 +1,41 @@
+package com.weekend.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+
+	
+	
+	
+	@GetMapping("/index")
+	public String indexPage()
+	{
+		return "index";
+	}
+	
+	
+
+	@GetMapping("/about")
+	public String aboutPage()
+	{
+		return "about";
+	}
+	
+	@GetMapping("/newyear")
+	public String newYearPage()
+	{
+		return "newyears";
+	}
+	
+	@GetMapping("/camp")
+	public String campPage()
+	{
+		return "camp";
+	}
+	
+	
+	
+	
+}

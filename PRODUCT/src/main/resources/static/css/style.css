@@ -1,0 +1,902 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,300&family=Poppins:wght@300;400;600&display=swap')
+	;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background-color: #f7f7f7;
+	color: #333;
+	font-family: 'Poppins', sans-serif;
+}
+/* Top Header */
+#top-header {
+	background-color: #0ba518; /* Updated green background */
+	color: #fff;
+	padding: 3px 0 0;
+	font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+}
+
+#top-header #et-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+#top-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Header */
+header {
+	background-color: white;
+	padding: 20px 0;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #f8f8f8;
+}
+
+header h1 {
+	color: #333;
+	margin: 0;
+	font-size: 1.8em;
+	flex: 1;           /* Takes up space on the left side */
+	text-align: left; /* Aligns h1 to the left */
+}
+
+header nav {
+	flex: 1; /* Takes up remaining space */
+	text-align: right; /* Aligns nav to the right */
+}
+
+header nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: inline-flex; /* Ensures links are horizontally aligned */
+}
+
+header nav ul li {
+	margin-left: 20px; /* Adds space between each link */
+}
+
+header nav ul li a {
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+header nav ul li a:hover {
+	color: red; /* Hover effect for the links */
+}
+
+/* Dropdown Menu */
+.dropdown {
+	position: relative;
+	z-index: 10;
+}
+
+.dropdown .dropdown-icon {
+	margin-left: 5px;
+	font-size: 12px;
+	transition: transform 0.3s ease; /* For rotating the icon */
+}
+
+.dropdown .sub-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	list-style: none;
+	padding: 10px;
+	border: 1px solid #ccc;
+	min-width: 150px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	transform: translateY(20px); /* Slide down effect */
+	z-index: 10;
+}
+
+.dropdown:hover .sub-menu {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.dropdown:hover .dropdown-icon {
+	transform: rotate(180deg); /* Rotate icon on hover */
+}
+
+.sub-menu li {
+	margin-bottom: 5px;
+}
+
+.sub-menu li a {
+	color: #555;
+	padding: 5px 10px;
+	display: block;
+	text-decoration: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sub-menu li a:hover {
+	background-color: #007bff;
+	color: #fff;
+}
+
+.custom-button {
+	background-color: #e53c37; /* Initial button color */
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background-color 0.3s ease; /* Smooth color transition */
+	margin-right: 10px; /* Space between buttons */
+}
+
+.custom-button:hover {
+	background-color: #00d084; /* Color on hover */
+}
+
+.black-text {
+	color: black;
+	
+	font-size: 1.2em; 
+}
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 400px; /* Set a fixed height */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ensure the slides take up the full height of the slider */
+}
+
+.slide {
+    min-width: 100%; /* Make each slide take up the full width */
+    height: 100%;
+    display: none; /* Hide all slides initially */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the full area without stretching */
+}
+
+.active {
+    display: block; /* Show the active slide */
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-slide, .next-slide {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Hero Section */
+.hero-section {
+	background: url('../images/hero-background.jpg') center center/cover
+		no-repeat;
+	color: white;
+	padding: 100px 20px;
+	text-align: center;
+}
+
+.hero-section h2 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+.hero-section p {
+	font-size: 1.2em;
+	margin-bottom: 30px;
+}
+
+.hero-section .btn {
+	background-color: #ffcc00;
+	color: #333;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 5px;
+}
+/* Products Section */
+.products-section {
+	padding: 50px 20px;
+	text-align: center;
+}
+
+.products-section h2 {
+	font-size: 2em;
+	margin-bottom: 30px;
+}
+
+.product-grid {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.product-card {
+	width: 250px; /* Slightly larger card */
+	background-color: white;
+	margin: 20px; /* Increased margin for better spacing */
+	padding: 20px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+	border-radius: 10px; /* Rounded corners */
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	/* Smooth hover effect */
+}
+
+.product-card:hover {
+	transform: translateY(-10px); /* Card moves up slightly on hover */
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	/* Shadow gets stronger on hover */
+}
+
+.product-card img {
+	width: 100%; /* Full width of the card */
+	height: 200px; /* Medium image size */
+	object-fit: cover; /* Ensures the image is cropped to fit the size */
+	margin-bottom: 15px;
+	border-radius: 8px; /* Rounded corners for the image */
+}
+
+.product-card h3 {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.product-card p {
+	font-size: 0.9em;
+	color: #666;
+}
+
+/* About Section */
+.about-section {
+	padding: 50px 20px;
+	background-color: #fff;
+	text-align: center;
+}
+
+.about-section h2 {
+	font-size: 2em;
+	margin-bottom: 30px;
+}
+
+.about-section p {
+	font-size: 1em;
+	color: #666;
+}
+
+/* Contact Section */
+.contact-section {
+	padding: 50px 20px;
+	background-color: #f7f7f7;
+	text-align: center;
+}
+
+.contact-section form {
+	display: inline-block;
+	width: 100%;
+	max-width: 500px;
+}
+
+.contact-section input, .contact-section textarea {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.contact-section .btn {
+	background-color: #ffcc00;
+	color: #333;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* Footer background with gradient */
+.footer {
+	background-image: radial-gradient(ellipse at center, #ffffff 0%, rgba(94, 137, 150, 0.8)
+		98%);
+	color: white;
+	padding: 18px;
+	text-align: center;
+}
+
+/* Footer headings */
+.footer h5 {
+	font-weight: bold;
+	color: black;
+}
+
+/* Unordered list inside the footer */
+.footer ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+.footer ul li {
+	/*  display: flex;
+    align-items: center; */
+	margin-bottom: 15px;
+}
+
+/* Icon beside label with space */
+.footer ul li .d-flex {
+	margin-bottom: 10px; /* Add space between label and details */
+}
+
+/* Icon inside list items */
+.footer ul li i {
+	margin-right: 10px; /* Space between icon and text */
+	font-size: 18px; /* Adjust icon size */
+}
+
+.footer ul li div {
+	margin-left: 0px;
+	/* Aligns the text with the icon for better visual spacing */
+}
+
+/* Optional: Highlight the label */
+.footer ul li strong {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/* Map iframe styling */
+.footer iframe {
+	border: 0;
+	border-radius: 5px;
+}
+
+/* Footer container */
+footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 0px;
+}
+
+/* Extra styles for consistency */
+.footer ul li span {
+	font-size: 14px; /* Adjust font size if needed */
+	color: #ffffff; /* Ensure text stays white */
+}
+
+.footer ul li strong {
+	color: black;
+	/* Highlight 'SHOP', 'CALL US', etc. in a different color */
+}
+
+/* Container for header content */
+.header-content-container {
+	display: flex;
+	justify-content: center;
+	background-image: radial-gradient(ellipse at center, #ffffff 0%, rgba(94, 137, 150, 0.8)
+		97%);
+	padding: 50px 0;
+	position: relative;
+	z-index: 2;
+	background-size: cover;
+	animation-timing-function: linear;
+	animation-duration: .2s;
+}
+
+.header-content {
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 20px;
+}
+
+/* Header styling */
+.et_pb_module_header {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 38px;
+	color: #000000 !important;
+	line-height: 1.2em;
+	text-align: center;
+}
+
+.et_pb_header_content_wrapper p {
+	margin: 20px auto;
+	width: 80%;
+	max-width: 800px;
+}
+
+/* Button styling */
+.et_pb_button {
+	display: inline-block;
+	padding: 12px 25px;
+	background-color: #ffcc00;
+	color: #333;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: bold;
+	border-radius: 5px;
+	margin: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.et_pb_button:hover {
+	background-color: #ffa500;
+}
+
+.et_pb_button_one {
+	background-color: #0ba518;
+	color: #fff;
+}
+
+.et_pb_button_one:hover {
+	background-color: #087f14;
+}
+
+.et_pb_button_two {
+	background-color: #ffcc00;
+	color: #333;
+}
+
+.et_pb_button_two:hover {
+	background-color: #ffa500;
+}
+
+/* Blurb module */
+.et_pb_blurb {
+	background-image: linear-gradient(100deg, #ffffff 0%, #0ba518 99%);
+	border-radius: 15px;
+	padding: 10px 40px;
+	margin-top: 10px;
+}
+
+/* Responsive Design */
+@media ( max-width : 768px) {
+	.et_pb_module_header {
+		font-size: 2em;
+	}
+	.et_pb_button {
+		padding: 10px 20px;
+	}
+	.header-content {
+		text-align: center;
+		margin: 20px auto;
+		width: 80%;
+		max-width: 800px;
+	}
+}
+
+/* Light text color on dark backgrounds */
+.et_pb_bg_layout_dark, .et_pb_bg_layout_dark h1, .et_pb_bg_layout_dark h2,
+	.et_pb_bg_layout_dark h3, .et_pb_bg_layout_dark h4,
+	.et_pb_bg_layout_dark h5, .et_pb_bg_layout_dark h6 {
+	color: black !important;
+}
+
+.content_left {
+	text-align: left;
+	color: #333;
+}
+
+/* about us page css */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background-color: #f7f7f7;
+	color: #333;
+}
+
+/* Full Width Header */
+.fullwidth-header {
+	background-image: radial-gradient(ellipse at center, #ffffff 0%, rgba(94, 137, 150, 0.8)
+		98%);
+	color: #fff;
+	padding: 50px 0;
+	text-align: center;
+	height: 300px;
+}
+
+.fullwidth-header h1 {
+	font-size: 40px;
+	margin-bottom: 10px;
+	color: #000;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.fullwidth-header span {
+	font-size: 20px;
+}
+
+/* Company Profile */
+.company-profile {
+	background-color: #fff;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.company-profile h1 {
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+
+.profile-content {
+	width: 70%;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+/*client feedback css */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background-color: #f7f7f7;
+	color: #333;
+}
+
+/* Full Width Header */
+.fullwidth-header {
+	background-image: radial-gradient(ellipse at center, #ffffff 0%, rgba(94, 137, 150, 0.8)
+		98%);
+	color: #fff;
+	padding: 50px 0;
+	text-align: center;
+	height: 300px;
+}
+
+.fullwidth-header h1 {
+	font-size: 65px;
+	margin-bottom: 10px;
+	color: #000;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.fullwidth-header span {
+	font-size: 20px;
+}
+
+/* Company Profile */
+.company-profile {
+	background-color: #fff;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.company-profile h1 {
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+
+.profile-content {
+	width: 70%;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+/* Video Section */
+.video-section {
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between the videos */
+}
+
+.video-section iframe {
+    flex-basis: 30%;         /* Each iframe takes up 30% of the width */
+    height: 300px;
+    border: none;
+}
+
+/* For smaller screens, adjust the layout */
+@media (max-width: 768px) {
+    .video-section iframe {
+        flex-basis: 45%; /* On smaller screens, each video takes up 45% of the width */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-section iframe {
+        flex-basis: 100%; /* On very small screens, each video takes the full width */
+    }
+}
+
+/* Contact us page css */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background-color: #f7f7f7;
+	color: #333;
+}
+
+/* Full Width Header */
+.fullwidth-header {
+	background-image: radial-gradient(ellipse at center, #ffffff 0%, rgba(94, 137, 150, 0.8)
+		98%);
+	color: #fff;
+	padding: 50px 0;
+	text-align: center;
+	height: 300px;
+}
+
+.fullwidth-header h1 {
+	font-size: 40px;
+	margin-bottom: 10px;
+	color: #000;
+}
+
+.fullwidth-header span {
+	font-size: 20px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+	position: relative;
+	z-index: 10;         /* Ensure dropdown is above other content */
+}
+
+.dropdown .sub-menu {
+	display: none;
+	position: absolute;
+	top: 100%;         /* Dropdown appears below the parent */
+	left: 0;
+	background-color: #fff;
+	list-style: none;
+	padding: 10px;
+	border: 1px solid #ccc;
+	min-width: 150px;
+	z-index: 10; /* Ensures dropdown is on top */
+}
+
+.dropdown:hover .sub-menu {
+	display: block;
+}
+
+/* Company Profile */
+.company-profile {
+	background-color: #fff;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.company-profile h1 {
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+
+.profile-content {
+	width: 70%;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+/* Video Section */
+.video-section {
+	text-align: center;
+	padding: 50px 0;
+}
+
+.video-section iframe {
+	width: 80%;
+	height: 450px;
+	border: none;
+}
+
+.contact_us_main_title {
+	font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+	font-weight: 700;
+	font-size: 45px;
+	color: #0ba518 !important;
+	line-height: 1.2em;
+}
+
+.square-card {
+	height: 300px; /* Adjust the height to make the card a square */
+	width: 300px; /* Adjust the width to match the height */
+}
+
+.card-body {
+	text-align: center;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+.product-details-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-card-image img {
+    max-width: 500px;                          /* Medium-sized image */
+    margin-right: 20px;
+    
+}
+
+.product-benefits {
+    flex: 1;  
+  padding-left: 350px;                     /* Make the benefits container larger */
+}
+
+.product-benefits h2 {
+    color: green;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-benefits h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.product-benefits ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.product-benefits ul li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product-benefits p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+
+/* REVIEW Section Title */
+.reviews-title {
+	font-size: 40px;
+    font-weight: bold;
+    color: green;
+    
+}
+
+/* Reviews Slider */
+.reviews-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Reviews Slides */
+.reviews-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 65px;
+    display: none;
+}
+
+.review.active {
+    display: block;
+}
+
+/* Review Card with Shadow */
+.review-card {
+    background-color: #fff;
+    padding: 40px;                                          /* Increased padding for larger content area */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 				/* Larger shadow for more depth */
+    border-radius: 12px;                		 			/* Slightly larger border-radius for smoother corners */
+    max-width: 800px;					 					/* Set a max width for a larger card */
+    margin: 0 auto; 										/* Center the card horizontally */
+    transition: transform 0.3s ease; 						/* Optional: Add a slight animation on hover */
+}
+
+/* Optional: Add hover effect */
+.review-card:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.review-content {
+    text-align: center;
+    color: #040404;
+}
+
+/* Slider Navigation */
+.reviews-slider-nav
+ {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.reviews-slider-nav button 
+{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.review-section {
+	padding: -8px 20px;
+	background-color: #fff;
+	text-align: center;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add New Employee</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 100px; /* Adjusted for the topbar */
+            max-width: 600px;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 60px; /* Adjusted for the topbar */
+            background-color: #343a40;
+            color: white;
+            padding-top: 20px;
+            width: 200px;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        button[type="submit"] {
+            margin-top: 20px;
+        }
+
+        a.btn-secondary {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="logo">
+            <h5>Employee Management System</h5>
+        </div>
+        <div class="user-info">
+            <span>Welcome, Admin</span>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/" class="text-center">Admin Panel</a>
+        <a href="/showNewEmployeeForm" class="btn btn-primary btn-block mb-3">Add New Employee</a>
+        <a href="/showEmployeeList" class="btn btn-primary btn-block mb-3">Employee List</a>
+        <a href="/showNewTeacherForm" class="btn btn-primary btn-block mb-3">Add New Teacher</a>
+        <a href="/showTeacherList" class="btn btn-primary btn-block mb-3">Teacher List</a>
+             
+    <a href="/showTeacherListforAttendance" class="btn btn-primary btn-block mb-3">Attendance</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="text-center">Add New Employee</h2>
+        <form th:action="@{/saveEmployee}" th:object="${employee}" method="post">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" th:field="*{firstName}" id="firstName" class="form-control" placeholder="Enter First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" th:field="*{lastName}" id="lastName" class="form-control" placeholder="Enter Last Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" th:field="*{email}" id="email" class="form-control" placeholder="Enter Email" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" th:field="*{department}" id="department" class="form-control" placeholder="Enter Department" required>
+            </div>
+            <!-- Role selection -->
+            <div class="form-group">
+                <label for="role">Role:</label>
+                <select th:field="*{role}" id="role" class="form-control" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="EMPLOYEE">EMPLOYEE</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Save</button>
+        </form>
+        <a href="/showEmployeeList" class="btn btn-secondary btn-block">Back to Employee List</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

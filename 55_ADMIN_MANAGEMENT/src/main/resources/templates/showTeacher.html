@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Teacher Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 100px; /* Adjusted margin to avoid overlap with the topbar */
+            max-width: 600px;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .topbar h5 {
+            margin: 0;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+
+        .card-body p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .btn-block {
+            margin-top: 20px;
+        }
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 60px; /* Adjusted for the topbar */
+            background-color: #343a40;
+            color: white;
+            padding-top: 20px;
+            width: 200px;
+        }
+		 .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            margin-left: 220px;
+            margin-top: 80px; /* Adjusted for the topbar */
+            padding: 20px;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+
+        .btn-sm {
+            padding: 5px 10px;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <h5>Teacher Management System</h5>
+        <div class="user-info">
+            <span>Welcome, Teacher</span>
+        </div>
+    </div>
+
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/teacherList" class="text-center">Teacher Panel</a>
+      <!--   <a href="/showNewEmployeeForm" class="btn btn-primary btn-block mb-3">Add New Employee</a>
+        <a href="/showEmployeeList" class="btn btn-primary btn-block mb-3">Employee List</a>
+        <a href="/showNewTeacherForm" class="btn btn-primary btn-block mb-3">Add New Teacher</a> -->
+        <a href="/teacherList" class="btn btn-primary btn-block mb-3">Teacher List</a>
+    </div>
+
+
+
+
+    <!-- Content -->
+    <div class="container">
+        <h2 class="text-center">Teacher Details</h2>
+        <div class="card">
+            <div class="card-body">
+                <p><b>First Name:</b> <span th:text="${teacher.firstName}"></span></p>
+                <p><b>Last Name:</b> <span th:text="${teacher.lastName}"></span></p>
+                <p><b>Email:</b> <span th:text="${teacher.email}"></span></p>
+                <p><b>Department:</b> <span th:text="${teacher.department}"></span></p>
+                <p><b>Role:</b> <span th:text="${teacher.role}"></span></p>
+            </div>
+        </div>
+        <a href="/teacherList" class="btn btn-secondary btn-block">Back to Teacher List</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

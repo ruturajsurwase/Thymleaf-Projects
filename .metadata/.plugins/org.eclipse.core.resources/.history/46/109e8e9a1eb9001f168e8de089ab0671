@@ -1,0 +1,8 @@
+package com.weekend.service;
+
+public class ContactService {
+
+	
+	  @Autowired
+	    private ContactRepository contactRepository;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Partner</title>
+</head>
+<body>
+    <h2>Add New Partner</h2>
+    <form action="/partners/save" method="post" enctype="multipart/form-data">
+        <label for="name">Partner Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="logo">Partner Logo:</label>
+        <input type="file" id="logo" name="logo" accept="image/*" required>
+        
+        <button type="submit">Add Partner</button>
+    </form>
+    <p th:text="${msg}"></p>
+</body>
+</html>

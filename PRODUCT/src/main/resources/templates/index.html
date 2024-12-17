@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dairy Products Store</title>
+
+<!-- Bootstrap 5 CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+	<div id="page-container">
+		<div id="top-header">
+			<div class="container">
+				<div id="et-info">
+					<span id="et-info-phone"><i class="fab fa-whatsapp"></i>
+						WhatsApp: 9167788789</span> <a href="mailto:ruturajsurwase@gmail.com">
+						<span id="et-info-email"><i class="fas fa-envelope"></i>
+							dairyproduct@gmail.com</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Header Section -->
+	<header>
+		<div class="header-container">
+			<h1>Dairy Products Store</h1>
+			<nav>
+				<ul>
+					<li><a href="/home">HOME</a></li>
+					<li><a href="/about_us">ABOUT US</a></li>
+					<li class="dropdown"><a href="#">OUR PRODUCTS <span
+							class="dropdown-icon">&#9662;</span></a>
+						<ul class="sub-menu">
+							<li><a href="/ghee">Ghee</a></li>
+							<li><a href="/paneer">Paneer</a></li>
+							<li><a href="/butter">Butter</a></li>
+							<li><a href="/soya-paneer">Soya Paneer</a></li>
+							<li><a href="/cheese">Cheese</a></li>
+						</ul></li>
+					<li><a href="/clients_feedback">CLIENT'S FEEDBACK</a></li>
+					<li><a href="/contact_us">CONTACT US</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Slider Section -->
+	<section class="slider">
+		<div class="slides">
+
+			<div class="slide active">
+				<img src="images/slide/ghee.jpg" alt="Slider Image 1">
+			</div>
+
+			<div class="slide">
+				<img src="images/slide/paneer.png" alt="Slider Image 2">
+			</div>
+
+			<div class="slide">
+				<img src="images/slide/cheese.jpg" alt="Slider Image 3">
+			</div>
+
+			<div class="slide">
+				<img src="images/slide/butter.png" alt="Slider Image 4">
+			</div>
+
+		</div>
+		<div class="slider-nav">
+			<button class="prev-slide">&#10094;</button>
+			<button class="next-slide">&#10095;</button>
+		</div>
+	</section>
+
+
+	<!-- Dairy Products Store -->
+	<div id="main-content">
+		<section class="fullwidth-header">
+			<div class="header-content">
+				<h1>DAIRY PRODUCTS STORE</h1>
+				<strong class="black-text">Traditional Products</strong>
+
+				<div class="buttons-container">
+					<button class="custom-button">What We Do</button>
+					<button class="custom-button">Why Dairy Products Store</button>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Order Now -->
+	<div class="et_pb_section et_section_specialty et_section_transparent">
+		<div class="et_pb_row">
+			<div class="et_pb_column et_pb_column_1_2 et_pb_column_single">
+				<div
+					class="et_pb_module et_pb_blurb et_clickable et_pb_text_align_right et_pb_blurb_position_top et_pb_bg_layout_dark">
+					<div class="et_pb_blurb_content">
+						<h4 class="et_pb_module_header">
+							<a href="/home">Order Now !</a>
+						</h4>
+					</div>
+				</div>
+			</div>
+			<div
+				class="et_pb_column et_pb_column_1_2 et_pb_specialty_column et_pb_column_empty"></div>
+		</div>
+	</div>
+
+	<!-- Company Profile Section -->
+	<section class="company-profile">
+		<div class="container">
+			<div class="profile-content">
+				<p>
+					<b>MS OIL PUREO (Formerly Savitri Lakadi Ghana)</b> uses the
+					ancient technique of extracting oils from various seeds and nuts in
+					a wooden mortar and pestle known as ‘Wooden Ghani’.
+				</p>
+				<p>
+					Our Manufacturing plant is located in Pimpri, Pune, being one of
+					the oldest and most reputed oil mills and retail stores <strong>Since
+						2019</strong>. The raw material used here is of the best quality. We
+					continuously strive to supply the best product to our end users.
+				</p>
+				<p>Our vision is to provide naturally pure and superior quality
+					oil to all our customers. Adding health to your food and a healthy
+					life is a happy life.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Products Section -->
+	<section id="products" class="products-section">
+		<h2>Our Products</h2>
+		<div class="product-grid">
+			<!-- Loop through the products and display them -->
+			<div th:each="product : ${products}" class="product-card">
+				<img th:src="@{'/product/display/' + ${product.id}}"
+					alt="Product Image" />
+				<h3 th:text="${product.name}">Product Name</h3>
+			</div>
+		</div>
+	</section>
+
+	<!-- REVIEW Section -->
+	<section id="review" class="review-section">
+		<div class="container">
+			<h2 class="text-center reviews-title">REVIEWS</h2>
+		</div>
+	</section>
+
+	<!-- Reviews Slider -->
+	<section class="reviews-slider">
+		<div class="reviews-slides">
+			<div th:each="review, iterStat : ${allReviews}" class="review"
+				th:classappend="${iterStat.index == 0} ? 'active'">
+				<div class="review-card">
+					<div class="review-content">
+						<h5 th:text="${review.reviewerName}">Reviewer Name</h5>
+						<p th:text="|Rating: ${review.rating}/5|">Rating</p>
+						<p th:text="${review.content}">Review content goes here</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="reviews-slider-nav">
+			<button class="prev-review">&#10094;</button>
+			<button class="next-review">&#10095;</button>
+		</div>
+	</section> 
+
+	<!-- footer Section -->
+	<footer class="footer bg-light py-4">
+		<div class="container">
+			<div class="row">
+				<!-- Contact Info Section -->
+				<div class="col-md-6">
+					<ul class="list-unstyled">
+						<!-- SHOP Address -->
+						<li class="mb-3">
+							<div class="d-flex align-items-center">
+								<i class="fas fa-map-marker-alt text-danger me-2"></i> <strong>SHOP</strong>
+							</div>
+							<div class="content_left">
+								Sai Shiv Park, Savitri Lakadi Ghana Shop No.10,<br> Old
+								Kate Pimple Rd, near Aditya Homoeopathic Hospital,<br>
+								Pimpri-Chinchwad, Maharashtra 410017
+							</div>
+						</li>
+
+						<!-- CALL US Section -->
+						<li class="mb-3">
+							<div class="d-flex align-items-center">
+								<i class="fas fa-phone text-danger me-2"></i> <strong>CALL
+									US</strong>
+							</div>
+							<div class="content_left">+91 9527714622</div>
+						</li>
+
+						<!-- EMAIL Section -->
+						<li class="mb-3">
+							<div class="d-flex align-items-center">
+								<i class="fas fa-envelope text-danger me-2"></i> <strong>EMAIL</strong>
+							</div>
+							<div class="content_left">msoilpureo@gmail.com</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Google Map Section -->
+				<div class="col-md-6">
+					<h5>OUR LOCATION</h5>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094077!2d144.96305761531593!3d-37.81362797975179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1616926211095!5m2!1sen!2sus"
+						width="100%" height="200" style="border: 0;" allowfullscreen=""
+						loading="lazy"> </iframe>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--Mian  Footer -->
+	<footer>
+		<p>&copy; 2024 Dairy Products Store</p>
+	</footer>
+
+
+	<!-- Bootstrap JS -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+		integrity="sha384-7/z9+qTf4FBLtR4KvtsP3Kpvvz8KTsVFq0XkZxCPhh5S2A6/1Db2aI9W3pxmj0cm"
+		crossorigin="anonymous">
+		
+	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-QJHtvGhmr9HCpqa3msjC3Df1z2sIohW1t2dpS1aAmeQv1eKtCIh8ioSFWnKT5CZZ"
+		crossorigin="anonymous">
+		
+	</script>
+
+	<!-- Custom JavaScript -->
+	<script src="/js/script.js"></script>
+
+</body>
+</html>

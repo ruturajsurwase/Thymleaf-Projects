@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #aad6ec;
+	color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 60px;
+	background-color: #343a40;
+	color: white;
+	padding-top: 20px;
+	width: 220px;
+}
+
+.content {
+	margin-left: 240px;
+	margin-top: 80px;
+	padding: 20px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 12px;
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.logout-btn {
+	position: absolute;
+	bottom: 74px;
+	width: 90%;
+	left: 10px;
+}
+</style>
+</head>
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <h5>Billing Management System</h5>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+    
+       <a href="/" class="btn btn-primary btn-block mb-3">Admin Panel</a> 
+			<a href="/products/addproduct" class="btn btn-primary btn-block mb-3">Add Product</a> 
+			<a href="/products/list" class="btn btn-primary btn-block mb-3">Product List</a> 
+			<a href="/new" class="btn btn-primary btn-block mb-3">Create Invoice</a>
+			<a href="/invoices" class="btn btn-primary btn-block mb-3">All Invoices</a> 
+			<a href="/products/stock" class="btn btn-primary btn-block mb-3">Stock Management</a> 
+			<a href="/billing-report-filters" class="btn btn-primary btn-block mb-3">Billing Report</a>
+			<a href="/client-report-filters" class="btn btn-primary btn-block mb-3">Client Report</a>
+			
+         
+ 	<!-- Logout Button -->
+    <form th:action="@{/logout}" method="post" class="logout-btn">
+        <button type="submit" class="btn btn-danger btn-block">Logout</button>
+    </form>
+    
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>Stock Management</h1>
+         <div th:if="${msg}" class="alert alert-success alert-dismissible fade show" role="alert">
+            <span th:text="${msg}"></span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.id}"></td>
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.stockQuantity}"></td>
+                    <td>
+                        <form th:action="@{/products/update-stock/{id}(id=${product.id})}" method="post">
+                            <input type="number" name="newStock" min="0" placeholder="Update Stock" required>
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

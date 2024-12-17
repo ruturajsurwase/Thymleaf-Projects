@@ -1,0 +1,16 @@
+package com.weekend.repository;
+
+import com.weekend.entity.Trek;
+
+public class TrekService {
+
+	public void saveTrek(Trek trek) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+}

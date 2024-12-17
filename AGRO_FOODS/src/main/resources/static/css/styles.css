@@ -1,0 +1,1079 @@
+/* Reset and Body Styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+}
+
+/* Header Styling */
+header {
+	background-color: #f6e6cc; /* Optional background color */
+	padding: 20px 0; /* Adjusted padding for better responsiveness */
+}
+
+/* Header container to align items */
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Left Logo Styling */
+.left-logo img {
+	height: 80px;
+	width: auto;
+}
+
+/* Right Logo Styling */
+.right-logo img {
+	height: 80px;
+	width: auto;
+}
+
+/* Navigation container */
+.nav-container {
+	flex-grow: 1;
+	text-align: center;
+	margin-top: 10px; /* Adds spacing for mobile view */
+}
+
+/* Navigation links styles */
+.nav-links {
+	list-style: none;
+	display: inline-flex;
+	gap: 30px;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+}
+
+.nav-links li {
+	display: inline;
+}
+
+.nav-links li a {
+	text-decoration: none;
+	color: #333;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+.nav-links li a:hover {
+	color: #5ec79c;
+}
+
+
+
+/* Tablet View */
+@media ( max-width : 768px) {
+	.header-container {
+		flex-direction: column;   /* Stack the logos and navigation vertically */
+	}
+	.nav-links {
+		display: flex;
+		flex-direction: column;      /* Stack nav links vertically on smaller screens */
+		gap: 15px; /* Reduce gap between links */
+	}
+	.nav-links li a {
+		font-size: 0.9rem;            /* Reduce font size for readability */
+	}
+	.left-logo img, .right-logo img {
+		height: 60px;                /* Reduce logo size for smaller screens */
+	}
+}
+
+/* Mobile View */
+@media ( max-width : 480px) {
+	header {
+		padding: 10px 0;                     /* Reduce padding */
+	}
+	.left-logo img, .right-logo img {
+		height: 50px;                   /* Further reduce logo size for mobile */
+	}
+	.nav-links {
+		gap: 10px;                    /* Reduce gap further for mobile */
+	}
+	.nav-links li a {
+		font-size: 0.8rem;           /* Adjust font size for mobile screens */
+	}
+}
+
+/* Slider Styles */
+.slider {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.slides {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.slide {
+	min-width: 100%;
+	height: 100%;
+	display: none; 					/* Hide all slides initially */
+	position: relative;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Ensure images cover the slide area */
+}
+
+.active {
+	display: block;
+}
+
+/* Slide Content */
+.slide-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+}
+
+.slide-content h3 {
+	font-size: 4rem; /* Scalable font size */
+	line-height: 1.2;
+	color: #ffffff;
+	font-weight: 400;
+	text-align: center;
+	transition: all 0.3s ease;
+	opacity: 0.8;
+	margin-bottom: 20px; /* Adjusted spacing for readability */
+}
+
+.slide-content p {
+	font-size: 1.2rem; /* Scalable font size */
+	margin: 0 auto;
+	margin-bottom: 30px;
+	max-width: 800px; /* Adjusted for better readability */
+	color: #f0f0f0;
+	padding: 0 20px; /* Add padding for mobile devices */
+}
+
+.slide-content a.theme-btn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 45px;
+	text-decoration: none;
+	font-size: 1rem;
+	border-radius: 5px;
+	transition: background-color 0.3s, opacity 0.3s;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.slide-content a.theme-btn:hover {
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	opacity: 0.7;
+}
+
+/* Leaf Icon */
+.content-image img {
+	height: 50px;
+	width: 75px;
+	margin-bottom: 100px;
+}
+
+/* Slider Navigation */
+.slider-nav {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+}
+
+.prev-slide, .next-slide {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.prev-slide:hover, .next-slide:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slide Animation */
+keyframes fadeIn {from { opacity:0;
+	
+}
+
+to {
+	opacity: 1;
+}
+
+}
+.slide.active .slide-content {
+	animation: fadeIn 1s ease-in-out;
+}
+
+/* For Tablets and Small Laptops */
+@media ( max-width : 1024px) {
+	.slider {
+		height: 500px; /* Adjust height for tablets */
+	}
+	.slide-content h3 {
+		font-size: 3rem; /* Decrease font size */
+	}
+	.slide-content p {
+		font-size: 1rem; /* Adjust font size */
+		max-width: 600px; /* Reduce content width */
+	}
+	.content-image img {
+		height: 40px; /* Adjust icon size */
+		width: 60px;
+	}
+}
+
+/* For Mobile Devices */
+@media ( max-width : 768px) {
+	.slider {
+		height: 400px; /* Reduce slider height for mobile */
+	}
+	.slide-content h3 {
+		font-size: 2.5rem; /* Further reduce heading size */
+	}
+	.slide-content p {
+		font-size: 0.9rem; /* Adjust paragraph font size */
+		max-width: 100%; /* Allow full width */
+	}
+	.content-image img {
+		height: 30px; /* Further reduce icon size */
+		width: 50px;
+		margin-bottom: 80px;
+	}
+	.slide-content a.theme-btn {
+		padding: 8px 30px; /* Adjust button padding */
+	}
+	.prev-slide, .next-slide {
+		padding: 8px; /* Reduce button size */
+	}
+}
+
+/* For Small Mobile Devices */
+@media ( max-width : 480px) {
+	.slider {
+		height: 300px; /* Further reduce slider height */
+	}
+	.slide-content h3 {
+		font-size: 2rem; /* Further reduce heading size */
+	}
+	.slide-content p {
+		font-size: 0.8rem; /* Adjust paragraph font size */
+	}
+	.content-image img {
+		height: 25px; /* Further reduce icon size */
+		width: 40px;
+	}
+	.slide-content a.theme-btn {
+		padding: 6px 20px; /* Adjust button padding */
+	}
+	.prev-slide, .next-slide {
+		padding: 6px; /* Reduce button size for mobile */
+	}
+}
+
+/* About Company Section */
+.about-company {
+	padding: 20px; /* Adjusted spacing */
+	background-color: #f6f6f6;
+}
+
+/* Section Title */
+.sec-title-one:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 80px;
+	background: url(https://sarikaagrofoods.com/images/icons/icon-crops.png)
+		center top no-repeat;
+}
+
+.sec-title-one {
+	position: relative;
+	padding-top: 70px;
+	padding-bottom: 10px;
+	text-align: center;
+	margin-bottom: 50px;
+	font-family: inherit;
+}
+
+.sec-title-one h2 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 2.5rem; /* Scalable font size */
+	line-height: 1.4em;
+	color: #007045;
+}
+
+/* Text Content */
+.content h3 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 1.2rem; /* Scalable font size */
+	line-height: 1.5em;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+/* Button Styles */
+.theme-btn {
+	background-color: white;
+	color: #4CAF50;
+	border: 2px solid #4CAF50;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-size: 1rem;
+	border-radius: 20px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-btn:hover {
+	background-color: #4CAF50;
+	color: white;
+}
+
+/* Layout for Row */
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+/* Responsive Columns */
+.col-sm-8 {
+	flex: 0 0 66.67%;
+}
+
+.col-sm-4 {
+	flex: 0 0 33.33%;
+}
+
+/* For Tablets and Small Laptops */
+@media ( max-width : 1024px) {
+	.sec-title-one h2 {
+		font-size: 2rem; /* Decrease font size */
+	}
+	.content h3 {
+		font-size: 1.1rem; /* Adjust font size */
+	}
+	.col-sm-8 {
+		flex: 0 0 75%; /* Make column wider on smaller screens */
+	}
+}
+
+/* For Mobile Devices */
+@media ( max-width : 768px) {
+	.sec-title-one h2 {
+		font-size: 1.8rem; /* Further reduce font size */
+	}
+	.content h3 {
+		font-size: 1rem; /* Adjust font size for readability */
+	}
+	.col-sm-8 {
+		flex: 0 0 90%; /* Make column almost full width */
+	}
+}
+
+/* For Small Mobile Devices */
+@media ( max-width : 480px) {
+	.sec-title-one h2 {
+		font-size: 1.5rem; /* Further reduce font size */
+	}
+	.content h3 {
+		font-size: 0.9rem; /* Reduce text size for small screens */
+	}
+	.col-sm-8 {
+		flex: 0 0 100%; /* Full width for small devices */
+	}
+	.theme-btn {
+		padding: 8px 15px; /* Reduce button padding */
+		font-size: 0.9rem; /* Adjust button font size */
+	}
+}
+
+/* Product Style */
+.product-style-one {
+	background-color: rgba(245, 176, 98, 0.95);
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	text-align: center;
+	transition: transform 0.3s ease-in-out;
+}
+
+.product-style-one:hover {
+	transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.food-image img {
+	height: 200px;
+	width: 200px;
+	margin-bottom: 15px;
+	object-fit: cover; /* Ensures image fits nicely */
+}
+
+.content h3 {
+	font-size: 1.5rem;
+	color: #6d4f43;
+}
+
+.content p {
+	font-size: 1rem;
+	color: #6d4f43;
+}
+
+/* Responsive Layout */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* Center the items */
+}
+
+/* Column Layout for Larger Screens */
+.col-md-4 {
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+}
+
+/* Column Layout for Tablets */
+@media ( max-width : 992px) {
+	.col-md-4 {
+		flex: 0 0 50%;
+		max-width: 50%; /* Adjust to two products per row */
+	}
+	.content h3 {
+		font-size: 1.3rem; /* Adjust font size */
+	}
+	.content p {
+		font-size: 0.9rem; /* Adjust font size */
+	}
+}
+
+/* Column Layout for Small Devices (Mobile) */
+@media ( max-width : 768px) {
+	.col-md-4 {
+		flex: 0 0 100%;
+		max-width: 100%; /* Full width for small screens */
+	}
+	.food-image img {
+		height: 150px;
+		width: 150px; /* Adjust image size */
+	}
+	.content h3 {
+		font-size: 1.2rem; /* Adjust font size */
+	}
+	.content p {
+		font-size: 0.85rem; /* Adjust font size */
+	}
+}
+
+/* Small Mobile Devices */
+@media ( max-width : 480px) {
+	.food-image img {
+		height: 120px;
+		width: 120px; /* Further reduce image size */
+	}
+	.content h3 {
+		font-size: 1.1rem; /* Adjust font size */
+	}
+	.content p {
+		font-size: 0.8rem; /* Adjust font size */
+	}
+}
+
+/* Button Container */
+.more-btn-outer {
+	text-align: center;
+	margin: 20px 0; /* Adds spacing around the button */
+}
+
+/* Button Styling */
+.theme-btn.btn-style-four {
+	background-color: #4CAF50; /* Green background */
+	color: white; /* White text */
+	padding: 10px 30px;
+	font-size: 1rem;
+	border: 2px solid #4CAF50;
+	border-radius: 30px; /* Rounded button */
+	text-decoration: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	/* Smooth transition */
+	display: inline-block; /* Ensure it's treated as a block element */
+}
+
+.theme-btn.btn-style-four:hover {
+	background-color: white;
+	color: #4CAF50; /* Invert colors on hover */
+	border-color: #4CAF50; /* Green border remains */
+}
+
+/* Responsive Adjustments */
+@media ( max-width : 768px) {
+	.theme-btn.btn-style-four {
+		padding: 8px 25px; /* Reduce padding on smaller screens */
+		font-size: 0.9rem; /* Adjust font size */
+	}
+}
+
+@media ( max-width : 480px) {
+	.theme-btn.btn-style-four {
+		padding: 7px 20px; /* Further reduce padding on very small screens */
+		font-size: 0.85rem; /* Adjust font size for small screens */
+	}
+}
+
+/* Map Container */
+#map-container {
+	position: relative;
+	width: 100%;
+	padding-bottom: 20%; /* Reduced value for smaller map height */
+	height: 0;
+	overflow: hidden;
+	margin-top: 50px; /* Add some space above the map */
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%; /* Keep full height of the container */
+}
+
+iframe {
+	width: 100%;
+	height: 100%; /* Make iframe fill the map's height */
+	border: 0;
+}
+
+/* Mobile adjustments */
+@media ( max-width : 768px) {
+	#map {
+		height: 40%; /* Adjust height for smaller devices */
+	}
+	#map iframe {
+		height: 100%; /* Match iframe height to map container */
+	}
+}
+
+@media ( max-width : 480px) {
+	#map {
+		height: 30%; /* Further reduce height for small screens */
+	}
+	#map iframe {
+		height: 100%; /* Match iframe height to map container */
+	}
+}
+
+/* Footer */
+footer {
+	background-color: #f6e6cc;
+	padding: 20px 20px; /* Reduced padding */
+	color: #333;
+	font-family: 'Arial', sans-serif;
+	margin-top: 10px;
+	/* Adjust this value to reduce space between map and footer */
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-section {
+	flex: 1;
+	margin: 0 20px;
+	min-width: 250px; /* Ensure minimum width for sections */
+}
+
+.footer-section h3 {
+	color: black;
+	font-size: 1.2rem;
+	margin-bottom: 15px;
+	font-family: 'Roboto Slab', sans-serif;
+}
+
+.footer-section ul {
+	list-style: none;
+	padding: 0;
+}
+
+.footer-section ul li {
+	margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+	color: #333;
+	text-decoration: none;
+	font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+	text-decoration: underline;
+}
+
+.footer-section p {
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+.footer-bottom {
+	padding-top: 6px;
+	border-top: 1px solid #ddd;
+	background-color: rgb(250, 226, 190);
+}
+
+.footer-bottom p {
+	font-size: 1rem;
+	color: #6a6a6a;
+	text-align: center;
+}
+
+/* Responsive Styling */
+@media ( max-width : 768px) {
+	.footer-container {
+		flex-direction: column; /* Stack sections vertically */
+		align-items: center;
+	}
+	.footer-section {
+		margin: 20px 0; /* Add space between sections */
+	}
+	.footer-section p {
+		text-align: center; /* Center align text on smaller screens */
+	}
+}
+
+@media ( max-width : 480px) {
+	footer {
+		padding: 20px 10px; /* Reduce padding for very small screens */
+	}
+	.footer-section {
+		min-width: 100%; /* Ensure full width for very small screens */
+		text-align: center; /* Center align content */
+	}
+	.footer-section h3, .footer-section ul li, .footer-section p {
+		font-size: 0.9rem; /* Adjust font size for readability */
+	}
+	.footer-bottom p {
+		font-size: 0.85rem; /* Adjust bottom text size */
+	}
+}
+
+/* About us Page*/
+section {
+	padding: 0;
+	text-align: center;
+}
+
+/* Styling for the banner (Sarika Agro Foods section) */
+.banner {
+	background-image: url('/images/slides/slide1.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 420px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px; /* Added padding for smaller screens */
+}
+
+.banner-content {
+	text-align: center;
+	padding: 10px;
+}
+
+.banner h1 {
+	font-size: 3rem;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	/* Shadow for readability */
+}
+
+/* Responsive Styling */
+@media ( max-width : 768px) {
+	.banner {
+		height: 320px;         /* Reduced height for tablets */
+	}
+	.banner h1 {
+		font-size: 2.5rem;    /* Adjust font size for tablets */
+	}
+}
+
+@media ( max-width : 480px) {
+	.banner {
+		height: 250px;          /* Further reduce height for mobile */
+	}
+	.banner h1 {
+		font-size: 2rem;       /* Smaller font size for mobile */
+	}
+}
+
+/* Gallery Page */
+.image-card {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;            /* Ensures the image covers the container */
+	object-position: center;     /* Centers the image */
+}
+
+/* Responsive Styling */
+@media ( max-width : 768px) {
+	.image-card {
+		height: 200px; /* Reduce height for tablets */
+	}
+}
+
+@media ( max-width : 576px) {
+	.image-card {
+		height: 150px; /* Further reduce height for mobile */
+	}
+}
+
+/* product page css */
+.products-section {
+	margin: 20px 0;
+}
+
+.row-border {
+	border-top: 2px solid #5ec79c;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	margin-left: 50px; 			/* Adjust this to crop the border from the left */
+	margin-right: 50px;		   /* Adjust this to crop the border from the right */
+}
+
+.product-image {
+	height: 300px;
+	width: 200px;
+	margin-left: 100px;
+	padding-top: 66px;
+}
+
+.lower-content {
+	margin-left: 15px;
+}
+
+.product-title {
+	color: #007045;
+	font-size: 30px;
+	padding-top: 130px;
+}
+
+.text {
+	font-size: 20px;
+	color: #333;
+}
+
+.page {
+	margin-top: 30px;
+}
+
+.value-heading {
+	text-align: center;
+	color: #007045;
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+
+.value-list {
+	text-align: center;
+	list-style-type: none;
+	padding-left: 0;
+	font-size: 18px;
+}
+
+.value-list li {
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+/* Benefits */
+.benefits-list {
+	font-size: 1rem; /* Responsive font size */
+	line-height: 1.8;
+}
+
+.benefit-item {
+	margin-bottom: 20px;
+}
+
+.divider {
+	width: 80%;
+	height: 2px;
+	background-color: #00b33c;
+	margin: 10px auto; /* Center the divider */
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 1.1rem; /* Responsive font size */
+	line-height: 1.8em;
+	font-weight: 400;
+}
+
+.value-heading {
+	font-size: 1.5rem; /* Responsive heading size */
+	margin-bottom: 1rem;
+}
+
+.value-list {
+	margin-left: 20px; /* Space out from left */
+}
+
+.value-list li {
+	font-size: 1rem; /* Responsive font size */
+	line-height: 1.5;
+}
+
+/* Media Queries for further adjustments */
+@media ( max-width : 768px) {
+	.benefits-list {
+		font-size: 16px; /* Adjust font size for mobile */
+	}
+	.benefit-item p {
+		font-size: 16px; 
+	}
+	.value-heading {
+		font-size: 1.25rem; 
+	}
+}
+
+/*Contact Form Section CSS */
+.container {
+	padding: 15px; /* Padding for mobile responsiveness */
+}
+
+.form-label {
+	font-size: 1rem; /* Ensure labels are readable */
+}
+
+input.form-control, textarea.form-control {
+	font-size: 1rem; /* Ensure input fields are readable */
+}
+
+/* Adjust button size for smaller screens */
+.btn-lg {
+	padding: 0.5rem 1.5rem; /* Button padding */
+}
+
+/* Media Queries for further adjustments */
+@media ( max-width : 768px) {
+	.form-label {
+		font-size: 0.9rem; /* Slightly smaller font on smaller screens */
+	}
+	input.form-control, textarea.form-control {
+		font-size: 0.9rem; /* Slightly smaller font on smaller screens */
+	}
+	.btn-lg {
+		font-size: 0.9rem; /* Smaller button font size */
+	}
+}
+
+@media ( max-width : 576px) {
+	.form-label {
+		font-size: 0.8rem; /* Even smaller font on mobile */
+	}
+	input.form-control, textarea.form-control {
+		font-size: 0.8rem; /* Smaller font on mobile */
+	}
+	.btn-lg {
+		padding: 0.4rem 1.2rem; /* Smaller button padding on mobile */
+		font-size: 0.8rem; /* Smaller button font size */
+	}
+}
+
+.card {
+	transition: transform 0.2s;
+	/* Add a smooth transition for hover effect */
+}
+
+.card:hover {
+	transform: scale(1.05); /* Slightly scale the card on hover */
+}
+
+.card-text p {
+	margin-bottom: 0.5rem; /* Space out paragraphs slightly */
+}
+
+/* Media Queries for further adjustments */
+@media ( max-width : 768px) {
+	.card-header {
+		font-size: 1.25rem; 	/* Adjust header font size for mobile */
+	}
+	.card-text {
+		font-size: 0.9rem; 		/* Smaller font size for text */
+	}
+}
+
+/* Testimonial Slider Styles */
+.testimonial-slider {
+	position: relative;
+	width: 100%;
+	max-width: 1600px;          /* Increase the max width of the slider */
+	height: auto; 				/* Allow flexible height for content */
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.testimonial-slides {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.testimonial-slide {
+	min-width: 100%;
+	height: auto;
+	display: none; 
+	position: relative;
+	background-color: rgba(94, 199, 156, 0.94);
+	display: flex;
+	flex-direction: column; 
+	justify-content: center;
+	align-items: center; 
+	padding: 20px; 
+	box-sizing: border-box;
+}
+
+.testimonial-slide img {
+	width: 80%; 
+	max-width: 300px; 
+	height: auto;
+	object-fit: cover;             
+	margin-top: 30px;
+}
+
+.testimonial-active {
+	display: flex;
+}
+
+/* Testimonial Description Styles */
+.testimonial-description {
+	font-size: 1.5rem;
+	max-width: 900px;
+	width: 100%;
+	color: #f0f0f0;
+	text-align: center;
+	margin-top: 10px;
+	padding: 0 20px;
+	margin-left: 300px;  
+}
+
+/* Testimonial Slider Navigation */
+.testimonial-slider-nav {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+}
+
+.testimonial-prev-slide, .next-slide {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.testimonial-prev-slide:hover, .next-slide:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Testimonial Slide Animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.testimonial-slide.active .slide-content {
+	animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+	.testimonial-description {
+		margin-left: 200px; /* Adjust the position on medium screens */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.testimonial-slider {
+		max-width: 100%; /* Make slider width flexible */
+		height: auto;
+	}
+
+	.testimonial-slide {
+		padding: 10px;
+	}
+
+	.testimonial-slide img {
+		width: 70%;  /* Reduce image size */
+	}
+
+	.testimonial-description {
+		font-size: 1rem; 
+		margin-left: 50px; /* Center align the description more */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.testimonial-slide img {
+		width: 90%; 
+	}
+
+	.testimonial-description {
+		font-size: 0.9rem; 
+		margin-left: 20px; /* Further adjust for smaller screens */
+	}
+
+	.testimonial-slider-nav {
+		padding: 0 10px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.testimonial-slide img {
+		width: 100%;  /* Full width on very small screens */
+	}
+
+	.testimonial-description {
+		font-size: 0.8rem;
+		margin-left: 10px; /* Make sure text isn't cut off */
+	}
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Driver Orders</title>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+.container {
+	margin-top: 30px;
+}
+
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #007bff;
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 60px;
+	background-color: #343a40;
+	color: white;
+	padding-top: 20px;
+	width: 200px;
+}
+
+.sidebar a {
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	background-color: #495057;
+}
+
+.content {
+	margin-left: 220px;
+	margin-top: 80px;
+	padding: 20px;
+}
+
+.table th, .table td {
+	vertical-align: middle;
+}
+
+.logout-btn {
+	position: absolute;
+	bottom: 74px;
+	width: 90%;
+	left: 10px;
+}
+</style>
+</head>
+<body>
+	<!-- Topbar -->
+	<div class="topbar">
+		<div class="logo">
+			<h5>Water Management System</h5>
+		</div>
+		<div class="user-info">
+			<span>Welcome, <span th:text="${driver.firstName}"></span></span>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+		<a th:href="@{/driver/{id}/dashboard(id=${driver.id})}"
+			class="btn btn-secondary"> Driver Dashboard </a> <a
+			th:href="@{/driver/{id}/jar-distribution(id=${driver.id})}"
+			class="btn btn-primary mt-3">View Jar Distribution</a>
+
+		<!-- Logout Button -->
+		<form th:action="@{/logout}" method="post" class="logout-btn">
+			<button type="submit" class="btn btn-danger btn-block">Logout</button>
+		</form>
+	</div>
+
+	<!-- Main Content -->
+	<div class="content">
+		<h4 class="text-center">
+			Orders Distributed by <span
+				th:text="${driver.firstName} + ' ' + ${driver.lastName}"></span>
+		</h4>
+<!-- Filter Form -->
+<form th:action="@{/driver/{id}/orders/filter(id=${driver.id})}" method="get" class="form-inline justify-content-center mb-4">
+    <div class="form-group mr-3">
+        <label for="month">Select Month: </label>
+        <select id="month" name="month" class="form-control mx-2">
+        	<option th:value="00" th:selected="${month == '00'}">All</option>
+            <option th:value="01" th:selected="${month == '01'}">January</option>
+            <option th:value="02" th:selected="${month == '02'}">February</option>
+            <option th:value="03" th:selected="${month == '03'}">March</option>
+            <option th:value="04" th:selected="${month == '04'}">April</option>
+            <option th:value="05" th:selected="${month == '05'}">May</option>
+            <option th:value="06" th:selected="${month == '06'}">June</option>
+            <option th:value="07" th:selected="${month == '07'}">July</option>
+            <option th:value="08" th:selected="${month == '08'}">August</option>
+            <option th:value="09" th:selected="${month == '09'}">September</option>
+            <option th:value="10" th:selected="${month == '10'}">October</option>
+            <option th:value="11" th:selected="${month == '11'}">November</option>
+            <option th:value="12" th:selected="${month == '12'}">December</option>
+        </select>
+    </div>
+    
+    <div class="form-group mr-3">
+        <label for="year">Select Year: </label>
+        <select id="year" name="year" class="form-control mx-2">
+        
+           <option th:value="00" th:selected="${year == '00'}">All</option>
+            <option th:value="2023" th:selected="${year == '2023'}">2023</option>
+            <option th:value="2024" th:selected="${year == '2024'}">2024</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+		<!-- Orders Table -->
+		<div class="table-responsive">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>Order ID</th>
+						<th>Customer Name</th>
+						<th>Order Date</th>
+						<th>Jar Quantity</th>
+						<th>Vehicle Number</th> 
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="order : ${orders}">
+						<td th:text="${order.id}"></td>
+						<td th:text="${order.customer.name}"></td>
+						<td
+							th:text="${order.orderDate.format(T(java.time.format.DateTimeFormatter).ofPattern('yyyy-MM-dd'))}"></td>
+
+						<td th:text="${order.jarQuantity}"></td>
+						  <td th:text="${order.vehicleNumber}"></td>
+					</tr>
+					<tr th:if="${#lists.isEmpty(orders)}">
+						<td colspan="4" class="text-center">No orders found for the selected filters.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

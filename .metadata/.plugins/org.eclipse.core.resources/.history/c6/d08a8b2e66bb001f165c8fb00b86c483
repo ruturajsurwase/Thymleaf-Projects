@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Careers Weekend Feels</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/otomanopee-one" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+   
+<!-- Header section-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a class="" href="#"> <img src="img/logo1.webp" class="logo-img" alt=""> </a>
+                <!-- <div class="logo"><h2>by<span>Camp</span></h2></div> -->
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"><i class="fa-light fa-bars"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mx-auto">
+                  
+                                 
+                    <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/newyear">New Year Special 25</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/camp">Camps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/trek">Treks</a></li>
+				  <!--   <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="/career">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+                   
+                   
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+ 
+    <!-- Header Section End  -->
+    <!-- Header Banner -->
+    <div class="banner-header section-padding valign bg-img bg-fixed bg-position-bottom" data-overlay-dark="4" data-background="img/blog/01.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Careers</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Faqs -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <ul class="faqs clearfix">
+                        <li class="item">
+                            <div class="title">Why work with WeekendFeels?</div>
+                            <div class="cont">
+                                <div class="text"><strong style="font-weight: 900;"> 1]</strong> Opportunity to work in a high-paced environment, quite literally. We take decisions in an instant.<br>
+                                    <strong style="font-weight: 900;"> 2] </strong> Apply your skills to a customer base of more than 50k.<br>
+                                    <strong style="font-weight: 900;"> 3] </strong> We believe in allowing the individual to grow his skillset with us.<br>
+                                    <strong style="font-weight: 900;"> 4] </strong> We do love structured work but at the same time, we won't stop you to experiment with different strategies.<br>
+                                    <strong style="font-weight: 900;"> 15] </strong> Your thoughts and ideas will be highly valued.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="title">Social Media Intern</div>
+                            <div class="cont">
+                                <div class="text">We are looking for an enthusiast and creative Social Media Specialist to join our team. As a Social Media Specialist, you will be responsible for developing and implementing our Social Media strategy.</div>
+                                <div class="text" style="font-weight: 900;">Location: Anywhere</div>
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You will
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> Design carefully crafted campaigns for our social channels, primarily Instagram<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Generate leads via Social Media and hand them over to the Sales team<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Research and optimize hashtag usage
+                                    </p>
+                                </div>
+
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You have
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> 1-2 years of experience in SMM (Attach links to your work or have them on your LinkedIn profile/resume)<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Strong hashtag research skills<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Planned and executed campaigns from scratch<br>
+                                        <strong style="font-weight: 900;"> 4] </strong> Have a basic understanding of how social media algorithms work
+                                    </p>
+
+                                </div>
+                                <p style="color: #cd810f; font-style: italic;">Interested candidates can send in their resume and cover letter to<a href="#" style="color: blue;"> info@weekendfeels.com </a> the subject line 'Social Media Intern'</p>
+                            </div>
+
+                        </li>
+                        <li class="item">
+                            <div class="title">Content Writer Intern</div>
+                            <div class="cont">
+                                <div class="text">We are looking for an experienced Content Writer to join our team. Your will find yourself fiddling with taglines on website pages, writing blog posts for feature announcements, putting together thought leadership posts for guest publications.</div>
+                                <div class="text" style="font-weight: 900;">Location: Anywhere</div>
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You will
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> Write SEO optimized content for our events and informational pieces<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Convery information in the shortest words and in the simplest language<br>
+
+                                    </p>
+                                </div>
+
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You have
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> 1-2 years of experience as a SEO content specicialist (Attach links to your work or have them on your LinkedIn profile/resume)<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Strong keyword research skills<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Planned content strategy from scratch<br>
+                                        <strong style="font-weight: 900;"> 4] </strong> Have a basic understanding of how search engines work
+                                    </p>
+
+                                </div>
+                                <p style="color: #cd810f; font-style: italic;">Interested candidates can send in their resume and cover letter to<a href="#" style="color: blue;"> info@weekendfeels.com </a> the subject line 'Content Writer Intern'</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="title">Process Executive</div>
+                            <div class="cont">
+                                <div class="text">The Process Executive will be responsible for working closely with various team members within the organization to streamline the processes and serve as point of contact. The successful candidate will need to accept ownership for effectively solving Customer queries and issues keeping customer satisfaction at the core of every decision and behavior.</div>
+                                <div class="text" style="font-weight: 900;">Location: Work From Home</div>
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You will
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> Candidate must be responsible for solving customer queries regarding Camping over call, WhatsApp and/or mail<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Receive and Promptly Respond to Customer Queries<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Whether chat agents are contacted by mail or WhatsApp chat, they must make a continual effort to respond to customers as quickly as possible<br>
+                                        <strong style="font-weight: 900;"> 4] </strong> Once they receive a message from a customer, they must listen carefully to the customer's question or concern before the following protocol in order to resolve the issue or answer the question<br>
+                                        <strong style="font-weight: 900;"> 5] </strong> Manage large influx of incoming chats<br>
+                                        <strong style="font-weight: 900;"> 6] </strong>Handle customer concerns, provide appropriate solutions and alternatives within the time limits; follow up to ensure resolution<br>
+                                        <strong style="font-weight: 900;"> 7] </strong> Follow communication procedures, guidelines, and policies<br>
+                                    </p>
+                                </div>
+
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You have
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> 1-2 years of experience as a SEO content specicialist (Attach links to your work or have them on your LinkedIn profile/resume)<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Strong keyword research skills<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Planned content strategy from scratch<br>
+                                        <strong style="font-weight: 900;"> 4] </strong> Have a basic understanding of how search engines work
+                                    </p>
+
+                                </div>
+                                <p style="color: #cd810f; font-style: italic;">Interested candidates can send in their resume and cover letter to<a href="#" style="color: blue;"> info@weekendfeels.com </a> the subject line  'Process Executive'</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img src="img//career.jpg" alt="" style="border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Promo Video -->
+           <!-- Footer -->
+  <footer class="footer" style="background: black;">
+        <!-- top -->
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <div class="logo"><img src="img/logo1.webp" alt="" style="background: #fff; width: 166%;">
+                            </div>
+                            <p>We are available Mon-Sat 10AM-11PM</p>
+                            <div class="phone" style="color: #fff;"><a href="tel:+12345678910"> +91-931 581 8031</a></div>
+                            <div class="mail" style="color: #fff;"><a href="mailto:info@byCamp.com">info@byCamp.com</a>
+                            </div>
+                            <div class="social-icons" style="margin-top: 45px;">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1 mb-30">
+                        <div class="item">
+                            <h3>Quick Link</h3>
+                            <p>Home</p>
+                            <p>About Us</p>
+                            <p>Camps</p>
+                            <p>New Year Special</p>
+                            <p>Blog</p>
+                            <p>Contact Us</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <h3>Payment Accept</h3>
+                            <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+                            <div class="newsletter">
+                                <div class=""><img src="img/slider/payments.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12">
+                        <p class="mb-0" style="    font-size: 15px;font-weight: 600;">Website Design and Maintain by <a href="#" style="color: #f2682a;">Swapra Technologies</a>.
+                        </p>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="links">
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Popup - Book An Appointment -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Book A Place</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="booking-inner clearfix">
+                        <form method="post" action="#0" class="form1 clearfix">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="name" type="text" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="email" type="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="phone" type="text" placeholder="Contact Number" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="select1_wrapper">
+                                        <label>Reservation Type</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="0">Reservation Type</option>
+                                                <option value="1">Private Cottage</option>
+                                                <option value="2">Tents With Territory</option>
+                                                <option value="3">Compact Trailers</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="input1_wrapper">
+                                        <label>Check In</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="form-control input datepicker"
+                                                placeholder="Check In" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="input1_wrapper">
+                                        <label>Check Out</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="form-control input datepicker"
+                                                placeholder="Check Out" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-group">
+                                    <textarea name="message" id="message" cols="30" rows="4"
+                                        placeholder="Additional Note"></textarea>
+                                </div>
+
+                                <div class="col-lg-7 col-md-12">
+                                    <p style="line-height: 1.3em;"><small><i class="fa-solid fa-circle-info"></i> We are
+                                            committed to protecting your privacy. We will never collect information
+                                            about you without your explicit consent.</small></p>
+                                </div>
+                                <div class="col-lg-5 col-md-12 text-end">
+                                    <button type="submit"><i class="fa-light fa-calendar-check mr-5"></i> Book Your Stay
+                                        Now</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-3.5.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Water Management System</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 60px;
+            background-color: #343a40;
+            color: white;
+       	padding-top: 0px;
+            width: 200px;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            	padding: 5px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            margin-left: 220px;
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .alert {
+            margin-top: 20px;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+
+        .btn-sm {
+            padding: 5px 10px;
+        }
+        .logout-btn {
+            position: absolute;
+            bottom: 74px;
+            width: 90%;
+            left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="logo">
+            <h5>Water Management System</h5>
+        </div>
+        <div class="user-info">
+            <span>Welcome, Admin</span>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+       <a href="/" class="text-center">Admin Panel</a>
+		 <a href="/adddriver"	class="btn btn-primary btn-block mb-3">Add Driver</a> 
+		 <a href="/showDriverList" class="btn btn-primary btn-block mb-3">Driver List</a>
+		  <a href="/addVehicle" class="btn btn-primary btn-block mb-3">Add Vehicle</a>
+		 <a href="/showVehicleList" class="btn btn-primary btn-block mb-3">Vehicle List</a>
+		 <a href="/addCustomer" class="btn btn-primary btn-block mb-3">Add Customer</a>
+		 <a href="/customerList" class="btn btn-primary btn-block mb-3">Customer List</a>
+  		 <a href="/addOrder" class="btn btn-primary btn-block mb-3">Create Order</a> 
+  		<a href="/orderList" class="btn btn-primary btn-block mb-3">Order List</a>   
+	    <a href="/vehicle/total-jars-page" class="btn btn-primary btn-block mb-3">Jars per Vehicle</a>
+     	<a href="/generate_bill" class="btn btn-primary btn-block mb-3">Generate Bill</a>
+        <a href="/report" class="btn btn-primary btn-block mb-3">Month Report</a>
+       
+        <!-- Logout Button -->
+        <form th:action="@{/logout}" method="post" class="logout-btn">
+            <button type="submit" class="btn btn-danger btn-block">Logout</button>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2 class="text-center">Vehicle List</h2>
+
+        <!-- Display Success Message -->
+        <div th:if="${message != null}" class="alert alert-success" role="alert">
+            <span th:text="${message}"></span>
+        </div>
+
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Vehicle Number</th>
+                    <th>Vehicle Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="vehicle : ${listVehicle}">
+                    <td th:text="${vehicle.id}"></td>
+                    <td th:text="${vehicle.vehicleNumber}"></td>
+                    <td th:text="${vehicle.vehicleType}"></td>
+                    <td>
+                       <!--  <a th:href="@{/showFormForUpdateVehicle/{id}(id=${vehicle.id})}" class="btn btn-warning btn-sm">Update</a> -->
+                        <a th:href="@{/deleteVehicle/{id}(id=${vehicle.id})}" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+                   
+            </tbody>
+         
+        </table>
+            <a th:href="@{/}" class="btn btn-secondary mt-3">Back to Dashboard</a>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

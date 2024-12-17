@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Trek</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Update Trek</h2>
+    <form th:action="@{/trek/update}" th:object="${trek}" method="post">
+        <input type="hidden" th:field="*{id}">
+        
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Enter trek name" required>
+        </div>
+        
+           <div class="form-group">
+            <label for="name">ImageUrl</label>
+            <input type="text" th:field="*{imageUrl}" class="form-control" id="name" placeholder="Enter trek name" required>
+        </div>
+        
+        
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" th:field="*{location}" class="form-control" id="location" placeholder="Enter location" required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration</label>
+            <input type="text" th:field="*{duration}" class="form-control" id="duration" placeholder="Enter duration" required>
+        </div>
+        <div class="form-group">
+            <label for="originalPrice">Original Price</label>
+            <input type="number" th:field="*{originalPrice}" class="form-control" id="originalPrice" placeholder="Enter original price" required>
+        </div>
+        <div class="form-group">
+            <label for="discountedPrice">Discounted Price</label>
+            <input type="number" th:field="*{discountedPrice}" class="form-control" id="discountedPrice" placeholder="Enter discounted price" required>
+        </div>
+        <div class="form-group">
+            <label for="discount">Discount (%)</label>
+            <input type="number" th:field="*{discount}" class="form-control" id="discount" placeholder="Enter discount percentage" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Trek</button>
+    </form>
+</div>
+</body>
+</html>

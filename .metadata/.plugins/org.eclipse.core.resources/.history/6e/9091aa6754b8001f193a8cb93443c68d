@@ -1,0 +1,47 @@
+package com.weekend.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.weekend.entity.AccommodationCamp;
+import com.weekend.service.AccommodationCampService;
+
+@Controller
+public class AccommodationCampController {
+
+	
+	@Autowired
+	private  AccommodationCampService accommodationService;
+	
+	
+	  @GetMapping("/accommodations")
+	    public String listAccommodations(Model model) 
+	  {
+	        List<AccommodationCamp> accommodations = accommodationService.getAllAccommodations();
+	        model.addAttribute("accommodations", accommodations);
+	        return "accommodation-list";
+	    }
+
+
+
+	  @GetMapping("/accommodations/add")
+	    public String showAddForm(Model model) {
+	        model.addAttribute("accommodation", new AccommodationCamp());
+	        return "accommodation-form";
+	    }
+
+	    @PostMapping("/accommodations/save")
+	    public String saveAccommodation(@ModelAttribute("accommodation") AccommodationCamp accommodation) {
+	        accommodationService.saveAccommodation(accommodation);
+	        return "redirect:/accommodations";
+	    }
+
+
+
+}

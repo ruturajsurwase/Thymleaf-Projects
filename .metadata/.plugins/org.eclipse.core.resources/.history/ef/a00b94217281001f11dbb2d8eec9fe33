@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Dairy Products Store</title>
+<!-- Bootstrap 5 CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+</style>
+</head>
+<body class="page-template">
+
+	<div id="page-container">
+		<div id="top-header">
+			<div class="container">
+				<div id="et-info">
+					<span id="et-info-phone"> <i class="fab fa-whatsapp"></i>
+						WhatsApp:9167788789
+					</span> <a href="mailto:ruturajsurwase@gmail.com"> <span
+						id="et-info-email"> <i class="fas fa-envelope"></i>
+							dairyproduct@gmail.com
+					</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- Header Section -->
+	<header>
+		<div class="header-container">
+			<h1>Dairy Products Store</h1>
+			<nav>
+				<ul>
+					<li><a href="/home">HOME</a></li>
+					<li><a href="/about_us">ABOUT US</a></li>
+					<li class="dropdown"><a href="#">OUR PRODUCTS <span
+							class="dropdown-icon">&#9662;</span></a>
+						<ul class="sub-menu">
+							<li><a href="#ghee">Ghee</a></li>
+							<li><a href="#paneer">Paneer</a></li>
+							<li><a href="#butter">Butter</a></li>
+							<li><a href="#soya-paneer">Soya Paneer</a></li>
+							<li><a href="#cheese">Cheese</a></li>
+						</ul></li>
+					<li><a href="/clients_feedback">CLIENT'S FEEDBACK</a></li>
+					<li><a href="/contact_us">CONTACT US</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<div id="main-content">
+		<section class="fullwidth-header">
+			<div class="header-content">
+				<h1>ORDER NOW !</h1>
+			</div>
+		</section>
+	</div>
+
+	
+
+ 
+
+<div>
+    <h2 class="contact_us_main_title text-center">CONTACT US</h2>
+</div>
+
+<!-- Contact Us Section -->
+	<section class="container my-5">
+    <div class="row d-flex align-items-stretch">
+        <!-- Left Side: Contact Form -->
+        <div class="col-md-6 d-flex">
+            <div class="card flex-fill">
+                <div class="card-body">
+                    <p>If you have any questions or would like more information about our products, feel free to get in touch with us. We'd love to hear from you!</p>
+                    <form action="/submit_contact" method="POST">
+                        <div class="mb-3 row">
+                            <label for="name" class="col-sm-4 col-form-label text-sm-end">Your Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required oninput="updateNameDisplay()">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="email" class="col-sm-4 col-form-label text-sm-end">Your Email</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="phone" class="col-sm-4 col-form-label text-sm-end">Phone Number</label>
+                            <div class="col-sm-8">
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="message" class="col-sm-4 col-form-label text-sm-end">Message</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Image Card -->
+        <div class="col-md-6 d-flex">
+            <div class="card flex-fill">
+                <img src="images/contact-us.jpg" alt="Contact Us" class="img-fluid card-img-top" style="height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer Section -->
+	<footer class="footer bg-light py-4">
+		<div class="container">
+			<div class="row">
+				<!-- Contact Info Section -->
+				<div class="col-md-6">
+					<ul class="list-unstyled">
+						<!-- SHOP Address -->
+						<li class="mb-3">
+							<div class="d-flex align-items-center">
+								<i class="fas fa-map-marker-alt text-danger me-2"></i> <strong>SHOP</strong>
+							</div>
+							<div class="content_left">
+								Sai Shiv Park, Savitri Lakadi Ghana Shop No.10,<br> Old
+								Kate Pimple Rd, near Aditya Homoeopathic Hospital,<br>
+								Pimpri-Chinchwad, Maharashtra 410017
+							</div>
+						</li>
+
+						<!-- CALL US Section -->
+						<li class="mb-3">
+							<div class="d-flex align-items-center">
+								<i class="fas fa-phone text-danger me-2"></i> <strong>CALL
+									US</strong>
+							</div>
+							<div class="content_left">+91 9527714622</div>
+						</li>
+
+						<!-- EMAIL Section -->
+						<li class="mb-3">
+							<div class="d-flex align-items-center">
+								<i class="fas fa-envelope text-danger me-2"></i> <strong>EMAIL</strong>
+							</div>
+							<div class="content_left">msoilpureo@gmail.com</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Google Map Section -->
+				<div class="col-md-6">
+					<h5>OUR LOCATION</h5>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094077!2d144.96305761531593!3d-37.81362797975179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1616926211095!5m2!1sen!2sus"
+						width="100%" height="200" style="border: 0;" allowfullscreen=""
+						loading="lazy"> </iframe>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--Mian  Footer -->
+	<footer>
+		<p>&copy; 2024 Dairy Products Store</p>
+	</footer>
+
+
+	<!-- Custom JavaScript -->
+	<script src="js/script.js"></script>
+</body>
+</html>

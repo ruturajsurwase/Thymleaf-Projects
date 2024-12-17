@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agro Foods</title>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Bootstrap CDN -->
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+<body>
+
+	<header>
+		<div class="header-container">
+			<!-- Left Logo -->
+			<div class="left-logo">
+				<img src="images/brandlogo.png" alt="Agro Foods Logo">
+			</div>
+
+			<!-- Navigation Links -->
+			<nav class="nav-container">
+				<ul class="nav-links">
+					<li><a href="/home">Home</a></li>
+					<li><a href="/about_us">About Us</a></li>
+					<li><a href="/gallery">Gallery</a></li>
+					<li><a href="/product">Product</a></li>
+					<li><a href="/medicinal_benefits">Medicinal Benefits</a></li>
+					<li><a href="/contact_us">Contact Us</a></li>
+				</ul>
+			</nav>
+
+			<!-- Right Logo -->
+			<div class="right-logo">
+				<img src="images/companylogo.png" alt="Company Logo">
+			</div>
+		</div>
+	</header>
+
+	<section class="banner">
+		<div class="banner-content">
+			<h1>Sarika Agro Foods</h1>
+		</div>
+	</section>
+
+	<section class="about-company">
+		<div class="container">
+			<!-- Section Title -->
+			<div class="sec-title-one">
+				<h2>Contact Us</h2>
+			</div>
+		</div>
+	</section>
+
+
+<!-- Form Section -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12"> <!-- Added col-md and col-sm classes for responsiveness -->
+            <form action="/submit" method="POST" onsubmit="return showAlert()">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label"><strong>First Name *</strong></label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label"><strong>Last Name *</strong></label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="email" class="form-label"><strong>Email *</strong></label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phoneNumber" class="form-label"><strong>Phone Number *</strong></label>
+                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label"><strong>Message *</strong></label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success btn-lg">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Card Section -->
+<div class="container mt-5">
+    <div class="row text-center">
+        <!-- Address Card -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-dark text-white fw-bold">Address</div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <img src="/images/address_icon.svg" alt="Address Icon" width="32" height="32" class="mb-2">
+                        <p>
+                            <strong>Factory Address</strong>
+                        </p>
+                        <p>Tadsar Road, Near Tehsildar Office, Kadegaon – 415304 (Maharashtra)</p>
+                        <p>
+                            <strong>Corporate Office</strong>
+                        </p>
+                        <p>Shop No - 10, Kailash Height, Plot no. 32, Sector 36, Kamothe, Navi Mumbai - 410 209, (Maharashtra).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call Now Card -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-dark text-white fw-bold">Call Now</div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <img src="/images/call_icon.svg" alt="Call Icon" width="32" height="32" class="mb-2">
+                        <p>
+                            <strong>Call to Us</strong>
+                        </p>
+                        <p>+91 981 928 4163</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emails Us Card -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-dark text-white fw-bold">Emails Us</div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <img src="/images/email_icon.svg" alt="Email Icon" width="32" height="32" class="mb-2">
+                        <p>
+                            <strong>Info Services</strong>
+                        </p>
+                        <p>sarikaagrofoods@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	<!-- Our Location -->
+	<section class="about-company">
+		<div class="container">
+			<!-- Section Title -->
+			<div class="sec-title-one">
+				<h2>Our Location</h2>
+			</div>
+		</div>
+	</section>
+
+<!-- Google Map Section -->
+<div id="map-container">
+    <div id="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094077!2d144.96305761531593!3d-37.81362797975179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1616926211095!5m2!1sen!2sus"
+            width="100%" height="450" style="border: 0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+	
+
+
+	<!-- footer -->
+	<footer>
+		<div class="footer-container">
+			<div class="footer-section">
+				<h3>USEFUL LINKS</h3>
+				<ul>
+					<li><a href="/about_us">About Us</a></li>
+					<li><a href="/gallery">Gallery</a></li>
+					<li><a href="/product">Product</a></li>
+					<li><a href="/medicinal_benefits">Medicinal Benefits</a></li>
+					<li><a href="/contact_us">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h3>PRODUCTS</h3>
+				<ul>
+							<li><a href="/product">Gurudev Jaggery Block</a></li>
+					<li><a href="/product">Gurudev Jaggery Granules</a></li>
+					<li><a href="/product">Gurudev Jaggery Cubes</a></li>
+					<li><a href="/product">Gurudev Jaggery Powder</a></li>
+					<li><a href="/product">Gurudev Jaggery Syrup</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h3>CONTACT US</h3>
+				<p>+91 981 928 4163</p>
+				<p>Email: sarikaagrofoods@gmail.com</p>
+			</div>
+			<div class="footer-section">
+				<h3>ADDRESS</h3>
+				<p>
+					<strong>Manufacturing and Packaging Unit</strong><br> Tadsar
+					Road, Near Tehsildar Office,<br> Kadegaon Dist. Sangli- 415
+					304 (Maharashtra)
+				</p>
+				<p>
+					<strong>Corporate Office</strong><br> Shop No - 10, Kailash
+					Height<br> Plot no. 32, Sector 36, Kamothe, Navi Mumbai- 410
+					209 (Maharashtra).
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- bottom footer -->
+	<div class="footer-bottom">
+		<p>Website Design-Development and Maintenance by SwaPra
+			Technologies</p>
+	</div>
+
+	<!-- jQuery and Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Custom JavaScript -->
+	<script src="js/script.js"></script>
+
+
+<script>
+    function showAlert() {
+        alert("Thank you! Your message has been sent successfully.");
+        return true; // Proceed with form submission
+    }
+</script>
+
+</body>
+</html>

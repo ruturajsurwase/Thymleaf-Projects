@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Water Management System</title>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+.container {
+	margin-top: 30px;
+}
+
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #007bff;
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 60px; /* Adjusted for the topbar */
+	background-color: #343a40;
+	color: white;
+	padding-top: 20px;
+	width: 200px;
+}
+
+.sidebar a {
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	background-color: #495057;
+}
+
+.content {
+	margin-left: 220px;
+	margin-top: 80px; /* Adjusted for the topbar */
+	padding: 20px;
+}
+
+.table th, .table td {
+	vertical-align: middle;
+}
+
+.logout-btn {
+	position: absolute;
+	bottom: 74px;
+	width: 90%;
+	left: 10px;
+}
+</style>
+</head>
+<body>
+	<!-- Topbar -->
+	<div class="topbar">
+		<div class="logo">
+			<h5>Water Management System</h5>
+		</div>
+		<div class="user-info">
+			<span>Welcome, <span th:text="${driver.firstName}"></span></span>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+
+	 <a th:href="@{/driver/{id}/dashboard(id=${driver.id})}" class="btn btn-secondary"> Driver Dashboard </a>
+	<a th:href="@{/driver/{id}/jar-distribution(id=${driver.id})}" class="btn btn-primary mt-3">View Jar Distribution</a>
+
+
+
+		<!-- Logout Button -->
+		<form th:action="@{/logout}" method="post" class="logout-btn">
+			<button type="submit" class="btn btn-danger btn-block">Logout</button>
+		</form>
+	</div>
+
+	<!-- Main Content -->
+	<div class="content">
+		<h4 class="text-center">Driver Dashboard</h4>
+		
+		
+
+		<!-- Teacher Details Card -->
+		<div class="card mt-4">
+			<div class="card-header">
+				Welcome, <span
+					th:text="${driver.firstName} + ' ' + ${driver.lastName}"></span>!
+					
+					
+			</div>
+			<div class="card-body">
+				<p>
+					<strong>Id:</strong> <span th:text="${driver.id}"></span>
+				</p>
+				<p>
+					<strong>First Name:</strong> <span th:text="${driver.firstName}"></span>
+				</p>
+				<p>
+					<strong>Last Name:</strong> <span th:text="${driver.lastName}"></span>
+				</p>
+				<p>
+					<strong>Email:</strong> <span th:text="${driver.email}"></span>
+				</p>
+				<p>
+					<strong>licenseNumber:</strong> <span
+						th:text="${driver.licenseNumber}"></span>
+				</p>
+				<p>
+					<strong>licenseNumber:</strong> <span
+						th:text="${driver.contactNumber}"></span>
+				</p>
+				<p>
+					<strong>Role:</strong> <span th:text="${driver.role}"></span>
+				</p>
+				<p>
+					<strong>Vehicle Number:</strong> <span
+						th:text="${driver.vehicle.vehicleNumber}"></span>
+				</p>
+				<p>
+					<strong>Vehicle Type:</strong> <span
+						th:text="${driver.vehicle.vehicleType}"></span>
+				</p>
+			</div>
+		</div>
+		<div th:if="${message}" class="alert alert-success">
+			<span th:text="${message}"></span>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

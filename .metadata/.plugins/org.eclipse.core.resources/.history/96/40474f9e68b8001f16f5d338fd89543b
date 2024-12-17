@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Camping Activities</title>
+  <style>
+.container {
+	margin-top: 30px;
+}
+
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #aad6ec;
+	color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 60px;
+	background-color: #343a40;
+	color: white;
+	padding-top: 20px;
+	width: 220px;
+}
+
+.sidebar a {
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.sidebar a:hover {
+	background-color: #81b1ce;
+}
+
+.content {
+	margin-left: 220px;
+	margin-top: 80px; 
+	padding: 20px;
+}
+
+.table th, .table td {
+	vertical-align: middle;
+}
+
+.logout-btn {
+	position: absolute;
+	bottom: 74px;
+	width: 90%;
+	left: 10px;
+}
+
+</style>
+</head>
+<body>
+    	<!-- Topbar -->
+	<div class="topbar">
+		<div class="logo">
+			<h5> Billing Management System</h5>
+		</div>
+		<div class="user-info">
+			<span>Welcome, Admin</span>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+<div class="sidebar">
+
+        <a href="/" class="btn btn-primary btn-block mb-3">Admin Panel</a>
+		
+		<a href="/add" 	class="btn btn-primary btn-block mb-3">Add Activity</a>
+		
+		<a href="/listActivities" 	class="btn btn-primary btn-block mb-3">Activity List</a>
+	    
+	  <!--   <a href="/new" 	class="btn btn-primary btn-block mb-3">Create invoice</a>
+	    
+	    <a href="/invoices" 	class="btn btn-primary btn-block mb-3">All Invoices</a>
+	    
+        <a href="/products/stock" class="btn btn-primary btn-block mb-3">Stock Management</a>
+
+        <a href="/billing-report-filters" class="btn btn-primary btn-block mb-3">Billing Report</a>
+
+       <a href="/client-report-filters" class="btn btn-primary btn-block mb-3">Client Report</a> -->
+
+		<!-- Logout Button -->
+    <form th:action="@{/logout}" method="post" class="logout-btn">
+        <button type="submit" class="btn btn-danger btn-block">Logout</button>
+    </form>
+    
+    
+</div>
+        <div class="content">
+            <h2>Camping Activities</h2>
+            <div th:each="activity : ${activities}" class="activity">
+                <img th:src="${activity.imageUrl}" alt="Activity Image" width="200"/>
+                <div class="activity-details">
+                    <h3 th:text="${activity.name}"></h3>
+                    <p>Early Bird Offer: <span th:text="${activity.earlyBirdOffer}"></span></p>
+                    <p>New Year Special: <span th:text="${activity.newYearSpecial}"></span></p>
+                    <p>Original Price: <span th:text="${activity.originalPrice}"></span></p>
+                    <p>Offer Price: <span th:text="${activity.offerPrice}"></span></p>
+                    <p>Lock Price: <span th:text="${activity.lockPrice}"></span></p>
+                    <p>Check-In: <span th:text="${activity.checkInTime}"></span></p>
+                    <p>Check-Out: <span th:text="${activity.checkOutTime}"></span></p>
+                </div>
+                <div class="activity-actions">
+                    <a th:href="@{/edit/{id}(id=${activity.id})}"><button class="btn-update">Update</button></a>
+                    <a th:href="@{/delete/{id}(id=${activity.id})}" onclick="return confirm('Are you sure you want to delete this activity?');">
+                        <button class="btn-delete">Delete</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

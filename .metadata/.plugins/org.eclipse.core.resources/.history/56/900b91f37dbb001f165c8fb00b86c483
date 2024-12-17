@@ -1,0 +1,7 @@
+package com.weekend.service;
+
+
+@Service
+public class ArticleService {
+
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Invoice</title>
+    
+    <link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+    
+    <style>
+    .container {
+	margin-top: 30px;
+}
+
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #aad6ec;
+	color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 60px; /* Adjusted for the topbar */
+	background-color: #343a40;
+	color: white;
+	padding-top: 20px;
+	width: 200px;
+}
+
+.sidebar a {
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	background-color: #81b1ce;
+}
+
+.content {
+	margin-left: 220px;
+	margin-top: 80px;                /* Adjusted for the topbar */
+	padding: 20px;
+}
+
+.table th, .table td {
+	vertical-align: middle;
+}
+
+.logout-btn {
+	position: absolute;
+	bottom: 74px;
+	width: 90%;
+	left: 10px;
+}
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+        nav ul li {
+            display: inline;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<!-- Topbar -->
+	<div class="topbar">
+		<div class="logo">
+			<h5> Billing Management System</h5>
+		</div>
+		<div class="user-info">
+			<span>Welcome, Admin</span>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+<div class="sidebar">
+		<a href="/" class="text-center">Admin Panel</a> 
+		
+		<a href="/products/addproduct" 	class="btn btn-primary btn-block mb-3">Add Product</a>
+		
+		<a href="/products/list" 	class="btn btn-primary btn-block mb-3">Product List</a>
+	    
+	    <a href="/new" 	class="btn btn-primary btn-block mb-3">Create invoice</a>
+	    
+	    <a href="/invoices" 	class="btn btn-primary btn-block mb-3">All Invoices</a>
+	    
+		<!-- Logout Button -->
+    <form th:action="@{/logout}" method="post" class="logout-btn">
+        <button type="submit" class="btn btn-danger btn-block">Logout</button>
+    </form>
+</div>
+	<!-- Main Content -->
+	<div class="content">
+		<h4 class="text-center">ADMIN DASHBOARD</h4>
+		  <h4>Create Invoice</h4>
+	</div>
+	
+
+
+  
+
+    <!-- Search Bar -->
+    <label for="productSearch">Search Products:</label>
+    <input type="text" id="productSearch" oninput="filterProducts()" placeholder="Search products..." />
+    <br><br>
+
+    <!-- Product Selection Form -->
+    <form th:action="@{/create}" method="post" onsubmit="return validateForm()">
+        <label>Client Name:</label>
+        <input type="text" name="clientName" required />
+        <br><br>
+
+        <h3>Products</h3>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <td>
+                        <input type="checkbox" name="productIds" th:value="${product.id}" />
+                    </td>
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.stockQuantity}"></td>
+                    <td>
+                        <input type="number" name="quantities" value="0" min="0" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Submit Button -->
+        <button type="submit">Generate Invoice</button>
+    </form>
+
+    <script>
+        // Validate Form
+        function validateForm() {
+            const quantities = document.querySelectorAll('input[name="quantities"]');
+            const selectedProducts = document.querySelectorAll('input[name="productIds"]:checked');
+
+            if (selectedProducts.length === 0) {
+                alert('Please select at least one product.');
+                return false;
+            }
+
+            let isValid = true;
+            selectedProducts.forEach((product, index) => {
+                const quantity = quantities[index].value;
+                if (quantity <= 0) {
+                    alert('Quantity must be greater than 0 for selected products.');
+                    isValid = false;
+                }
+            });
+
+            return isValid;
+        }
+
+        // Filter Products
+        function filterProducts() {
+            const query = document.getElementById("productSearch").value.toLowerCase();
+            const rows = document.querySelectorAll("#productTable tbody tr");
+
+            rows.forEach(row => {
+                const productName = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
+                row.style.display = productName.includes(query) ? "" : "none";
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+package com.weekend.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.weekend.entity.Article;
+import com.weekend.service.ArticleService;
+
+@Controller
+@RequestMapping("/articles")
+public class ArticleController {
+
+	
+	
+	 private  ArticleService articleService;
+	 
+	 
+	 
+	  @GetMapping
+	    public String getArticles(Model model) {
+	        List<Article> articles = articleService.getAllArticles();
+	        model.addAttribute("articles", articles);
+	        return "articles";  // Name of the Thymeleaf template
+	    }
+
+	    @GetMapping("/new")
+	    public String createArticleForm(Model model) {
+	        model.addAttribute("article", new Article());
+	        return "create-article";  // Name of the form template
+	    }
+
+	    @PostMapping
+	    public String saveArticle(@ModelAttribute Article article,
+	                              @RequestParam("image") MultipartFile imageFile) throws IOException {
+	        if (!imageFile.isEmpty()) {
+	            String imagePath = "images/" + imageFile.getOriginalFilename();
+	            Path path = Paths.get("src/main/resources/static/" + imagePath);
+	            Files.write(path, imageFile.getBytes());
+	            article.setImagePath(imagePath);
+	        }
+	        articleService.saveArticle(article);
+	        return "redirect:/articles";
+	    }
+}

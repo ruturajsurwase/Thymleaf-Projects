@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Short Weekend Getaways in India</title>
+    <link rel="shortcut icon" href="img/" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/otomanopee-one" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    
+
+    <?php
+    include_once "header.php"
+    ?>
+
+
+    
+    <!-- Slider -->
+    <header class="header slider-fade">
+        <div class="owl-carousel owl-theme">
+            <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
+            <div class="item bg-img" data-overlay-dark="3" data-background="img/slider/11.jpg">
+                <div class="v-middle caption">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-8 col-md-12 text-left">
+                                <h1>Make Camping <span>More Fun!</span></h1>
+                                <p>Join us for a Fun-Filled Summer Adventure!</p>
+                                <a href="#" class="button-1 mb-30 mt-20">Discover <span
+                                        class="ti-arrow-top-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item bg-img" data-overlay-dark="3" data-background="img/slider/07.jpg">
+                <div class="v-middle caption">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-7 col-md-12 text-left">
+                                <h1>Kid Summer <span>Camp*</span></h1>
+                                <p>Join us for a Fun-Filled Summer Adventure!</p>
+                                <a href="#" class="button-1 mb-30 mt-20">Discover <span
+                                        class="ti-arrow-top-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item bg-img" data-overlay-dark="3" data-background="img/slider/14.jpg">
+                <div class="v-middle caption">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-7 col-md-12 text-left">
+                                <h1>New Year<br> <span>2025</span></h1>
+                                <p>Early Brid Offers are Live</p>
+                                <a href="#" class="button-1 mb-30 mt-20">Discover <span
+                                        class="ti-arrow-top-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WhatsApp -->
+        <div class="whatsapp">
+            <a href="#" target="_blank">
+                <div class="icon d-flex justify-content-center align-items-center"> <i
+                        class="fa-brands fa-whatsapp"></i> </div>
+                <div class="call"><span>+1 234 567 8910</span>
+                    <br>WhatsApp Line
+                </div>
+            </a>
+        </div>
+    </header>
+    <!-- About -->
+    <section class="about section-padding" style="padding: 72px 0px;">
+        <div class="container">
+            <div class="row">
+                <!-- Content Section -->
+                <div class="col-lg-6 col-md-12 mb-30" style="margin: 22px 0px 1px 0px;">
+                    <div class="section-title">
+                        <i class="flaticon-023-hiking-1"></i> About Us
+                    </div>
+                    <h3
+                        style="font-size: 26px; letter-spacing: 0.3px; font-family: auto; text-transform: capitalize; line-height: 32px; margin: -6px 0px 11px 0px;">
+                        To Provide an affordable and consistent experience short weekend Getaway.
+                    </h3>
+                    <p class="mb-50" style="margin-bottom: 35px;">
+                        Weekends are the shortest period in the entire week. It is how we perceive time, in other words,
+                        psychological time. We do not so much perceive time itself, but changes in or the passage of
+                        time, or what might be described as "events in time".
+                    </p>
+                    <div class="row">
+                        <div class="col col-md-4">
+                            <div class="icon">
+                                <span class="flaticon-007-tent-1"></span>
+                                <h5>Tents Rent</h5>
+                            </div>
+                        </div>
+                        <div class="col col-md-4">
+                            <div class="icon">
+                                <span class="flaticon-023-hiking-1"></span>
+                                <h5>Activities</h5>
+                            </div>
+                        </div>
+                        <div class="col col-md-4">
+                            <div class="icon">
+                                <span class="flaticon-005-firewood"></span>
+                                <h5>Firewoods</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Merged Image Section -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="item">
+                                <img src="img/id2.jpeg" class="img-fluid" alt="Image 1"
+                                    style="width: 92%;margin: 19px 0px 0px 19px;height: auto;object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="item">
+                                <img src="img/id.jpeg" class="img-fluid" alt="Image 2"
+                                    style="width: 100%; height: auto; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="accommodation section-padding"
+        style="padding: 72px 0px;background-image: linear-gradient(#00000091, #010101c4), url(img/nm.webp);background-attachment: fixed;background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-30">
+                    <div class="section-subtitle" style="color: white;">
+                        <div class="iconix"><i class="flaticon-023-hiking-1"></i></div> Our Services
+                    </div>
+                    <div class="section-title" style="color: white;">Where to Next?</div>
+                </div>
+            </div>
+            <div class="accommodation-carousel owl-theme owl-carousel">
+                <div class="item">
+                    <div class="img"> <img src="img/slider/Pawna-Camping-6.jpeg" alt=""> </div>
+                    <div class="con opacity-1">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="title"><a href="#">Pawna Lake Camping</a></div>
+                                <span>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                </span>
+                                <div class="details"> <i class="flaticon-007-tent-1"></i> <i
+                                        class="flaticon-005-firewood"></i> <i class="flaticon-030-camping-gas"></i> <i
+                                        class="flaticon-031-pot"></i> <i class="flaticon-010-bedding"></i> </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="book">
+                                    <div><a href="#" class="btn"><span>Know More</span></a>
+                                    </div>
+                                    <div><span class="price">₹999</span><span>Onwards</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img"> <img src="img/slider/alibaug.jpg" alt=""> </div>
+                    <div class="con opacity-1">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="title"><a href="#">Alibaug Beach Camping</a></div>
+                                <span>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+
+                                </span>
+                                <div class="details"> <i class="flaticon-007-tent-1"></i> <i
+                                        class="flaticon-005-firewood"></i> <i class="flaticon-030-camping-gas"></i> <i
+                                        class="flaticon-031-pot"></i> <i class="flaticon-010-bedding"></i> </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="book">
+                                    <div><a href="#" class="btn"><span>Know More</span></a>
+                                    </div>
+                                    <div><span class="price">₹1199</span><span>Onwards</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img"> <img src="img/slider/panshet.jpg" alt=""> </div>
+                    <div class="con opacity-1">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="title"><a href="#">Panshet Dam Camping</a></div>
+                                <span>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                </span>
+                                <div class="details"> <i class="flaticon-007-tent-1"></i> <i
+                                        class="flaticon-005-firewood"></i> <i class="flaticon-030-camping-gas"></i> <i
+                                        class="flaticon-031-pot"></i> <i class="flaticon-010-bedding"></i> </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="book">
+                                    <div><a href="#" class="btn"><span>Know More</span></a>
+                                    </div>
+                                    <div><span class="price">₹ 999</span><span>Onwards</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img"> <img src="img/slider/paw.jpg" alt=""> </div>
+                    <div class="con opacity-1">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="title"><a href="#">Pawna Riverside Camping</a>
+                                </div>
+                                <span>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                </span>
+                                <div class="details"> <i class="flaticon-007-tent-1"></i> <i
+                                        class="flaticon-005-firewood"></i> <i class="flaticon-030-camping-gas"></i> <i
+                                        class="flaticon-031-pot"></i> <i class="flaticon-010-bedding"></i> </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="book">
+                                    <div><a href="#" class="btn"><span>Know More</span></a>
+                                    </div>
+                                    <div><span class="price">₹1199</span><span>Onwards</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img"> <img src="img/slider/bhandar.webp" alt=""> </div>
+                    <div class="con opacity-1">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="title"><a href="#">Bhandardara Camping</a></div>
+                                <span>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+
+                                </span>
+                                <div class="details"> <i class="flaticon-007-tent-1"></i> <i
+                                        class="flaticon-005-firewood"></i> <i class="flaticon-030-camping-gas"></i> <i
+                                        class="flaticon-031-pot"></i> <i class="flaticon-010-bedding"></i> </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="book">
+                                    <div><a href="#" class="btn"><span>Know More</span></a>
+                                    </div>
+                                    <div><span class="price">₹1099</span><span>Onwards</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img"> <img src="img/slider/advan.jpeg" alt=""> </div>
+                    <div class="con opacity-1">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="title"><a href="#">Igatpuri Water Sports and
+                                        Camping</a></div>
+                                <span>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                </span>
+                                <div class="details"> <i class="flaticon-007-tent-1"></i> <i
+                                        class="flaticon-005-firewood"></i> <i class="flaticon-030-camping-gas"></i> <i
+                                        class="flaticon-031-pot"></i> <i class="flaticon-010-bedding"></i> </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="book">
+                                    <div><a href="#" class="btn"><span>Know More</span></a>
+                                    </div>
+                                    <div><span class="price">₹1399</span><span>Onwards</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Promo Video -->
+    <section class="video-wrapper video section-padding bg-img bg-fixed" data-overlay-dark="3"
+        data-background="img/slider/11.jpg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <div class="section-title"><span>byCamp Promo<br>Video</span></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <a class="vid" href="https://youtu.be/mtc2IHdyz4s">
+                        <div class="vid-button"> <span class="icon"><i class="fa-solid fa-play"></i></span> </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="blog section-padding bg-gray" style="padding-top: 72px; padding-bottom: 16px;">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="section-title">
+                                <i class="flaticon-023-hiking-1"></i> Our Blogs
+                            </div>
+                            <div class="section-subtitle" style="    font-family: auto;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin: -16px 0px 28px 0px;">
+                            Ideas for your next weekend
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-12">
+
+                            <div class="item mb-60">
+                                <div class="img"> <img src="img/blog/01.jpg" alt=""> </div>
+                                <div class="box">
+                                    <div class="cont"> <span class="date"><i
+                                                class="fa-regular fa-calendar-days mr-5"></i>by Kavita • Jul 29, 2022 at
+                                            10:45 am •</span>
+                                        <h5><a href="#">Panshet Dam - How to Reach, Time & Prices</a></h5>
+                                        <p>Situated on the outskirts of Pune city, about 50 km to its South, Panshet is
+                                            home to lush greenery, gushing waterfalls, and mountains. It is known for
+                                            its unparalleled natural beauty and an absolutely enthralling ambiance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="item mb-60">
+                                <div class="img"> <img src="img/blog/02.jpg" alt=""> </div>
+                                <div class="box">
+                                    <div class="cont"> <span class="date"><i
+                                                class="fa-regular fa-calendar-days mr-5"></i>by Sara • Jan 10, 2022 at
+                                            4:30 pm •</span>
+                                        <h5><a href="#">11 Best Camping Options Near Mumbai and Pune</a></h5>
+                                        <p>From the picturesque mountains to the natural Konkan coastal strip,
+                                            Maharashtra is a breathtaking sight. It is a paradise for explorers; the
+                                            state is renowned for its diverse culture and cuisine.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Pagination -->
+                    <!-- <div class="row">
+                        <div class="col-md-12 mb-30">
+                            <ul class="pagination-wrap">
+                                <li><a href="blog.html"><i class="fa-light fa-angle-left"></i></a></li>
+                                <li><a href="blog.html">1</a></li>
+                                <li><a href="blog.html" class="active">2</a></li>
+                                <li><a href="blog.html">3</a></li>
+                                <li><a href="blog.html"><i class="fa-light fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="testimonials bg-img bg-fixed section-padding" data-background="img/slider/17.jpg"
+        data-overlay-dark="3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-md-12 text-center"> <!-- Change from col-lg-6 to col-lg-12 -->
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <h5>Testimonials</h5>
+                            <span>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                            </span>
+                            <p>“We went to Alibaug beach camping with WeekendFeels and guess what, everything was above
+                                expectations. We loved the place from where it started- the welcome drink, the starters,
+                                the activities, the music, the dinner, the friendly staff, and the live music. We blend
+                                in the night and we forgot that our life has a lot of tensions in our daily routine. At
+                                last, the open-air cinema and campfire ♥. We enjoyed every single second of that night.
+                                We can't express the feelings in words so if you want to know, you have to visit there.”
+                            </p>
+                            <div class="who">
+                                <div class="img"> <img src="img/team/3.jpg" alt=""> </div>
+                                <h6>@Meenal, Traveler</h6>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Testimonials</h5>
+                            <span>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                            </span>
+                            <p>“We really had a great time. The entire team were very friendly and helpful. Camping site
+                                is amazingly beautiful and serene. Luckily we also got to view saturn and jupiter from
+                                there and the open sky and stary night was mesmerizing. But you need to improve the
+                                approach road. Tents were clean and spacious. We were the only family so the staff took
+                                utmost care of our safety. We had real fun boating and kayaking and swimming in lake was
+                                a different experience for my children. Overall this one day picnic was a good change
+                                from the usual city stress. Thank you so much for arranging this trip specially for us
+                                on Sunday.”</p>
+                            <div class="who">
+                                <div class="img"> <img src="img/team/4.jpg" alt=""> </div>
+                                <h6>@Manish, Adventurer</h6>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Testimonials</h5>
+                            <span>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                                <i class="star-rating"></i>
+                            </span>
+                            <p>“What an amazing experience.. Nature has so much to give us... an extremely beautiful
+                                location weekend feel had suggested us n we enjoyed so so much!! From start till the
+                                end, be the food, the activities, night safari everything has its own charm... all the
+                                staffs there was so helpful in everything we asked, we wanted. Thank u once again for
+                                this wonderful suggestion. Igatpuri campsite was so amazing that one should definitely
+                                visit once.. What an experience”</p>
+                            <div class="who">
+                                <div class="img"> <img src="img/team/2.jpg" alt=""> </div>
+                                <h6>@Rosy, Nature Lover</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+
+    <section class="accommodation-box section-padding bg-gray" style="padding: 72px 0px;">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12 text-center">
+    <div class="section-title">
+        <i class="flaticon-023-hiking-1"></i> Our Experience
+    </div>
+    <div class="section-subtitle" style="font-family: auto;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin: -16px 0px 28px 0px;">
+        Your Trusted Partner for Memorable Moments
+    </div>
+</div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="item" style="background: white;border-left: solid 2px orange;">
+                        <span class="icon flaticon-021-cottage-1"></span>
+                        <div class="cont">
+                            <h1><a href="#" style="font-family: auto;font-size: 26px;">3443</a></h5>
+                                <h3 style="font-family: auto;font-size: 26px;">Camps Organized</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="item" style="    background: white;border-left: solid 2px orange;"> <span class="icon flaticon-007-tent-1"></span>
+                        <div class="cont">
+                            <h1><a href="#" style="font-family: auto;font-size: 26px;">63018</a></h1>
+                            <h3 style="font-family: auto;font-size: 26px;">Satisfied Customers</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="item" style="    background: white;border-left: solid 2px orange;"> <span class="icon flaticon-048-van"></span>
+                        <div class="cont">
+                            <h1><a href="#" style="font-family: auto;font-size: 26px;">10</a></h5>
+                                <h3 style="font-family: auto;font-size: 26px;">Locations</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    
+
+    <?php
+    include_once "footer.php"
+    ?>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-3.5.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,34 @@
+package com.weekend.repository;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.weekend.entity.AccommodationCamp;
+import com.weekend.entity.Trek;
+
+@Service
+public class TrekService {
+
+	@Autowired
+	private TrekRepository trekRepository;
+	
+	
+	public void saveTrek(Trek trek) 
+	{
+		trekRepository.save(trek);
+		
+	}
+
+
+	public List<Trek> getAllTrek() 
+	{
+		return  trekRepository.findAll();
+		
+	}
+
+	
+	
+	
+}

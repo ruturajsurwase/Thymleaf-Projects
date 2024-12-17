@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Camping Activities</title>
+</head>
+<body>
+    <h1>Camping Activities</h1>
+    <a href="/add">Add New Activity</a>
+    <div>
+        <div th:each="activity : ${activities}">
+            <img th:src="${activity.imageUrl}" alt="Activity Image" width="200"/><br/>
+            <h2 th:text="${activity.name}"></h2>
+            <p>Early Bird Offer: <span th:text="${activity.earlyBirdOffer}"></span></p>
+            <p>New Year Special: <span th:text="${activity.newYearSpecial}"></span></p>
+            <p>
+                <span>Original Price: </span>
+                <span th:text="${activity.originalPrice}"></span>
+            </p>
+            <p>
+                <span>Offer Price: </span>
+                <span th:text="${activity.offerPrice}"></span>
+            </p>
+            <p>
+                <span>Lock Price: </span>
+                <span th:text="${activity.lockPrice}"></span>
+            </p>
+            <p>Check-In: <span th:text="${activity.checkInTime}"></span></p>
+            <p>Check-Out: <span th:text="${activity.checkOutTime}"></span></p>
+        </div>
+    </div>
+</body>
+</html>

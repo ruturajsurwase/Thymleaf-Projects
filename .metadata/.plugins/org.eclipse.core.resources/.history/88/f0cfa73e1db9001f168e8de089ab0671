@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Contact Weekend Feels</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/otomanopee-one" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<style>
+    @media (min-width:260px) and (max-width:780px) {
+        #fom{
+            background: #ffffff00 !important;
+            padding: 0px !important;
+
+        }
+    }
+</style>
+
+<body class="bg-gray">
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+<!-- Header section-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a class="" href="#"> <img src="img/logo1.webp" class="logo-img" alt=""> </a>
+                <!-- <div class="logo"><h2>by<span>Camp</span></h2></div> -->
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"><i class="fa-light fa-bars"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mx-auto">
+                  
+                                 
+                    <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/newyear">New Year Special 25</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/camp">Camps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/trek">Treks</a></li>
+				    <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/career">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+                   
+                   
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+ 
+    <!-- Header Section End  -->
+    
+    <!-- Header Banner -->
+    <div class="banner-header middle-height section-padding valign bg-img bg-fixed bg-position-center" data-overlay-dark="3" data-background="img/slider/08.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Contact Us</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Box -->
+    <div class="contact-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 animate-box" data-animate-effect="fadeInUp">
+                    <div class="item"> <span class="icon fa-solid fa-envelope"></span>
+                        <h5>e-Mail</h5>
+                        <p>info@byCamp.com</p> <i class="numb fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-box" data-animate-effect="fadeInUp">
+                    <div class="item"> <span class="icon fa-solid fa-location-dot"></span>
+                        <h5>Our Address</h5>
+                        <p>Mumbai pune</p> <i class="numb fa-solid fa-location-dot"></i>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-box" data-animate-effect="fadeInUp">
+                    <div class="item active"> <span class="icon fa-solid fa-phone"></span>
+                        <h5>Call Us</h5>
+                        <p> +91-93158 18031</p> <i class="numb fa-solid fa-phone"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact -->
+    <section class="contact section-padding" style="padding-top: 27px; padding-bottom:50px;">
+        <div class="container">
+        <h3 style="    text-align: center;
+    font-size: 46px;
+    margin-bottom: 42px;">Get in touch</h3>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-30">
+                    <img src="img/contact.jpg" alt="" style="border-radius: 20px;">
+                </div>
+                <div class="col-lg-5 offset-lg-1 col-md-12">
+                    
+                    <form method="post" id="fom" action="#" style="    background: #ffffff; padding: 35px; border-radius: 15px">
+                        <!-- form elements -->
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <input name="name" type="text" placeholder="Name *" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input name="email" type="email" placeholder="e-Mail *" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input name="phone" type="text" placeholder="Phone *" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input name="subject" type="text" placeholder="Subject" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <textarea name="message" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit"><i class="fa-regular fa-paper-plane"></i> <span>Submit</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <!-- footer -->
+     <footer class="footer" style="background: black;">
+        <!-- top -->
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <div class="logo"><img src="img/logo1.webp" alt="" style="background: #fff; width: 166%;">
+                            </div>
+                            <p>We are available Mon-Sat 10AM-11PM</p>
+                            <div class="phone" style="color: #fff;"><a href="tel:+12345678910"> +91-931 581 8031</a></div>
+                            <div class="mail" style="color: #fff;"><a href="mailto:info@byCamp.com">info@byCamp.com</a>
+                            </div>
+                            <div class="social-icons" style="margin-top: 45px;">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1 mb-30">
+                        <div class="item">
+                            <h3>Quick Link</h3>
+                            <p>Home</p>
+                            <p>About Us</p>
+                            <p>Camps</p>
+                            <p>New Year Special</p>
+                            <p>Blog</p>
+                            <p>Contact Us</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <h3>Payment Accept</h3>
+                            <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+                            <div class="newsletter">
+                                <div class=""><img src="img/slider/payments.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12">
+                        <p class="mb-0" style="    font-size: 15px;font-weight: 600;">Website Design and Maintain by <a href="#" style="color: #f2682a;">Swapra Technologies</a>.
+                        </p>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="links">
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Popup - Book An Appointment -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Book A Place</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="booking-inner clearfix">
+                        <form method="post" action="#0" class="form1 clearfix">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="name" type="text" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="email" type="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="phone" type="text" placeholder="Contact Number" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="select1_wrapper">
+                                        <label>Reservation Type</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="0">Reservation Type</option>
+                                                <option value="1">Private Cottage</option>
+                                                <option value="2">Tents With Territory</option>
+                                                <option value="3">Compact Trailers</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="input1_wrapper">
+                                        <label>Check In</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="form-control input datepicker"
+                                                placeholder="Check In" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="input1_wrapper">
+                                        <label>Check Out</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="form-control input datepicker"
+                                                placeholder="Check Out" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-group">
+                                    <textarea name="message" id="message" cols="30" rows="4"
+                                        placeholder="Additional Note"></textarea>
+                                </div>
+
+                                <div class="col-lg-7 col-md-12">
+                                    <p style="line-height: 1.3em;"><small><i class="fa-solid fa-circle-info"></i> We are
+                                            committed to protecting your privacy. We will never collect information
+                                            about you without your explicit consent.</small></p>
+                                </div>
+                                <div class="col-lg-5 col-md-12 text-end">
+                                    <button type="submit"><i class="fa-light fa-calendar-check mr-5"></i> Book Your Stay
+                                        Now</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+   
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-3.5.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

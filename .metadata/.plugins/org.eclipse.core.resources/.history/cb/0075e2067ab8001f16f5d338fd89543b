@@ -1,0 +1,46 @@
+package com.weekend.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.weekend.entity.AccommodationCamp;
+import com.weekend.entity.Trek;
+import com.weekend.service.TrekService;
+
+
+@Controller
+public class TrekController {
+
+	@Autowired
+	private TrekService trekService;
+
+	@GetMapping("/trek/add")
+	public String showAddForm(Model model)
+	{
+		model.addAttribute("trek", new Trek());
+		return "trek-form";
+	}
+
+	@PostMapping("/trekcamp/save")
+	public String saveTrek(@ModelAttribute("trek") Trek trek) 
+	{
+		trekService.saveTrek(trek);
+		return "redirect:/trek-list";
+	}
+
+	
+	  @GetMapping("/treks")
+	    public String listAccommodations(Model model) 
+	  {
+	        List<Trek> allTrek = trekService.getAllTrek();
+	        model.addAttribute("allTrek", allTrek);
+	        return "trek-list";
+	    }
+	
+}

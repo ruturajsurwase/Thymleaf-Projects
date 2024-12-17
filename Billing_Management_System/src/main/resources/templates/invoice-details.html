@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Invoice Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Topbar Styling */
+        .topbar {
+            width: 100%;
+            height: 60px;
+            background-color: #aad6ec;
+            color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 60px; /* Adjusted for the topbar */
+            background-color: #343a40;
+            color: white;
+            padding-top: 20px;
+            width: 220px;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .sidebar a:hover {
+            background-color: #81b1ce;
+        }
+
+        .logout-btn {
+            position: absolute;
+            bottom: 20px;
+            width: 90%;
+            left: 10px;
+        }
+
+        /* Main Content Styling */
+        .content {
+            margin-left: 240px; /* Adjusted for the sidebar width */
+            margin-top: 80px;   /* Adjusted for the topbar */
+            padding: 20px;
+        }
+
+        /* Table Styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+         .print-btn {
+        display: block;
+        margin: 20px auto; /* Centers horizontally */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .print-btn:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="logo">
+        <h5>Billing Management System</h5>
+    </div>
+    <div class="user-info">
+        <span>Welcome, Admin</span>
+    </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+ <a href="/" class="btn btn-primary btn-block mb-3">Admin Panel</a> 
+			<a href="/products/addproduct" class="btn btn-primary btn-block mb-3">Add Product</a> 
+			<a href="/products/list" class="btn btn-primary btn-block mb-3">Product List</a> 
+			<a href="/new" class="btn btn-primary btn-block mb-3">Create Invoice</a>
+			<a href="/invoices" class="btn btn-primary btn-block mb-3">All Invoices</a> 
+			<a href="/products/stock" class="btn btn-primary btn-block mb-3">Stock Management</a> 
+			<a href="/billing-report-filters" class="btn btn-primary btn-block mb-3">Billing Report</a>
+			<a href="/client-report-filters" class="btn btn-primary btn-block mb-3">Client Report</a>
+			
+       
+       
+    <!-- Logout Button -->
+    <form th:action="@{/logout}" method="post" class="logout-btn">
+        <button type="submit" class="btn btn-danger btn-block">Logout</button>
+    </form>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+    <h1>Invoice Details</h1>
+    <p><strong>Invoice Number:</strong> <span th:text="${invoice.invoiceNumber}"></span></p>
+    <p><strong>Client Name:</strong> <span th:text="${invoice.clientName}"></span></p>
+    <p><strong>Date:</strong> <span th:text="${invoice.date}"></span></p>
+    <p><strong>Total Amount:</strong> <span th:text="${invoice.totalAmount}"></span></p>
+
+    <h3>Purchased Products</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="item : ${invoice.purchasedProducts}">
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.quantity}"></td>
+                <td th:text="${item.price}"></td>
+               <td th:text="${#numbers.formatDecimal(item.totalPrice, 0, 2)}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+<button class="print-btn" onclick="window.print()">Print Invoice</button>
+</div>
+
+</body>
+</html>

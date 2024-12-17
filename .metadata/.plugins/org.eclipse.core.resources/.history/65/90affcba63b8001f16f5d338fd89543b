@@ -1,0 +1,5 @@
+package com.weekend.repository;
+
+public class TrekService {
+
+}

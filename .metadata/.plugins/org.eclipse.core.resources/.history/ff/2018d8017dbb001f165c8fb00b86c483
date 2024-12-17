@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Weekend Feels Blogs</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/otomanopee-one" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<style>
+  
+    .activities1 .item {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* Make all items equal height */
+    }
+
+    .activities1 .item img {
+        width: 100%;
+        height: 200px; /* Set a fixed height for images */
+        object-fit: cover; /* Ensures the image scales without distortion */
+    }
+
+    .activities1 .cont {
+        padding: 15px;
+        flex-grow: 1; /* Ensures the text container takes up the remaining space */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Space between the content and button */
+    }
+
+    .activities1 .text h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .activities1 .text p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 15px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Limit the number of lines to 3 */
+        -webkit-box-orient: vertical;
+    }
+
+    .activities1 .button-1 {
+        text-align: center;
+        background-color: #14bdbf;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+
+    .activities1 .button-1:hover {
+        background-color: #10a2a5;
+    }
+
+    .mb-45 {
+        margin-bottom: 45px;
+    }
+</style>
+    </style>
+
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    
+  <!-- Header section-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a class="" href="#"> <img src="img/logo1.webp" class="logo-img" alt=""> </a>
+                <!-- <div class="logo"><h2>by<span>Camp</span></h2></div> -->
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"><i class="fa-light fa-bars"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mx-auto">
+                  
+                                 
+                    <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/newyear">New Year Special 25</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/camp">Camps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/trek">Treks</a></li>
+				    <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/career">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+                   
+                   
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+ 
+    <!-- Header Section End  -->
+  
+    <!-- Header Banner -->
+    <div class="banner-header section-padding valign bg-img bg-fixed bg-position-center" data-overlay-dark="3" data-background="img/activities/2.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Our Blogs</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Activities 1 -->
+    <section class="activities1 section-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b1.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>Mumbai To Alibaug Ferry – Time, Prices & Tickets</h5>
+                                <p>Alibaug is a seashore jungle gym for India’s rich, popular and invigorating Mumbai escape. It’s possible to enjoy Alibaug in a day or two. You</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b2.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>Nandi Hills – Timing, Location & How To Reach</h5>
+                                <p>A gem of beauty, filled with flavors of history, is nothing but Nandi Hills. Also known as Nandidurga, this heaven on earth is home to</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                            
+               
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b3.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>8 Best Resorts in Alwar</h5>
+                                <p>Alwar, the city of handicrafts, arts, and jewellery is also known for its historical significance and architecture. Majorly popular for its magnificent marble pavilions based</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b4.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>7 Best Resorts in Jodhpur</h5>
+                                <p>Jodhpur is nothing but a blue paradise! Famously known as the blue city, it is the second-largest city in Rajasthan.  Jodhpur’s architecture, residences, unique attractions,</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b5.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>10 Best Resorts in Udaipur</h5>
+                                <p>Famously known as the city of lakes and palaces, Udaipur is one of the most royal places not only in Rajasthan but throughout India. Because</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b6.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>8 Best Resorts in Ajmer</h5>
+                                <p>Famously known for its multi-religious historical monuments, Ajmer is one of the most visited tourist places in India. While you go on to tour its</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                            <!-- <div class="icon">
+                                <a href="activities-details.html" class="arrow">
+                                    <div class="icon-w"> <i class="flaticon-054-hiking-2 icon-show"></i> <i class="ti-arrow-top-right icon-hidden"></i> </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b7.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>Best Resorts in Pushkar</h5>
+                                <p>Pushkar, the rose garden of Rajasthan is known for more than one thing. For its heritage, mythological history, roses, and also camel safaris. The architecture</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div><div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b8.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>9 Best Resorts in Jaisalmer</h5>
+                                <p>Jaisalmer, the Golden City of India is best known for its sandstone architecture and of course its magnificent landscapes of deserts. Famous for its camel</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div><div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b9.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>11 Best Resorts in Pune</h5>
+                                <p>Very well known for its cultural heritage, food, and beautiful trip destinations, Pune City represents completeness and warmth. If you are a Punekar or someone</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                            <!-- <div class="icon">
+                                <a href="activities-details.html" class="arrow">
+                                    <div class="icon-w"> <i class="flaticon-054-hiking-2 icon-show"></i> <i class="ti-arrow-top-right icon-hidden"></i> </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div><div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b10.png" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>8 Best Resorts in Jaipur</h5>
+                                <p>Jaipur! The city of astonishing architecture, brilliant arts, crafts, jewelry, and fabrics, and fascinating monuments like the Hawa Mahal and Amber Palace! The pink city</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                            <!-- <div class="icon">
+                                <a href="activities-details.html" class="arrow">
+                                    <div class="icon-w"> <i class="flaticon-054-hiking-2 icon-show"></i> <i class="ti-arrow-top-right icon-hidden"></i> </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div><div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b11.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>Top 5 Nashik Wineries and Vineyards</h5>
+                                <p>Nashik, the city of grapes, is famously known as the ‘Wine capital of India.’  Nashik is, in fact, that city of India that primarily introduced</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                            <!-- <div class="icon">
+                                <a href="activities-details.html" class="arrow">
+                                    <div class="icon-w"> <i class="flaticon-054-hiking-2 icon-show"></i> <i class="ti-arrow-top-right icon-hidden"></i> </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div><div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b12.png" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>Panshet Dam – How to Reach, Time & Prices</h5>
+                                <p>Are you a mountain person? Are you looking for a short break from your daily grind at a green spot? If you do, this word</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                            <!-- <div class="icon">
+                                <a href="activities-details.html" class="arrow">
+                                    <div class="icon-w"> <i class="flaticon-054-hiking-2 icon-show"></i> <i class="ti-arrow-top-right icon-hidden"></i> </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div><div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b13.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>11 Best Resorts in Nashik</h5>
+                                <p>Nashik is the city of bliss, serenity, and grapes! Also famously known as India’s Wine capital, it is one of the best weekend trip destinations</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                            <!-- <div class="icon">
+                                <a href="activities-details.html" class="arrow">
+                                    <div class="icon-w"> <i class="flaticon-054-hiking-2 icon-show"></i> <i class="ti-arrow-top-right icon-hidden"></i> </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div><div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b14.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>11 Best Resorts in Nagpur</h5>
+                                <p>Known as the city of oranges, Nagpur is also famous for its education hub, historical monuments, architecture, and dense vegetation. If you are traveling in</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                            <!-- <div class="icon">
+                                <a href="activities-details.html" class="arrow">
+                                    <div class="icon-w"> <i class="flaticon-054-hiking-2 icon-show"></i> <i class="ti-arrow-top-right icon-hidden"></i> </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/b15.png" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>6 Best Resorts in Bhandardara</h5>
+                                <p>Are you thinking about where to take off this weekend? Quit stressing over your troubles and exploit the extended rain this year. It is by</p>
+                            <a href="" style="padding: 8px 46px; font-size: 15px;" class="button-1 mb-30 mt-20">Read More</a>
+                            </div>
+                            <!-- <div class="icon">
+                                <a href="activities-details.html" class="arrow">
+                                    <div class="icon-w"> <i class="flaticon-054-hiking-2 icon-show"></i> <i class="ti-arrow-top-right icon-hidden"></i> </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Promo Video -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        <!-- Footer -->
+  <footer class="footer" style="background: black;">
+        <!-- top -->
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <div class="logo"><img src="img/logo1.webp" alt="" style="background: #fff; width: 166%;">
+                            </div>
+                            <p>We are available Mon-Sat 10AM-11PM</p>
+                            <div class="phone" style="color: #fff;"><a href="tel:+12345678910"> +91-931 581 8031</a></div>
+                            <div class="mail" style="color: #fff;"><a href="mailto:info@byCamp.com">info@byCamp.com</a>
+                            </div>
+                            <div class="social-icons" style="margin-top: 45px;">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1 mb-30">
+                        <div class="item">
+                            <h3>Quick Link</h3>
+                            <p>Home</p>
+                            <p>About Us</p>
+                            <p>Camps</p>
+                            <p>New Year Special</p>
+                            <p>Blog</p>
+                            <p>Contact Us</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <h3>Payment Accept</h3>
+                            <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+                            <div class="newsletter">
+                                <div class=""><img src="img/slider/payments.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12">
+                        <p class="mb-0" style="    font-size: 15px;font-weight: 600;">Website Design and Maintain by <a href="#" style="color: #f2682a;">Swapra Technologies</a>.
+                        </p>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="links">
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Popup - Book An Appointment -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Book A Place</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="booking-inner clearfix">
+                        <form method="post" action="#0" class="form1 clearfix">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="name" type="text" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="email" type="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="phone" type="text" placeholder="Contact Number" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="select1_wrapper">
+                                        <label>Reservation Type</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="0">Reservation Type</option>
+                                                <option value="1">Private Cottage</option>
+                                                <option value="2">Tents With Territory</option>
+                                                <option value="3">Compact Trailers</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="input1_wrapper">
+                                        <label>Check In</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="form-control input datepicker"
+                                                placeholder="Check In" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="input1_wrapper">
+                                        <label>Check Out</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="form-control input datepicker"
+                                                placeholder="Check Out" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-group">
+                                    <textarea name="message" id="message" cols="30" rows="4"
+                                        placeholder="Additional Note"></textarea>
+                                </div>
+
+                                <div class="col-lg-7 col-md-12">
+                                    <p style="line-height: 1.3em;"><small><i class="fa-solid fa-circle-info"></i> We are
+                                            committed to protecting your privacy. We will never collect information
+                                            about you without your explicit consent.</small></p>
+                                </div>
+                                <div class="col-lg-5 col-md-12 text-end">
+                                    <button type="submit"><i class="fa-light fa-calendar-check mr-5"></i> Book Your Stay
+                                        Now</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+   
+   
+   
+   
+   
+   
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-3.5.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Trek</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add trek</h2>
+        <form action="/trekcamp/save" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" name="imageUrl" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" name="duration" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="originalPrice">Original Price:</label>
+                <input type="text" id="originalPrice" name="originalPrice" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="discountedPrice">Discounted Price:</label>
+                <input type="text" id="discountedPrice" name="discountedPrice" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="discount">Discount:</label>
+                <input type="text" id="discount" name="discount" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save Trek</button>
+        </form>
+    </div>
+</body>
+</html>

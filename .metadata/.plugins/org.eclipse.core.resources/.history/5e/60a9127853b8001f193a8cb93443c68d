@@ -1,0 +1,12 @@
+package com.weekend.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.weekend.service.AccommodationCampService;
+
+public class AccommodationCampController {
+
+	
+	@Autowired
+	private  AccommodationCampService accommodationService;
+}

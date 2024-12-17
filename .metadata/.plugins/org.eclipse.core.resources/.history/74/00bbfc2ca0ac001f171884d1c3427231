@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Invoice</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+        nav ul li {
+            display: inline;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Invoice</h1>
+
+    <!-- Search Bar -->
+    <label for="productSearch">Search Products:</label>
+    <input type="text" id="productSearch" oninput="filterProducts()" placeholder="Search products..." />
+    <br><br>
+
+    <!-- Product Selection Form -->
+    <form th:action="@{/create}" method="post" onsubmit="return validateForm()">
+        <label>Client Name:</label>
+        <input type="text" name="clientName" required />
+        <br><br>
+
+        <h3>Products</h3>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <td>
+                        <input type="checkbox" name="productIds" th:value="${product.id}" />
+                    </td>
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.stockQuantity}"></td>
+                    <td>
+                        <input type="number" name="quantities" value="0" min="0" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Submit Button -->
+        <button type="submit">Generate Invoice</button>
+    </form>
+
+    <script>
+        // Validate Form
+        function validateForm() {
+            const quantities = document.querySelectorAll('input[name="quantities"]');
+            const selectedProducts = document.querySelectorAll('input[name="productIds"]:checked');
+
+            if (selectedProducts.length === 0) {
+                alert('Please select at least one product.');
+                return false;
+            }
+
+            let isValid = true;
+            selectedProducts.forEach((product, index) => {
+                const quantity = quantities[index].value;
+                if (quantity <= 0) {
+                    alert('Quantity must be greater than 0 for selected products.');
+                    isValid = false;
+                }
+            });
+
+            return isValid;
+        }
+
+        // Filter Products
+        function filterProducts() {
+            const query = document.getElementById("productSearch").value.toLowerCase();
+            const rows = document.querySelectorAll("#productTable tbody tr");
+
+            rows.forEach(row => {
+                const productName = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
+                row.style.display = productName.includes(query) ? "" : "none";
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+package com.weekend.service;
+
+import com.weekend.repository.AccommodationCampRepository;
+
+public class AccommodationCampService {
+
+	
+	
+	  private final AccommodationCampRepository accommodationRepository;
+
+	    public AccommodationService(AccommodationRepository accommodationRepository) 
+	    {
+	        this.accommodationRepository = accommodationRepository;
+	    }
+
+	    public List<Accommodation> getAllAccommodations() {
+	        return accommodationRepository.findAll();
+	    }
+}

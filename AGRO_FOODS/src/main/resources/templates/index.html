@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agro Foods</title>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Bootstrap CDN -->
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+	<header>
+		<div class="header-container">
+			<!-- Left Logo -->
+			<div class="left-logo">
+				<img src="images/brandlogo.png" alt="Agro Foods Logo">
+			</div>
+
+			<!-- Navigation Links -->
+			<nav class="nav-container">
+				<ul class="nav-links">
+					<li><a href="/home">Home</a></li>
+					<li><a href="/about_us">About Us</a></li>
+					<li><a href="/gallery">Gallery</a></li>
+					<li><a href="/product">Product</a></li>
+					<li><a href="/medicinal_benefits">Medicinal Benefits</a></li>
+					<li><a href="/contact_us">Contact Us</a></li>
+				</ul>
+			</nav>
+
+			<!-- Right Logo -->
+			<div class="right-logo">
+				<img src="images/companylogo.png" alt="Company Logo">
+			</div>
+		</div>
+	</header>
+
+	<!-- Slider Section -->
+	<section class="slider">
+		<div class="slides">
+			<!-- Slide 1 -->
+			<div class="slide active">
+				<img src="images/slides/slide1.jpg" alt="Slider Image 1">
+				<div class="slide-content">
+					<figure class="content-image">
+						<img src="images/icon-crops.png" alt="Leaf Icon">
+					</figure>
+					<h3>Welcome to Agro Foods</h3>
+					<p>“Agro Foods” jaggery is the best natural taste with the
+						finest quality jaggery made from the best sugarcane.</p>
+					<a href="contact.php" class="theme-btn btn-style-one">Contact
+						Us</a>
+				</div>
+			</div>
+
+			<!-- Slide 2 -->
+			<div class="slide">
+				<img src="images/slides/slide2.jpg" alt="Slider Image 2">
+				<div class="slide-content">
+					<figure class="content-image">
+						<img src="images/icon-crops.png" alt="Leaf Icon">
+					</figure>
+					<h3>Welcome to Agro Foods</h3>
+					<p>“Agro Foods” jaggery is the best natural taste with the
+						finest quality jaggery made from the best sugarcane.</p>
+					<a href="contact.php" class="theme-btn btn-style-one">Contact
+						Us</a>
+				</div>
+			</div>
+
+			<!-- Slide 3 -->
+			<div class="slide">
+				<img src="images/slides/slide3.jpg" alt="Slider Image 2">
+				<div class="slide-content">
+					<figure class="content-image">
+						<img src="images/icon-crops.png" alt="Leaf Icon">
+					</figure>
+					<h3>Welcome to Agro Foods</h3>
+					<p>“Agro Foods” jaggery is the best natural taste with the
+						finest quality jaggery made from the best sugarcane.</p>
+					<a href="contact.php" class="theme-btn btn-style-one">Contact
+						Us</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Slider Navigation -->
+		<div class="slider-nav">
+			<button class="prev-slide">&#10094;</button>
+			<button class="next-slide">&#10095;</button>
+		</div>
+	</section>
+
+	<section class="about-company">
+		<div class="auto-container">
+			<!-- Section Title -->
+			<div class="sec-title-one">
+				<h2>About Company</h2>
+			</div>
+			<div class="row clearfix">
+				<div class="col-sm-8">
+					<div class="content" style="text-align: center;">
+						<h3>Agro Foods is known for quality of Products. We are
+							working with the aim of providing good quality, hygienic and
+							organic products. We tied up with farmers to get good agro
+							products through which we help them to get the best price in
+							return.</h3>
+					</div>
+					<div class="more-btn-outer"
+						style="margin-bottom: 15px; margin-top: 35px; text-align: center;">
+						<a href="/about_us" class="theme-btn btn-style-one"
+							style="display: inline-block;">Read More</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Products Section One -->
+	<section class="products-section-one">
+
+		<!-- Section Title -->
+		<div class="sec-title-one">
+			<h2>Our Products</h2>
+		</div>
+		<br>
+
+		<div class="row clearfix">
+			<!-- Product Style one -->
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="product-style-one"
+					style="background-color: rgba(245, 176, 98, 0.95); padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+					<figure class="food-image">
+						<img src="images/jaggeryblock.jpg" alt="Jaggery Granules"
+							style="height: 200px; width: 200px; margin-bottom: 15px;">
+					</figure>
+					<div class="content">
+						<h3 style="color: #6d4f43;">Jaggery Block</h3>
+						<p style="color: #6d4f43;">Jaggery Blocks are packed with
+							minerals like calcium, phosphorus, iron, and magnesium.</p>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Product Style Two -->
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="product-style-one"
+					style="background-color: rgba(244, 238, 222, 0.95); padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+					<figure class="food-image">
+						<img src="images/jaggerygranyles.jpg" alt="Jaggery Granules"
+							style="height: 200px; width: 200px; margin-bottom: 15px;">
+					</figure>
+					<div class="content">
+						<h3 style="color: #6d4f43;">Jaggery Granules</h3>
+						<p style="color: #6d4f43;">Jaggery granules are packed with
+							minerals like calcium, phosphorus, iron, and magnesium.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product Style Three -->
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="product-style-one"
+					style="background-color: rgba(94, 199, 156, 0.95); padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+					<figure class="food-image">
+						<img src="images/jaggerycubes.jpg" alt="Jaggery Cubes"
+							style="height: 200px; width: 200px; margin-bottom: 15px;">
+					</figure>
+					<div class="content">
+						<h3 style="color: white;">Jaggery Cubes</h3>
+						<p style="color: white;">Jaggery cubes are made from pure
+							sugarcane, retaining essential nutrients.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product Style Four -->
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="product-style-one"
+					style="background-color: rgba(245, 176, 98, 0.95); padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+					<figure class="food-image">
+						<img src="images/jaggerysyrup.jpg" alt="Jaggery Syrup"
+							style="height: 200px; width: 200px; margin-bottom: 15px;">
+					</figure>
+					<div class="content">
+						<h3 style="color: white;">Jaggery Syrup</h3>
+						<p style="color: white;">Jaggery syrup made from pure
+							sugarcane, retaining essential nutrients.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product Style five-->
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="product-style-one"
+					style="background-color: rgba(244, 238, 222, 0.95); padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+					<figure class="food-image">
+						<img src="images/jageerypowder.jpg" alt="Jaggery Granules"
+							style="height: 200px; width: 200px; margin-bottom: 15px;">
+					</figure>
+					<div class="content">
+						<h3 style="color: #6d4f43;">Jaggery Powder</h3>
+						<p style="color: #6d4f43;">Jaggery granules are packed with
+							minerals like calcium, phosphorus, iron, and magnesium.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="more-btn-outer text-center">
+			<a href="/about_us" class="theme-btn btn-style-four">Read More</a>
+		</div>
+
+	</section>
+
+	<!-- Testimonial  -->
+	<div class="sec-title-one">
+		<h2>Testimonial</h2>
+	</div>
+
+	<section class="testimonial-slider">
+		<div class="testimonial-slides">
+			<!-- Dynamically load testimonials -->
+			<div th:each="testimonial, iterStat : ${testimonials}"
+				class="testimonial-slide"
+				th:classappend="${iterStat.first} ? 'testimonial-active' : ''">
+
+				<img
+					th:src="'data:image/jpeg;base64,' + ${testimonial.encodedImage}"
+					alt="Testimonial Image">
+					
+				<p th:text="${testimonial.description}" class="testimonial-description">Testimonial Description</p>
+			
+			</div>
+		</div>
+
+		<!-- Slider Navigation -->
+		<div class="testimonial-slider-nav">
+			<button class="testimonial-prev-slide" onclick="plusSlides(-1)">&#10094;</button>
+			<button class="next-slide" onclick="plusSlides(1)">&#10095;</button>
+		</div>
+	</section>
+
+	<!-- Google Map Section -->
+	<div id="map-container">
+		<div id="map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094077!2d144.96305761531593!3d-37.81362797975179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1616926211095!5m2!1sen!2sus"
+				width="100%" height="450" style="border: 0;" allowfullscreen=""
+				loading="lazy"></iframe>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- Footer section -->
+	<footer>
+		<!-- Google Map Section -->
+		<div class="footer-container">
+			<div class="footer-section">
+				<h3>USEFUL LINKS</h3>
+				<ul>
+					<li>
+					<li><a href="/about_us">About Us</a></li>
+					<li><a href="/gallery">Gallery</a></li>
+					<li><a href="/product">Product</a></li>
+					<li><a href="/medicinal_benefits">Medicinal Benefits</a></li>
+					<li><a href="/contact_us">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h3>PRODUCTS</h3>
+				<ul>
+					<li><a href="/product">Gurudev Jaggery Block</a></li>
+					<li><a href="/product">Gurudev Jaggery Granules</a></li>
+					<li><a href="/product">Gurudev Jaggery Cubes</a></li>
+					<li><a href="/product">Gurudev Jaggery Powder</a></li>
+					<li><a href="/product">Gurudev Jaggery Syrup</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h3>CONTACT US</h3>
+				<p>+91 981 928 4163</p>
+				<p>Email: sarikaagrofoods@gmail.com</p>
+			</div>
+			<div class="footer-section">
+				<h3>ADDRESS</h3>
+				<p>
+					<strong>Manufacturing and Packaging Unit</strong><br> Tadsar
+					Road, Near Tehsildar Office,<br> Kadegaon Dist. Sangli- 415
+					304 (Maharashtra)
+				</p>
+				<p>
+					<strong>Corporate Office</strong><br> Shop No - 10, Kailash
+					Height<br> Plot no. 32, Sector 36, Kamothe, Navi Mumbai- 410
+					209 (Maharashtra).
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<div class="footer-bottom">
+		<p>Website Design-Development and Maintenance by SwaPra
+			Technologies</p>
+	</div>
+	<!-- Custom JavaScript -->
+	<script src="js/script.js"></script>
+	<script src="js/script2.js"></script>
+	<!-- Bootstrap JS and dependencies -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+</body>
+</html>

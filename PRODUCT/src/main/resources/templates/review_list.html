@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Product Save</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+	<link rel="stylesheet" href="css/dashboard.css">
+	<style>
+	.container {
+	margin-top: 30px;
+}
+
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #aad6ec;
+	color:black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 60px;             /* Adjusted for the topbar */
+	background-color: #343a40;
+	color: white;
+	padding-top: 20px;
+	width: 200px;
+}
+
+.sidebar a {
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	background-color: 	#81b1ce;
+}
+
+.content {
+	margin-left: 220px;
+	margin-top: 80px; /* Adjusted for the topbar */
+	padding: 20px;
+}
+
+.table th, .table td {
+	vertical-align: middle;
+}
+
+.logout-btn {
+	position: absolute;
+	bottom: 74px;
+	width: 90%;
+	left: 10px;
+}
+</style>
+</head>
+<body class="bg-light">
+	<!-- Topbar -->
+	<div class="topbar">
+		<div class="logo">
+			<h5>Product Management System</h5>
+		</div>
+		<div class="user-info">
+			<span>Welcome, Admin</span>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+		<a href="/" class="text-center">Admin Panel</a> 
+		<a href="/addproduct" class="btn btn-primary btn-block mb-3">Add Product</a> 
+		<a href="/productlist" class="btn btn-primary btn-block mb-3">Product List</a>
+     <a href="/getAllEnquries" class="btn btn-primary btn-block mb-3">Enquiry List</a>
+       <a href="/addReview" class="btn btn-primary btn-block mb-3">Add Review</a>
+        <a href="/admin/reviewlist" class="btn btn-primary btn-block mb-3">Review List</a>
+        
+		<!-- Logout Button -->
+		<form th:action="@{/logout}" method="post" class="logout-btn">
+			<button type="submit" class="btn btn-danger btn-block">Logout</button>
+		</form>
+	</div>
+
+	<!-- Main Content -->
+	<div class="content">
+		<h2 class="text-center">Reviews List</h2>
+		<table class="table table-striped table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th>ID</th>
+					<th>Reviewer Name</th>
+					<th>Review Description</th>
+					<th>Ratings</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="reviews : ${allReviews}">
+					<td th:text="${reviews.id}"></td>
+					<td th:text="${reviews.reviewerName}"></td>
+					<td th:text="${reviews.content}"></td>
+					<td th:text="${reviews.rating}"></td>
+				
+	               <td>
+					 <a th:href="@{/deletereview/{id}(id=${reviews.id})}" class="btn btn-danger btn-sm">Delete</a> 
+				   </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous"></script>
+</body>
+</html>

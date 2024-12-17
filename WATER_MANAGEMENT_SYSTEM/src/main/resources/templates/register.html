@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" th:href="@{../css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <!-- Display message if available -->
+        <div class="message" th:if="${message != null}">[[${message}]]</div>
+
+        <h2>Registration Form</h2>
+
+        <!-- Form binding to the user object -->
+        <form th:action="@{/registration}" method="post" th:object="${user}">
+
+            <!-- Fullname field -->
+            <div class="form-group">
+                <label for="fullname">Fullname:</label> 
+                <input th:field="*{fullname}" type="text" id="fullname" name="fullname"
+                       class="form-control" placeholder="Enter your fullname" required>
+            </div>
+
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email">Email:</label> 
+                <input th:field="*{email}" type="email" id="email" name="email"
+                       class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Password field -->
+            <div class="form-group">
+                <label for="password">Password:</label> 
+                <input th:field="*{password}" type="password" id="password" name="password"
+                       class="form-control" placeholder="Enter your password" required>
+            </div>
+
+            <!-- Role selection -->
+            <div class="form-group">
+                <label for="role">Role:</label> 
+                <select th:field="*{role}" id="role" name="role" class="form-control" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="DRIVER">DRIVER</option>
+                
+                </select>
+            </div>
+
+            <!-- Submit button -->
+            <input type="submit" value="Register" class="btn btn-primary">
+        </form>
+
+        <!-- Login button for registered users -->
+        <div class="login-section">
+            <p>Already registered? <a th:href="@{/login}" class="btn btn-secondary">Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>

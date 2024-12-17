@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>New Trekking Location Near Delhi</title>
+    <link rel="shortcut icon" href="img/favicon.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/otomanopee-one" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+
+
+    <?php
+    include_once "header.php"
+    ?>
+    <!-- Header Banner -->
+    <div class="banner-header section-padding valign bg-img bg-fixed" data-overlay-dark="3" data-background="img/slider/08.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Treks</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Accommodation -->
+    <section class="activities1 section-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-45">
+                    <div class="item"> <img src="img/01-Triund_Trek.jpg" class="img-fluid" alt="">
+                        <div class="cont">
+                            <div class="text">
+                                <h5>Triund Trek</h5>
+                                <p>
+                                    <i class="fa fa-calendar" style="font-size: 12px; margin-right: 8px; color: #14bdbf;"></i>
+                                    <span class="current-date"></span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-map-marker" style="font-size: 13px; margin-right: 8px; color: #14bdbf;"></i>
+                                    Delhi, Chandigarh
+                                    <span style="margin-left: 48px;">
+                                        <i class="fa fa-clock" style="font-size: 13px; margin-right: 6px; color: #14bdbf;"></i>
+                                        2 Day / 1 Night
+                                    </span>
+                                </p>
+                                <p style="font-size: 21px; color: red;">
+                                    <span style="text-decoration: line-through;">₹ 1499</span>
+                                    <span style="color:black; font-size: 15px; margin-left: 3px; background: #f2cc00; padding: 1px 10px; border-radius: 7px;">33% off</span>
+                                </p>
+                                <div style="display: flex; justify-content: space-between; margin-top:6px;">
+                                    <h3 style="color: #008f00;">₹ 999 <span style="font-size: 15px; color:black;">Onwards</span></h3>
+                                    <div>
+                                        <a href="#" class="button-1 mb-30 mt-20" style="padding: 5px 29px;"> <span>Know More</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+
+
+                <script>
+                    // Get current date
+                    const today = new Date();
+                    const options = {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric'
+                    };
+                    const formattedDate = today.toLocaleDateString('en-US', options);
+
+                    // Apply date to all elements with the class 'current-date'
+                    const dateElements = document.querySelectorAll('.current-date');
+                    dateElements.forEach((element) => {
+                        element.textContent = formattedDate;
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+    <!-- Promo Video -->
+
+    <!-- Clients -->
+    <!-- <section class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="logo">
+                            <a href="#0"><img src="img/clients/1.svg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="logo">
+                            <a href="#0"><img src="img/clients/2.svg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="logo">
+                            <a href="#0"><img src="img/clients/3.svg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="logo">
+                            <a href="#0"><img src="img/clients/4.svg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="logo">
+                            <a href="#0"><img src="img/clients/5.svg" class="img-fluid" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Footer -->
+
+
+    <?php
+    include_once "footer.php"
+    ?>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-3.5.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

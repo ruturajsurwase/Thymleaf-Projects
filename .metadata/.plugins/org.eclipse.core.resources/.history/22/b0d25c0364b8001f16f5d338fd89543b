@@ -1,0 +1,24 @@
+package com.weekend.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.weekend.entity.Trek;
+
+@Service
+public class TrekService {
+
+	@Autowired
+	private TrekRepository trekRepository;
+	
+	
+	public void saveTrek(Trek trek) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+}

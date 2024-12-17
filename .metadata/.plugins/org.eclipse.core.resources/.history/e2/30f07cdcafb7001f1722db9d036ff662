@@ -1,0 +1,16 @@
+package com.weekend.service;
+
+public class CampingActivityService {
+
+	
+	 @Autowired
+	    private CampingActivityRepository repository;
+
+	    public List<CampingActivity> getAllActivities() {
+	        return repository.findAll();
+	    }
+
+	    public void saveActivity(CampingActivity activity) {
+	        repository.save(activity);
+	    }
+}

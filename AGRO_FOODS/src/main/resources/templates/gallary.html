@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Foods</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+    <div class="header-container">
+        <!-- Left Logo -->
+        <div class="left-logo">
+            <img src="images/brandlogo.png" alt="Agro Foods Logo">
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about_us">About Us</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/product">Product</a></li>
+                <li><a href="/medicinal_benefits">Medicinal Benefits</a></li>
+                <li><a href="/contact_us">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Right Logo -->
+        <div class="right-logo">
+            <img src="images/companylogo.png" alt="Company Logo">
+        </div>
+    </div>
+</header>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Sarika Agro Foods</h1>
+        </div>
+    </section>
+
+    
+            <!-- Section Title -->
+            <div class="sec-title-one">
+                <h2>Gallery</h2>
+            </div>
+
+           <!-- Image Gallery -->
+<section class="gallery">
+    <div class="container">
+        <div class="row">
+            <!-- Loop through all images and display each -->
+            <div class="col-md-4 col-sm-6 col-xs-12 mb-3" th:each="image : ${galleryList}">
+                <div class="card">
+                    <!-- Set up click event to open the modal -->
+                    <img th:src="@{/image/{id}(id=${image.id})}" class="card-img-top image-card"
+                         alt="Gallery Image"
+                         data-toggle="modal" data-target="#imageModal"
+                         onclick="showImageInModal(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <!-- This image will be replaced with the clicked image -->
+                <img id="modalImage" src="" class="img-fluid" alt="Enlarged Image">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+  <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Medicinal Benefits</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>PRODUCTS</h3>
+                <ul>
+                    <li><a href="#">Gurudev Jaggery Block</a></li>
+                    <li><a href="#">Gurudev Jaggery Granules</a></li>
+                    <li><a href="#">Gurudev Jaggery Cubes</a></li>
+                    <li><a href="#">Gurudev Jaggery Powder</a></li>
+                    <li><a href="#">Gurudev Jaggery Syrup</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>CONTACT US</h3>
+                <p>+91 981 928 4163</p>
+                <p>Email: sarikaagrofoods@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>ADDRESS</h3>
+                <p>
+                    <strong>Manufacturing and Packaging Unit</strong><br>
+                    Tadsar Road, Near Tehsildar Office,<br>
+                    Kadegaon Dist. Sangli- 415 304 (Maharashtra)
+                </p>
+                <p>
+                    <strong>Corporate Office</strong><br>
+                    Shop No - 10, Kailash Height<br>
+                    Plot no. 32, Sector 36, Kamothe, Navi Mumbai- 410 209 (Maharashtra).
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <p>Website Design-Development and Maintenance by SwaPra Technologies</p>
+    </div>
+
+
+<script>
+    function showImageInModal(image) {
+        // Set the source of the modal image to the clicked image
+        document.getElementById('modalImage').src = image.src;
+    }
+</script>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

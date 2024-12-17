@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Product Save</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<style>
+.container {
+	margin-top: 30px;
+}
+
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #aad6ec;
+	color:black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 60px; /* Adjusted for the topbar */
+	background-color: #343a40;
+	color: white;
+	padding-top: 20px;
+	width: 200px;
+}
+
+.sidebar a {
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+		background-color: 	#81b1ce;
+}
+
+.content {
+	margin-left: 220px;
+	margin-top: 80px; /* Adjusted for the topbar */
+	padding: 20px;
+}
+
+.table th, .table td {
+	vertical-align: middle;
+}
+
+.logout-btn {
+	position: absolute;
+	bottom: 74px;
+	width: 90%;
+	left: 10px;
+}
+</style>
+</head>
+<body class="bg-light">
+	<!-- Topbar -->
+	<div class="topbar">
+		<div class="logo">
+			<h5>Product Management System</h5>
+		</div>
+		<div class="user-info">
+			<span>Welcome, Admin</span>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+		<a href="/" class="text-center">Admin Panel</a> 
+		<a href="/addproduct" class="btn btn-primary btn-block mb-3">Add Product</a> 
+		<a href="/productlist" class="btn btn-primary btn-block mb-3">Product List</a>
+     <a href="/getAllEnquries" class="btn btn-primary btn-block mb-3">Enquiry List</a>
+       <a href="/addReview" class="btn btn-primary btn-block mb-3">Add Review</a>
+               <a href="/admin/reviewlist" class="btn btn-primary btn-block mb-3">Review List</a>
+		<!-- Logout Button -->
+		<form th:action="@{/logout}" method="post" class="logout-btn">
+			<button type="submit" class="btn btn-danger btn-block">Logout</button>
+		</form>
+	</div>
+
+	<!-- Main Content -->
+<!-- Content -->
+	<div class="content">
+		<h2 class="text-center">Update Product</h2>
+
+		<form method="post" th:action="@{/product/saveProduct}"
+			th:object="${product}" enctype="multipart/form-data">
+			<!-- Hidden field to store the product ID -->
+			<input type="hidden" th:field="*{id}" />
+
+			<div class="mb-3">
+				<label for="name">Product Name</label> <input type="text"
+					th:field="*{name}" class="form-control" id="name"
+					placeholder="Enter product name" required>
+			</div>
+
+			<div class="mb-3">
+				<label for="description">Description</label>
+				<textarea th:field="*{description}" class="form-control"
+					id="description" placeholder="Enter product description" required></textarea>
+			</div>
+
+			<div class="mb-3">
+				<label for="price">Price</label> <input type="number" step="0.01"
+					th:field="*{price}" class="form-control" id="price"
+					placeholder="Enter product price" required>
+			</div>
+
+			<div class="mb-3">
+				<label for="currentImage">Current Image</label>
+				<div>
+					<img th:if="${product.base64Image}"
+						th:src="'data:image/jpeg;base64,' + ${product.base64Image}"
+						alt="Product Image" width="150">
+				</div>
+			</div>
+
+			<!-- File Upload for Image -->
+			<div class="mb-3">
+				<label for="image">Upload New Image</label> <input type="file"
+					name="image" class="form-control" id="image">
+			</div>
+
+
+			<div class="text-center">
+				<button type="submit" class="btn btn-primary">Update Product</button>
+			</div>
+		</form>
+
+		<div class="text-center mt-3">
+			<a href="/productlist"class="btn btn-danger">Back to Product List</a>
+		</div>
+	</div>
+
+	
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gallery</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 60px;
+            background-color: #f6e6cc;
+            color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 60px;
+            background-color: #343a40;
+            color: white;
+            padding-top: 20px;
+            width: 200px;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #f6e6cc;
+        }
+
+        .content {
+            margin-left: 220px;
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .msg {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .table img {
+            width: 120px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="logo">
+            <h5>Management System</h5>
+        </div>
+        <div class="user-info">
+            <span>Welcome, Admin</span>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/" class="text-center">Admin Panel</a>
+        <a href="/addphoto" class="btn btn-primary btn-block mb-3">Add Photos for Gallery</a>
+        <a href="/photolist" class="btn btn-primary btn-block mb-3">Photo List</a>
+        <a href="/add-partner" class="btn btn-primary btn-block mb-3">Add Clients</a>
+        <a href="/partners/list" class="btn btn-primary btn-block mb-3">Clients</a>
+        <a href="/addService" class="btn btn-primary btn-block mb-3">Add Service</a>
+        <a href="/servicesList" class="btn btn-primary btn-block mb-3">All Service</a>
+        <a href="/contacts/getallContactUs" class="btn btn-primary btn-block mb-3">Contact Us Enquries</a>
+
+        <!-- Logout Button -->
+        <form th:action="@{/logout}" method="post" class="logout-btn">
+            <button type="submit" class="btn btn-danger btn-block">Logout</button>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h4 class="text-center">ADMIN DASHBOARD</h4>
+            <h2 class="text-center">Gallery Photos</h2>
+      
+
+        <!-- Message for add/delete actions -->
+        <p th:if="${msg}" th:text="${msg}" class="msg"></p>
+
+        <!-- Table format for gallery images -->
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through galleryList -->
+                <tr th:each="gallery, iterStat : ${galleryList}">
+                    <td th:text="${iterStat.count}"></td>
+                    <td>
+                        <img th:src="@{'/image/' + ${gallery.id}}" alt="Image"/>
+                    </td>
+                    <td>
+                        <form th:action="@{'/image/delete/' + ${gallery.id}}" method="post">
+                            <button type="submit" class="btn-delete">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+spring.application.name=WEEKENDFEELS
+
+
+
+
+
+# Thymeleaf Configuration
+spring.thymeleaf.cache=false
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+spring.thymeleaf.enabled=true

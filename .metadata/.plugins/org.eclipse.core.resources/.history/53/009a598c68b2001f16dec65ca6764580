@@ -1,0 +1,5 @@
+package com.billapp.entity;
+
+public class Client {
+
+}

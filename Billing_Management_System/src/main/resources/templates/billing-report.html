@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Billing Report</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-top: 20px;
+}
+
+/* Topbar */
+.topbar {
+    width: 100%;
+    height: 60px;
+    background-color: #aad6ec;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    width: 220px;
+}
+
+.sidebar a {
+    color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #81b1ce;
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: 74px;
+    width: 90%;
+    left: 10px;
+}
+
+/* Content */
+.content {
+    margin-left: 220px;
+    margin-top: 80px; /* Adjusted for topbar */
+    padding: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+/* List of Products */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+li span {
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="logo">
+            <h5>Billing Management System</h5>
+        </div>
+        <div class="user-info">
+            <span>Welcome, Admin</span>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/" class="btn btn-primary btn-block mb-3">Admin Panel</a>
+        <a href="/products/addproduct" class="btn btn-primary btn-block mb-3">Add Product</a>
+        <a href="/products/list" class="btn btn-primary btn-block mb-3">Product List</a>
+        <a href="/new" class="btn btn-primary btn-block mb-3">Create Invoice</a>
+        <a href="/invoices" class="btn btn-primary btn-block mb-3">All Invoices</a>
+        <a href="/products/stock" class="btn btn-primary btn-block mb-3">Stock Management</a>
+        <a href="/billing-report-filters" class="btn btn-primary btn-block mb-3">Billing Report</a>
+        <a href="/client-report-filters" class="btn btn-primary btn-block mb-3">Client Report</a>
+        
+        <!-- Logout Button -->
+        <form th:action="@{/logout}" method="post" class="logout-btn">
+            <button type="submit" class="btn btn-danger btn-block">Logout</button>
+        </form>
+        
+        
+    </div>
+
+    <!-- Content -->
+  
+    <div class="content">
+    <h1>Billing Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice Number</th>
+                <th>Client Name</th>
+                <th>Date</th>
+                <th>Total Amount</th>
+                <th>Products</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterate over the invoices -->
+            <tr th:each="invoice : ${invoices}">
+                <td th:text="${invoice.invoiceNumber}"></td>
+                <td th:text="${invoice.clientName}"></td>
+                <td th:text="${invoice.date}"></td>
+                <td th:text="${invoice.totalAmount}"></td>
+                <td>
+                    <ul>
+                        <!-- Iterate over the purchased products -->
+                        <li th:each="product : ${invoice.purchasedProducts}">
+                            <span th:text="${product.name}"></span> -
+                            <span th:text="${product.quantity}"></span> x
+                            <span th:text="${product.price}"></span> =
+                            <span th:text="${product.totalPrice}"></span>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- "Download Report" button -->
+    <form action="/billing-report/download" method="get" style="margin-top: 20px;">
+        <input type="hidden" name="startDate" th:value="${param.startDate}" />
+        <input type="hidden" name="endDate" th:value="${param.endDate}" />
+        <input type="hidden" name="clientName" th:value="${param.clientName}" />
+        <input type="hidden" name="productName" th:value="${param.productName}" />
+        <button type="submit">Download Report as PDF</button>
+    </form>
+    
+</div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

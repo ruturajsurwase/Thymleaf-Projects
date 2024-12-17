@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Management System</title>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+.container {
+	margin-top: 30px;
+}
+
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #aad6ec;
+	color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 60px;
+	background-color: #343a40;
+	color: white;
+	padding-top: 20px;
+	width: 220px;
+}
+
+.sidebar a {
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.sidebar a:hover {
+	background-color: #81b1ce;
+}
+
+.content {
+	margin-left: 220px;
+	margin-top: 80px; 
+	padding: 20px;
+}
+
+.table th, .table td {
+	vertical-align: middle;
+}
+
+.logout-btn {
+	position: absolute;
+	bottom: 74px;
+	width: 90%;
+	left: 10px;
+}
+
+</style>
+</head>
+<body>
+
+	<!-- Topbar -->
+	<div class="topbar">
+		<div class="logo">
+			<h5>Management System</h5>
+		</div>
+		<div class="user-info">
+			<span>Welcome, Admin</span>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+<div class="sidebar">
+
+        <a href="/" class="btn btn-primary btn-block mb-3">Admin Panel</a>
+		
+		<a href="/add" 	class="btn btn-primary btn-block mb-3">Add Activity</a>
+		
+		<a href="/listActivities" 	class="btn btn-primary btn-block mb-3">Activity List</a>
+		
+		<a href="/accommodations/add" class="btn btn-primary btn-block mb-3">Add New Accommodation Camp</a>
+	    
+	   <a href="/accommodations" class="btn btn-primary btn-block mb-3">Accommodation Camp List</a>
+	    
+	    <a href="/trek/add" class="btn btn-primary btn-block mb-3">Add New Trek</a>
+	 
+	    <a href="/treks" class="btn btn-primary btn-block mb-3">Trek List</a>
+	    
+	     <a href="/articles/new" class="btn btn-primary btn-block mb-3"> New Blog</a>
+	 
+	  <a href="/articles/list" class="btn btn-primary btn-block mb-3">Blog List</a>
+	 
+		<!-- Logout Button -->
+    <form th:action="@{/logout}" method="post" class="logout-btn">
+        <button type="submit" class="btn btn-danger btn-block">Logout</button>
+    </form>
+    
+    
+</div>
+
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="container">
+            <h2 class="text-center mb-4">Create Blog</h2>
+            <form action="/articles/save" method="post" class="row g-3">
+			
+                <div class="col-md-6">
+                    <label class="form-label" for="title">Title:</label>
+                    <input type="text" id="name" name="title" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" for="imageUrl">Image URL:</label>
+                    <input type="text" id="imageUrl" name="imageUrl" class="form-control" required>
+                </div>
+
+
+				<div class="col-md-6">
+					<label class="form-label" for="description">Description:</label>
+					<textarea id="description" name="description" rows="5"
+						class="form-control" required></textarea>
+				</div>
+
+
+
+
+				<div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Save Blog</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

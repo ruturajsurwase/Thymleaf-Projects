@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>About Weekend Feels</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/otomanopee-one" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<style>
+    @media(min-width:280px) and (max-width:780px) {
+        #run {
+            padding: 1px 10px 141px 20px !important;
+            background-position: right !important;
+        }
+        #parag{
+            margin-top: 90px !important;
+        }
+    }
+
+    .section-paddingg {
+        padding: 154px 0px 210px 0px !important;
+    }
+</style>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    
+    <!-- Header section-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a class="" href="#"> <img src="img/logo1.webp" class="logo-img" alt=""> </a>
+                <!-- <div class="logo"><h2>by<span>Camp</span></h2></div> -->
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"><i class="fa-light fa-bars"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mx-auto">
+                    <!-- <li class="nav-item dropdown"> <a class="nav-link active dropdown-toggle" href="index.php" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item active"><span>Home Slider</span></a></li>
+                            <li><a href="index2.html" class="dropdown-item"><span>Home Image</span></a></li>
+                            <li><a href="index3.html" class="dropdown-item"><span>Home Video</span></a></li>
+                            <li><a href="index4.html" class="dropdown-item"><span>Home Slideshow</span></a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="newyears.php">New Year Special 25</a></li>
+                    <li class="nav-item"><a class="nav-link" href="camp.php">Camps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="treks.php">Treks</a></li>
+
+                    <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Blogs</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="amenities.html" class="dropdown-item"><span>Amenities</span></a></li>
+                            <li><a href="events.html" class="dropdown-item"><span>Events</span></a></li>
+                            <li><a href="team.html" class="dropdown-item"><span>Team</span></a></li>
+                            <li><a href="pricing.html" class="dropdown-item"><span>Pricing</span></a></li>
+                            <li><a href="faq.html" class="dropdown-item"><span>FAQs</span></a></li>
+                            <li><a href="gallery-image.html" class="dropdown-item"><span>Image Gallery</span></a></li>
+                            <li><a href="gallery-video.html" class="dropdown-item"><span>Video Gallery</span></a></li>
+                            <li><a href="404.html" class="dropdown-item"><span>404 Page</span></a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="career.php">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+                </ul>
+                <!-- <div class="navbar-right">
+                    <div class="button"><a data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" href="#0"><i class="ti-calendar mr-5"></i>Book Now</a></div>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+    <!-- Header Section End  -->
+    
+    <!-- Header Banner -->
+    <div id="run" class="banner-header  section-paddingg valign bg-img" data-overlay-dark="3" data-background="img/run.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+
+
+    <section class="about section-padding" style="padding: 72px 0px 0px 0px;">
+        <div class="container">
+            <div class="row">
+                <!-- Content Section -->
+                <div class="col-lg-6 col-md-12 mb-30" style="margin: 7px 0px 1px 0px;">
+                    <div class="section-title">
+                        <i class="flaticon-023-hiking-1"></i> About Us
+                    </div>
+                    <h3
+                        style="font-size: 26px; letter-spacing: 0.3px; font-family: auto; text-transform: capitalize; line-height: 32px; margin: -6px 0px 11px 0px;">
+                        To Provide an affordable and consistent experience short weekend Getaway.
+                    </h3>
+                    <p class="" style="margin-bottom: 10px;">
+                        Weekends are the shortest period in the entire week. It is how we perceive time, in other words,
+                        psychological time. We do not so much perceive time itself, but changes in or the passage of
+                        time, or what might be described as "events in time".
+                    </p>
+                    <p class="mb-50" style="margin-bottom: 10px;">
+                        At WeekendFeels, we are committed to creating "events in time". Create a short weekend escape experience so smooth that one wants to relive those moments again and again. Thus making weekends the longest period in the entire week.
+                    </p>
+                    <p class="mb-50" style="margin-bottom: 35px;">
+                        WeekendFeels was born With the vision to create interesting stories in our customer's lives. Being transparent with our offering combined with the customer-centric approach helped us to set the expectation beforehand of our travelers.
+                    </p>
+
+
+                </div>
+
+                <!-- Merged Image Section -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="item">
+                                <img src="img/id2.jpeg" class="img-fluid" alt="Image 1"
+                                    style="width: 92%;margin: 19px 0px 0px 19px;height: auto;object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="item">
+                                <img src="img/id.jpeg" class="img-fluid" alt="Image 2"
+                                    style="width: 100%; height: auto; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about section-padding" style="padding: 0px 0px;margin-top: -58px;">
+        <div class="container">
+            <div class="row">
+                <!-- Content Section -->
+                <div class="col-lg-11 col-md-12 mb-30" style="margin: 7px 0px 1px 0px;">
+
+
+                    <p id="parag" class="" style="margin-bottom: 10px;">
+                        We put all the check and balances to ensure that our customers are safe and secure at the<br> same time they are having a great time while they are with us.
+                    </p>
+                    <p class="mb-50" style="margin-bottom: 10px;">
+                        We take pride in empowering our partners who took the responsibility of fulfilling our vision The local entrepreneurs enabled with the correct set of information helped us to create a tailor-made experience for our travelers.
+                    </p>
+
+                    <!-- <div class="row">
+                        <div class="col col-md-4">
+                            <div class="icon">
+                                <span class="flaticon-007-tent-1"></span>
+                                <h5>Tents Rent</h5>
+                            </div>
+                        </div>
+                        <div class="col col-md-4">
+                            <div class="icon">
+                                <span class="flaticon-023-hiking-1"></span>
+                                <h5>Activities</h5>
+                            </div>
+                        </div>
+                        <div class="col col-md-4">
+                            <div class="icon">
+                                <span class="flaticon-005-firewood"></span>
+                                <h5>Firewoods</h5>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- Merged Image Section -->
+
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Footer -->
+  <footer class="footer" style="background: black;">
+        <!-- top -->
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <div class="logo"><img src="img/logo1.webp" alt="" style="background: #fff; width: 166%;">
+                            </div>
+                            <p>We are available Mon-Sat 10AM-11PM</p>
+                            <div class="phone" style="color: #fff;"><a href="tel:+12345678910"> +91-931 581 8031</a></div>
+                            <div class="mail" style="color: #fff;"><a href="mailto:info@byCamp.com">info@byCamp.com</a>
+                            </div>
+                            <div class="social-icons" style="margin-top: 45px;">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1 mb-30">
+                        <div class="item">
+                            <h3>Quick Link</h3>
+                            <p>Home</p>
+                            <p>About Us</p>
+                            <p>Camps</p>
+                            <p>New Year Special</p>
+                            <p>Blog</p>
+                            <p>Contact Us</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <h3>Payment Accept</h3>
+                            <p>The payment is encrypted and transmitted securely with an SSL protocol.</p>
+                            <div class="newsletter">
+                                <div class=""><img src="img/slider/payments.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12">
+                        <p class="mb-0" style="    font-size: 15px;font-weight: 600;">Website Design and Maintain by <a href="#" style="color: #f2682a;">Swapra Technologies</a>.
+                        </p>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="links">
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Popup - Book An Appointment -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Book A Place</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="booking-inner clearfix">
+                        <form method="post" action="#0" class="form1 clearfix">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="name" type="text" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="email" type="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <input name="phone" type="text" placeholder="Contact Number" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="select1_wrapper">
+                                        <label>Reservation Type</label>
+                                        <div class="select1_inner">
+                                            <select class="select2 select" style="width: 100%">
+                                                <option value="0">Reservation Type</option>
+                                                <option value="1">Private Cottage</option>
+                                                <option value="2">Tents With Territory</option>
+                                                <option value="3">Compact Trailers</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="input1_wrapper">
+                                        <label>Check In</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="form-control input datepicker"
+                                                placeholder="Check In" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="input1_wrapper">
+                                        <label>Check Out</label>
+                                        <div class="input1_inner">
+                                            <input type="text" class="form-control input datepicker"
+                                                placeholder="Check Out" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-group">
+                                    <textarea name="message" id="message" cols="30" rows="4"
+                                        placeholder="Additional Note"></textarea>
+                                </div>
+
+                                <div class="col-lg-7 col-md-12">
+                                    <p style="line-height: 1.3em;"><small><i class="fa-solid fa-circle-info"></i> We are
+                                            committed to protecting your privacy. We will never collect information
+                                            about you without your explicit consent.</small></p>
+                                </div>
+                                <div class="col-lg-5 col-md-12 text-end">
+                                    <button type="submit"><i class="fa-light fa-calendar-check mr-5"></i> Book Your Stay
+                                        Now</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-3.5.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

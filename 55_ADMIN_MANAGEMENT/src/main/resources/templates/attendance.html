@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Attendance</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container { margin-top: 100px; }
+        .btn-large { width: 100%; height: 150px; font-size: 24px; margin-bottom: 30px; }
+        .topbar { width: 100%; height: 60px; background-color: #007bff; color: white; position: fixed; top: 0; left: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+        .sidebar { height: 100vh; position: fixed; left: 0; top: 60px; background-color: #343a40; color: white; padding-top: 20px; width: 200px; }
+        .sidebar a { color: white; display: block; padding: 10px; text-decoration: none; }
+        .sidebar a:hover { background-color: #495057; }
+        .content { margin-left: 220px; margin-top: 80px; padding: 20px; }
+        .logout-btn { position: absolute; bottom: 74px; width: 90%; left: 10px; }
+    </style>
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="logo">
+            <h5>Teacher Management System</h5>
+        </div>
+        <div class="user-info">
+            <span>Welcome, <span th:text="${teacher.firstName} + ' ' + ${teacher.lastName}"></span></span>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Updated link to pass teacher ID -->
+        <a th:href="@{/teacherdashboard/{id}(id=${teacher.id})}" class="text-center">Teacher Panel</a>
+        
+       <!--  <a href="/attendance" class="btn btn-primary btn-block mb-3">Attendance</a> -->
+        <a th:href="@{/attendance/{id}(id=${teacher.id})}" class="btn btn-primary btn-block mb-3">Punch Attendance</a> 
+        
+        <form th:action="@{/logout}" method="post" class="logout-btn">
+            <button type="submit" class="btn btn-danger btn-block">Logout</button>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container content">
+        <h3 class="text-center">Attendance</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Check-In Button -->
+                <form th:action="@{/checkin/{id}(id=${teacher.id})}" method="post" onsubmit="return showCheckinPopup()">
+                    <button type="submit" class="btn btn-success btn-large">IN</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <!-- Check-Out Button -->
+                <form th:action="@{/checkout/{id}(id=${teacher.id})}" method="post" onsubmit="return showCheckoutPopup()">
+                    <button type="submit" class="btn btn-danger btn-large">OUT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Show popup message for Check-in
+        function showCheckinPopup() {
+            alert('You have checked IN successfully!');
+            return true; // Submit the form
+        }
+
+        // Show popup message for Check-out
+        function showCheckoutPopup() {
+            alert('You have checked OUT successfully!');
+            return true; // Submit the form
+        }
+    </script>
+</body>
+</html>

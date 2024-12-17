@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Management System</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        margin-top: 30px;
+    }
+
+    .topbar {
+        width: 100%;
+        height: 60px;
+        background-color: #f6e6cc;
+        color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar {
+        height: calc(100vh - 60px);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        background-color: #343a40;
+        color: white;
+        padding-top: 20px;
+        width: 200px;
+        overflow-y: auto;
+    }
+
+    .sidebar a {
+        color: white;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .sidebar a:hover {
+        background-color: #f6e6cc;
+        color: #343a40;
+    }
+
+    .content {
+        margin-left: 220px;
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    .form-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    .form-container label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+
+    .form-container input[type="text"],
+    .form-container textarea,
+    .form-container input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .form-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin-top: 15px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-container button:hover {
+        background-color: #0056b3;
+    }
+
+    .form-container img {
+        display: block;
+        margin: 10px 0;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .content {
+            margin-left: 0;
+        }
+
+        .topbar {
+            padding: 10px;
+        }
+
+        .form-container {
+            width: 90%;
+            margin: 10px auto;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .form-container h2 {
+            font-size: 18px;
+        }
+
+        .form-container button {
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="logo">
+            <h5>Management System</h5>
+        </div>
+        <div class="user-info">
+            <span>Welcome, Admin</span>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/" class="text-center">Admin Panel</a>
+        <a href="/addphoto" class="btn btn-primary btn-block mb-3">Add Photos for Gallery</a>
+        <a href="/photolist" class="btn btn-primary btn-block mb-3">Photo List</a>
+        <a href="/add-partner" class="btn btn-primary btn-block mb-3">Add Clients</a>
+              <a href="/partners/list" 	class="btn btn-primary btn-block mb-3">Clients</a>
+        <a href="/addService" class="btn btn-primary btn-block mb-3">Add Service</a>
+        <a href="/servicesList" class="btn btn-primary btn-block mb-3">All Service</a>
+        <a href="/contacts/getallContactUs" class="btn btn-primary btn-block mb-3">Contact Us Enquries</a>
+
+        <!-- Logout Button -->
+        <form th:action="@{/logout}" method="post" class="logout-btn">
+            <button type="submit" class="btn btn-danger btn-block">Logout</button>
+        </form>
+    </div>
+
+
+
+
+  <div class="content">
+        <div class="form-container">
+    <div class="container mt-5">
+    <h1 class="text-center">Update Service</h1>
+    <form th:action="@{/updateService}" th:object="${serviceForm}" method="post" enctype="multipart/form-data">
+        <input type="hidden" th:field="*{id}">
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" th:field="*{title}" class="form-control" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" th:field="*{description}" class="form-control" rows="4" required></textarea>
+
+        <label for="currentImage">Current Image:</label>
+        <div>
+            <img th:src="'data:image/jpeg;base64,' + ${serviceForm.base64Image}" alt="Current Image" style="width: 150px; height: auto;">
+        </div>
+
+        <label for="image">Upload New Image (Optional):</label>
+        <input type="file" id="image" th:field="*{image}" class="form-control" accept="image/*">
+
+        <button type="submit" class="btn btn-success mt-3">Update Service</button>
+    </form>
+</div>
+    </div>
+  </div>  
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+package com.weekend.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.weekend.entity.AccommodationCamp;
+import com.weekend.entity.Trek;
+
+@Controller
+public class TrekController {
+
+	
+	
+	
+	
+	
+	 @GetMapping("/trek/add")
+	    public String showAddForm(Model model) 
+	 {
+	        model.addAttribute("trek", new Trek());
+	        return "trek-form";
+	    }
+	 
+
+	    @PostMapping("/trek/save")
+	    public String saveAccommodation(@ModelAttribute("trek") Trek trek) {
+	        accommodationService.saveAccommodation(accommodation);
+	        return "redirect:/accommodation-list";
+	    }
+
+}

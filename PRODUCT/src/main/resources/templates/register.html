@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../css/styles.css}">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Display message if available -->
+        <div class="alert alert-info" th:if="${message != null}">[[${message}]]</div>
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title text-center">Registration Form</h2>
+
+                <!-- Form binding to the user object -->
+                <form th:action="@{/registration}" method="post" th:object="${user}">
+
+                    <!-- Fullname field -->
+                    <div class="form-group">
+                        <label for="fullname">Fullname:</label> 
+                        <input th:field="*{fullname}" type="text" id="fullname" name="fullname"
+                               class="form-control" placeholder="Enter your fullname" required>
+                    </div>
+
+                    <!-- Email field -->
+                    <div class="form-group">
+                        <label for="email">Email:</label> 
+                        <input th:field="*{email}" type="email" id="email" name="email"
+                               class="form-control" placeholder="Enter your email" required>
+                    </div>
+
+                    <!-- Password field -->
+                    <div class="form-group">
+                        <label for="password">Password:</label> 
+                        <input th:field="*{password}" type="password" id="password" name="password"
+                               class="form-control" placeholder="Enter your password" required>
+                    </div>
+
+                    <!-- Role selection -->
+                    <div class="form-group">
+                        <label for="role">Role:</label> 
+                        <select th:field="*{role}" id="role" name="role" class="form-control" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="ADMIN">ADMIN</option>
+                            <option value="TEACHER">TEACHER</option>
+                            <option value="EMPLOYEE">EMPLOYEE</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit button -->
+                    <input type="submit" value="Register" class="btn btn-primary btn-block">
+                </form>
+
+                <!-- Login button for registered users -->
+                <div class="text-center mt-3">
+                    <p>Already registered? <a th:href="@{/login}" class="btn btn-link">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

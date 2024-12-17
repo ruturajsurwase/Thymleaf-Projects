@@ -1,0 +1,25 @@
+package com.weekend.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.weekend.entity.AccommodationCamp;
+import com.weekend.service.AccommodationCampService;
+
+@Controller
+public class AccommodationCampController {
+
+	
+	@Autowired
+	private  AccommodationCampService accommodationService;
+	
+	
+	  @GetMapping("/accommodations")
+	    public String listAccommodations(Model model) 
+	  {
+	        List<AccommodationCamp> accommodations = accommodationService.getAllAccommodations();
+	        model.addAttribute("accommodations", accommodations);
+	        return "accommodation-list";
+	    }
+}

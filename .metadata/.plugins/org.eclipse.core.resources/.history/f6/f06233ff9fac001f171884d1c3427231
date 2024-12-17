@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Invoice List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Invoice List</h1>
+
+<!-- Invoice Table -->
+<table>
+    <thead>
+        <tr>
+            <th>Invoice Number</th>
+            <th>Client Name</th>
+            <th>Date</th>
+            <th>Total Amount</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="invoice : ${invoices}">
+            <td th:text="${invoice.invoiceNumber}"></td>
+            <td th:text="${invoice.clientName}"></td>
+            <td th:text="${invoice.date}"></td>
+            <td th:text="${invoice.totalAmount}"></td>
+            <td>
+<a th:href="@{/invoice/details/{id}(id=${invoice.id})}" class="btn">View</a>
+                
+                <a th:href="@{/invoice/download/{id}(id=${invoice.id})}" class="btn">Download PDF</a>
+            
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

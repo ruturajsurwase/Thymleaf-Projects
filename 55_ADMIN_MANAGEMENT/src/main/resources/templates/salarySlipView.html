@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Slip</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 60px;
+            background-color: #343a40;
+            color: white;
+            padding-top: 20px;
+            width: 200px;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            margin-left: 220px;
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            margin-bottom: 20px;
+        }
+
+        .header-section > div {
+            text-align: center;      /* Center text in each column */
+            margin: 0 20px;         /* Add some margin between columns */
+        }
+
+        .company-info 
+        {
+  		  margin-bottom: 20px;
+   		 text-align: center;
+		}
+
+		.company-info .right-align 
+		{
+    	text-align: right; 
+		}
+    </style>
+</head>
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="logo">
+            <h5>Employee Management System</h5>
+        </div>
+        <div class="user-info">
+            <span>Welcome, Admin</span>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/" class="text-center">Admin Panel</a>
+        <a href="/showNewEmployeeForm" class="btn btn-primary btn-block mb-3">Add New Employee</a>
+        <a href="/showEmployeeList" class="btn btn-primary btn-block mb-3">Employee List</a>
+        <a href="/showNewTeacherForm" class="btn btn-primary btn-block mb-3">Add New Teacher</a>
+        <a href="/showTeacherList" class="btn btn-primary btn-block mb-3">Teacher List</a>
+        <a href="/showTeacherListforAttendance" class="btn btn-primary btn-block mb-3">Attendance</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2 class="text-center">Salary Slip</h2>
+
+        <!-- Header Section -->
+        <div class="header-section">
+            <div>
+                        <h4>SwaPra Technologies</h4>
+                <p>Neeta Tower, Kasarwadi, Pune - 411012</p>
+          <p>For the Month of: <span th:text="${month} + '/' + ${year}"></span></p>
+            </div>   
+        </div>
+         
+<!-- Teacher Information -->
+<div class="company-info" style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;">
+        <p><strong>Employee Name:</strong> <span th:text="${teacher.firstName} + ' ' + ${teacher.lastName}"></span></p>
+        <p><strong>Designation:</strong> <span th:text="${teacher.role}"></span></p>
+    </div>
+    <div style="text-align: right;">
+        <p><strong>Employee ID:</strong> SPT-EMP-2324/087</p>
+        <p><strong>Bank A/C No:</strong> 50100736131905</p>
+    </div>
+</div>
+
+        <!-- Salary Information -->
+        <h4>Salary Information</h4>
+        <table class="table table-bordered">
+            <tr>
+                <th>Salary Per Month:</th>
+                <td th:text="${salaryPerMonth}"></td>
+            </tr>
+            <tr>
+                <th>Total Working Days:</th>
+                <td th:text="${totalDaysInMonth}"></td>
+            </tr>
+            <tr>
+                <th>Total Present Days:</th>
+                <td th:text="${totalPresentDays}"></td>
+            </tr>
+            <tr>
+                <th>Total Absent Days:</th>
+                <td th:text="${absentDays}"></td>
+            </tr>
+            <tr>
+                <th>Salary Per Day:</th>
+                <td th:text="${#numbers.formatDecimal(salaryPerDay, 1, 2)}"></td>
+            </tr>
+            <tr>
+                <th>Basic Pay:</th>
+                <td th:text="${BasicPay}"></td>
+            </tr>
+            <tr>
+                <th>HRA:</th>
+                <td th:text="${HRA}"></td>
+            </tr>
+            <tr>
+                <th>Conveyance Allowance:</th>
+                <td th:text="${conveyanceAllowance}"></td>
+            </tr>
+            <tr>
+                <th>Educational Allowance:</th>
+                <td th:text="${educationAllowance}"></td>
+            </tr>
+            <tr>
+                <th>Washing Allowance:</th>
+                <td th:text="${washingAllowance}"></td>
+            </tr>
+            <tr>
+                <th>Medical Allowance:</th>
+                <td th:text="${medicalAllowance}"></td>
+            </tr>
+            <tr>
+                <th>Dearness Allowance:</th>
+                <td th:text="${dearnessAllowance}"></td>
+            </tr>
+            <tr>
+                <th>Other Allowances:</th>
+                <td th:text="${otherAllowances}"></td>
+            </tr>
+            <tr>
+                <th>Monthly Gross Salary:</th>
+                <td th:text="${grossSalary}"></td>
+            </tr>
+            <tr>
+                <th>Professional Tax:</th>
+                <td th:text="${deductions}"></td>
+            </tr>
+            <tr>
+                <th>Absent Days Salary:</th>
+                <td th:text="${#numbers.formatDecimal(absentDaysSalary,1,2)}"></td>
+            </tr>
+            <tr>
+                <th>Net Salary:</th>
+                <td th:text="${#numbers.formatDecimal(totalSalary, 1, 2)}"></td>
+            </tr>
+        </table>
+
+        <!-- Download Salary Slip Button -->
+        <form th:action="@{/generateSalarySlip}" method="post">
+            <input type="hidden" name="teacherId" th:value="${teacher.id}" />
+            <input type="hidden" name="month" th:value="${month}" />
+            <input type="hidden" name="year" th:value="${year}" />
+            <button type="submit" class="btn btn-success">Download Salary Slip</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

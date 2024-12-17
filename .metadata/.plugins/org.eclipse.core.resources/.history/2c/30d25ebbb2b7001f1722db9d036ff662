@@ -1,0 +1,39 @@
+package com.weekend.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.weekend.entity.CampingActivity;
+import com.weekend.service.CampingActivityService;
+
+
+@Controller
+public class CampingActivityController {
+
+	
+	
+	@Autowired
+    private CampingActivityService service;
+
+    @GetMapping("/listActivities")
+    public String listActivities(Model model) {
+        model.addAttribute("activities", service.getAllActivities());
+        return "index";
+    }
+
+    @GetMapping("/add")
+    public String showAddForm(Model model) {
+        model.addAttribute("activity", new CampingActivity());
+        return "add-activity";
+    }
+
+    @PostMapping("/save")
+    public String saveActivity(@ModelAttribute CampingActivity activity) {
+        service.saveActivity(activity);
+        return "redirect:/";
+    }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+ <title>Water Management System</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+.container {
+	margin-top: 30px;
+}
+
+.topbar {
+	width: 100%;
+	height: 60px;
+	background-color: #007bff;
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.sidebar {
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 60px; /* Adjusted for the topbar */
+	background-color: #343a40;
+	color: white;
+	padding-top: 0px;
+	width: 200px;
+}
+
+.sidebar a {
+	color: white;
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	background-color: #495057;
+}
+
+.content {
+	margin-left: 220px;
+	margin-top: 80px; /* Adjusted for the topbar */
+	padding: 20px;
+}
+
+.alert {
+	margin-top: 20px;
+}
+
+.table th, .table td {
+	vertical-align: middle;
+}
+
+.btn-sm {
+	padding: 5px 10px;
+}
+.logout-btn {
+	position: absolute;
+	bottom: 74px;
+	width: 90%;
+	left: 10px;
+}
+</style>
+<body>
+
+
+	<!-- Topbar -->
+	<div class="topbar">
+		<div class="logo">
+			<h5>Water Management System</h5>
+		</div>
+		<div class="user-info">
+			<span>Welcome, Admin</span>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div class="sidebar">
+		<a href="/" class="text-center">Admin Panel</a> 
+		<a href="/adddriver" class="btn btn-primary btn-block mb-3">Add Driver</a> 
+		<a href="/showDriverList" class="btn btn-primary btn-block mb-3">Driver List</a> 
+		<a href="/addVehicle" class="btn btn-primary btn-block mb-3">Add Vehicle</a> 
+		<a href="/showVehicleList"	class="btn btn-primary btn-block mb-3">Vehicle List</a>
+		<a href="/addCustomer" class="btn btn-primary btn-block mb-3">Add Customer</a> 
+		<a href="/customerList"	class="btn btn-primary btn-block mb-3">Customer List</a>
+		<a href="/addOrder" class="btn btn-primary btn-block mb-3">Create Order</a> 
+		<a href="/orderList" class="btn btn-primary btn-block mb-3">Order List</a> 
+		<a href="/vehicle/total-jars-page" class="btn btn-primary btn-block mb-3">Jars per Vehicle</a>
+	  	<a href="/generate_bill" class="btn btn-primary btn-block mb-3">Generate Bill</a>
+	<a href="/report" class="btn btn-primary btn-block mb-3">Month Report</a>
+		<!-- Logout Button -->
+		<form th:action="@{/logout}" method="post" class="logout-btn">
+			<button type="submit" class="btn btn-danger btn-block">Logout</button>
+		</form>
+
+	</div>
+
+
+	<div class="content ">
+		<h2>Vehicle wise Jar Distribution</h2>
+
+		<!-- Form to select vehicle, year, and month -->
+		<form action="/vehicle/jar-distribution" method="get" class="mt-4">
+			<div class="form-group">
+				<label for="vehicleId">Select Vehicle:</label> <select
+					class="form-control" id="vehicleId" name="vehicleId" required>
+					<option value="" disabled selected>Select a vehicle</option>
+					<option th:each="vehicle : ${vehicles}" th:value="${vehicle.id}"
+						th:text="${vehicle.vehicleNumber}"></option>
+				</select>
+			</div>
+
+			<div class="form-group">
+	<label for="year">Select Year:</label> <input type="number" id="year" name="year" class="form-control"
+					placeholder="Enter year" required>
+			</div>
+
+			<div class="form-group">
+				<label for="month">Select Month:</label> <select
+					class="form-control" id="month" name="month" required>
+					<option value="" disabled selected>Select a month</option>
+					<option value="1">January</option>
+					<option value="2">February</option>
+					<option value="3">March</option>
+					<option value="4">April</option>
+					<option value="5">May</option>
+					<option value="6">June</option>
+					<option value="7">July</option>
+					<option value="8">August</option>
+					<option value="9">September</option>
+					<option value="10">October</option>
+					<option value="11">November</option>
+					<option value="12">December</option>
+				</select>
+			</div>
+			
+		<div class="text-center">
+   			<button type="submit" class="btn btn-primary">Get Jar Distribution</button>
+		</div>
+
+			
+		</form>
+
+
+
+		<!-- Section to display the date-wise jar distribution -->
+		<div class="mt-4" th:if="${dateWiseDistribution != null}">
+			<h4>Jar Distribution:</h4>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Jar Quantity</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="entry : ${dateWiseDistribution}">
+						<td th:text="${entry.key}"></td>
+						<!-- Date -->
+						<td th:text="${entry.value}"></td>
+						<!-- Jar Quantity -->
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- Section to display the total jar quantity -->
+			<!-- <h4>
+				Total Jar Quantity: <span th:text="${totalJars}"></span>
+			</h4> -->
+		</div>
+
+		<!-- Message if no data is available -->
+		<div th:if="${dateWiseDistribution == null}">
+			<h4>No data available for the selected period.</h4>
+		</div>
+	</div>
+
+</body>
+</html>

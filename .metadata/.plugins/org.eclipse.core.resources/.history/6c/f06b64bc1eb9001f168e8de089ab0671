@@ -1,0 +1,20 @@
+package com.weekend.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ContactController {
+	
+	
+	
+	@Autowired
+	    private ContactService contactService;
+	 
+
+	    @PostMapping("/submitContact")
+	    public String submitContact(@ModelAttribute Contact contact) {
+	        contactService.saveContact(contact);
+	        return "redirect:/thank-you"; // Redirect to a thank-you page
+	    }
+}

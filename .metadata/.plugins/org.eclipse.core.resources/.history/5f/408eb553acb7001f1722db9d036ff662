@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Careers Weekend Feels</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/otomanopee-one" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <?php include_once "header.php" ?>
+    <!-- Header Banner -->
+    <div class="banner-header section-padding valign bg-img bg-fixed bg-position-bottom" data-overlay-dark="4" data-background="img/blog/01.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Careers</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Faqs -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <ul class="faqs clearfix">
+                        <li class="item">
+                            <div class="title">Why work with WeekendFeels?</div>
+                            <div class="cont">
+                                <div class="text"><strong style="font-weight: 900;"> 1]</strong> Opportunity to work in a high-paced environment, quite literally. We take decisions in an instant.<br>
+                                    <strong style="font-weight: 900;"> 2] </strong> Apply your skills to a customer base of more than 50k.<br>
+                                    <strong style="font-weight: 900;"> 3] </strong> We believe in allowing the individual to grow his skillset with us.<br>
+                                    <strong style="font-weight: 900;"> 4] </strong> We do love structured work but at the same time, we won't stop you to experiment with different strategies.<br>
+                                    <strong style="font-weight: 900;"> 15] </strong> Your thoughts and ideas will be highly valued.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="title">Social Media Intern</div>
+                            <div class="cont">
+                                <div class="text">We are looking for an enthusiast and creative Social Media Specialist to join our team. As a Social Media Specialist, you will be responsible for developing and implementing our Social Media strategy.</div>
+                                <div class="text" style="font-weight: 900;">Location: Anywhere</div>
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You will
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> Design carefully crafted campaigns for our social channels, primarily Instagram<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Generate leads via Social Media and hand them over to the Sales team<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Research and optimize hashtag usage
+                                    </p>
+                                </div>
+
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You have
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> 1-2 years of experience in SMM (Attach links to your work or have them on your LinkedIn profile/resume)<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Strong hashtag research skills<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Planned and executed campaigns from scratch<br>
+                                        <strong style="font-weight: 900;"> 4] </strong> Have a basic understanding of how social media algorithms work
+                                    </p>
+
+                                </div>
+                                <p style="color: #cd810f; font-style: italic;">Interested candidates can send in their resume and cover letter to<a href="#" style="color: blue;"> info@weekendfeels.com </a> the subject line 'Social Media Intern'</p>
+                            </div>
+
+                        </li>
+                        <li class="item">
+                            <div class="title">Content Writer Intern</div>
+                            <div class="cont">
+                                <div class="text">We are looking for an experienced Content Writer to join our team. Your will find yourself fiddling with taglines on website pages, writing blog posts for feature announcements, putting together thought leadership posts for guest publications.</div>
+                                <div class="text" style="font-weight: 900;">Location: Anywhere</div>
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You will
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> Write SEO optimized content for our events and informational pieces<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Convery information in the shortest words and in the simplest language<br>
+
+                                    </p>
+                                </div>
+
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You have
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> 1-2 years of experience as a SEO content specicialist (Attach links to your work or have them on your LinkedIn profile/resume)<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Strong keyword research skills<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Planned content strategy from scratch<br>
+                                        <strong style="font-weight: 900;"> 4] </strong> Have a basic understanding of how search engines work
+                                    </p>
+
+                                </div>
+                                <p style="color: #cd810f; font-style: italic;">Interested candidates can send in their resume and cover letter to<a href="#" style="color: blue;"> info@weekendfeels.com </a> the subject line 'Content Writer Intern'</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="title">Process Executive</div>
+                            <div class="cont">
+                                <div class="text">The Process Executive will be responsible for working closely with various team members within the organization to streamline the processes and serve as point of contact. The successful candidate will need to accept ownership for effectively solving Customer queries and issues keeping customer satisfaction at the core of every decision and behavior.</div>
+                                <div class="text" style="font-weight: 900;">Location: Work From Home</div>
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You will
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> Candidate must be responsible for solving customer queries regarding Camping over call, WhatsApp and/or mail<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Receive and Promptly Respond to Customer Queries<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Whether chat agents are contacted by mail or WhatsApp chat, they must make a continual effort to respond to customers as quickly as possible<br>
+                                        <strong style="font-weight: 900;"> 4] </strong> Once they receive a message from a customer, they must listen carefully to the customer's question or concern before the following protocol in order to resolve the issue or answer the question<br>
+                                        <strong style="font-weight: 900;"> 5] </strong> Manage large influx of incoming chats<br>
+                                        <strong style="font-weight: 900;"> 6] </strong>Handle customer concerns, provide appropriate solutions and alternatives within the time limits; follow up to ensure resolution<br>
+                                        <strong style="font-weight: 900;"> 7] </strong> Follow communication procedures, guidelines, and policies<br>
+                                    </p>
+                                </div>
+
+                                <div class="text" style="font-weight: 300; font-size:30px; margin-top: 14px;">You have
+                                    <p> <strong style="font-weight: 900;"> 1]</strong> 1-2 years of experience as a SEO content specicialist (Attach links to your work or have them on your LinkedIn profile/resume)<br>
+                                        <strong style="font-weight: 900;"> 2] </strong> Strong keyword research skills<br>
+                                        <strong style="font-weight: 900;"> 3] </strong> Planned content strategy from scratch<br>
+                                        <strong style="font-weight: 900;"> 4] </strong> Have a basic understanding of how search engines work
+                                    </p>
+
+                                </div>
+                                <p style="color: #cd810f; font-style: italic;">Interested candidates can send in their resume and cover letter to<a href="#" style="color: blue;"> info@weekendfeels.com </a> the subject line  'Process Executive'</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img src="img//career.jpg" alt="" style="border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Promo Video -->
+    <?php include_once "footer.php" ?>
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-3.5.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+
+</html>

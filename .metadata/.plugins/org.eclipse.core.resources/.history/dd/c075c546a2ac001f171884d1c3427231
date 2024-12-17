@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Invoice List</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Topbar Styling */
+        .topbar {
+            width: 100%;
+            height: 60px;
+            background-color: #aad6ec;
+            color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 60px; 
+            background-color: #343a40;
+            color: white;
+            padding-top: 20px;
+            width: 220px;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .sidebar a:hover {
+            background-color: #81b1ce;
+        }
+
+        /* Main Content Styling */
+        .content {
+            margin-left: 240px; /* Adjusted for the sidebar width */
+            margin-top: 80px;   /* Adjusted for the topbar */
+            padding: 20px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Logout Button Styling */
+        .logout-btn {
+            position: absolute;
+            bottom: 74px;
+            width: 90%;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="logo">
+        <h5>Billing Management System</h5>
+    </div>
+    <div class="user-info">
+        <span>Welcome, Admin</span>
+    </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="/" class="text-center">Admin Panel</a>
+    <a href="/products/addproduct" class="btn btn-primary btn-block mb-3">Add Product</a>
+    <a href="/products/list" class="btn btn-primary btn-block mb-3">Product List</a>
+    <a href="/new" class="btn btn-primary btn-block mb-3">Create Invoice</a>
+    <a href="/invoices" class="btn btn-primary btn-block mb-3">All Invoices</a>
+    
+    <!-- Logout Button -->
+    <form th:action="@{/logout}" method="post" class="logout-btn">
+        <button type="submit" class="btn btn-danger btn-block">Logout</button>
+    </form>
+    
+    
+</div>
+
+<!-- Main Content -->
+<div class="content">
+    <h1>Invoice List</h1>
+
+    <!-- Invoice Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice Number</th>
+                <th>Client Name</th>
+                <th>Date</th>
+                <th>Total Amount</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="invoice : ${invoices}">
+                <td th:text="${invoice.invoiceNumber}"></td>
+                <td th:text="${invoice.clientName}"></td>
+                <td th:text="${invoice.date}"></td>
+                <td th:text="${invoice.totalAmount}"></td>
+                <td>
+                    <a th:href="@{/invoice/details/{id}(id=${invoice.id})}" class="btn">View</a>
+                    <a th:href="@{/invoice/download/{id}(id=${invoice.id})}" class="btn">Download PDF</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

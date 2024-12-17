@@ -1,0 +1,169 @@
+/*
+Flaticon icon font: Flaticon
+*/
+@font-face {
+	font-family: 'Flaticon';
+	src: url('../../fonts/Flaticon.eot');
+	src: url('../../fonts/Flaticond41d.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/Flaticon.woff2') format('woff2'),
+		url('../../fonts/Flaticon.woff') format('woff'),
+		url('../../fonts/Flaticon.ttf') format('truetype'),
+		url('../../fonts/Flaticon.svg#Flaticon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	@font-face {
+		font-family: 'Flaticon';
+		src: url('Flaticon.html#Flaticon') format('svg');
+	}
+}
+[class^='flaticon-'],
+[class*=' flaticon-'],
+[class^='flaticon-'],
+[class*=' flaticon-'] {
+	line-height: 1;
+}
+[class^='flaticon-']:before,
+[class*=' flaticon-']:before,
+[class^='flaticon-']:after,
+[class*=' flaticon-']:after {
+	font-family: Flaticon;
+	font-style: normal;
+}
+
+
+.flaticon-002-cottage:before {
+    content: "\f101";
+}
+.flaticon-003-camping:before {
+    content: "\f102";
+}
+.flaticon-005-firewood:before {
+    content: "\f103";
+}
+.flaticon-006-hiking:before {
+    content: "\f104";
+}
+
+
+.flaticon-007-tent-1:before {
+    content: "\f105";
+}
+.flaticon-008-branch:before {
+    content: "\f106";
+}
+.flaticon-009-tent-2:before {
+    content: "\f107";
+}
+.flaticon-010-bedding:before {
+    content: "\f108";
+}
+.flaticon-011-cat:before {
+    content: "\f109";
+}
+.flaticon-012-tent-3:before {
+    content: "\f10a";
+}
+.flaticon-013-campfire:before {
+    content: "\f10b";
+}
+.flaticon-014-tent-4:before {
+    content: "\f10c";
+}
+.flaticon-015-sports:before {
+    content: "\f10d";
+}
+.flaticon-020-tent-5:before {
+    content: "\f112";
+}
+.flaticon-021-cottage-1:before {
+    content: "\f113";
+}
+.flaticon-022-tent-6:before {
+    content: "\f114";
+}
+.flaticon-023-hiking-1:before {
+    content: "\f115";
+}
+.flaticon-024-campfire-1:before {
+    content: "\f116";
+}
+.flaticon-025-eco-house:before {
+    content: "\f117";
+}
+.flaticon-026-washing-machine:before {
+    content: "\f118";
+}
+.flaticon-028-sink:before {
+    content: "\f11a";
+}
+.flaticon-029-fridge:before {
+    content: "\f11b";
+}
+.flaticon-030-camping-gas:before {
+    content: "\f11c";
+}
+.flaticon-031-pot:before {
+    content: "\f11d";
+}
+.flaticon-032-eat:before {
+    content: "\f11e";
+}
+.flaticon-033-solar-energy:before {
+    content: "\f11f";
+}
+.flaticon-034-wc:before {
+    content: "\f120";
+}
+.flaticon-035-shower:before {
+    content: "\f121";
+}
+.flaticon-036-toilet-paper:before {
+    content: "\f122";
+}
+.flaticon-037-hair-dryer:before {
+    content: "\f123";
+}
+.flaticon-038-essential-oil:before {
+    content: "\f124";
+}
+.flaticon-039-blanket:before {
+    content: "\f125";
+}
+.flaticon-040-ac:before {
+    content: "\f126";
+}
+.flaticon-041-bed:before {
+    content: "\f127";
+}
+.flaticon-042-guitar:before {
+    content: "\f128";
+}
+.flaticon-043-bonfire:before {
+    content: "\f129";
+}
+.flaticon-044-beach-chair:before {
+    content: "\f12a";
+}
+.flaticon-045-bicycle:before {
+    content: "\f12b";
+}
+.flaticon-046-massage:before {
+    content: "\f12c";
+}
+.flaticon-047-camp:before {
+    content: "\f12d";
+}
+.flaticon-048-van:before {
+    content: "\f12e";
+}
+.flaticon-049-bonfire-1:before {
+    content: "\f12f";
+}
+.flaticon-053-sea-waves:before {
+    content: "\f131";
+}
+.flaticon-054-hiking-2:before {
+    content: "\f132";
+}

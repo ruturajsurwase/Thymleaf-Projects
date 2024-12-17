@@ -1,0 +1,5 @@
+package com.weekend.controller;
+
+public class ContactController {
+
+}

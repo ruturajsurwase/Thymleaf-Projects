@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Invoice Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Invoice Details</h1>
+    <p><strong>Invoice Number:</strong> <span th:text="${invoice.invoiceNumber}"></span></p>
+    <p><strong>Client Name:</strong> <span th:text="${invoice.clientName}"></span></p>
+    <p><strong>Date:</strong> <span th:text="${invoice.date}"></span></p>
+    <p><strong>Total Amount:</strong> $<span th:text="${invoice.totalAmount}"></span></p>
+
+    <h3>Purchased Products</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="item : ${invoice.purchasedProducts}">
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.quantity}"></td>
+                <td th:text="${item.price}"></td>
+                <td th:text="${item.totalPrice}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="window.print()">Print Invoice</button>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.weekend.entity;
+
+public class Contact {
+
+}

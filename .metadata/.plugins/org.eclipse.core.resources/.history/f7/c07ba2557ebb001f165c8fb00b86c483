@@ -1,0 +1,11 @@
+package com.weekend.controller;
+
+import com.weekend.service.ArticleService;
+
+@Controller
+public class ArticleController {
+
+	
+	
+	 private  ArticleService articleService;
+}
